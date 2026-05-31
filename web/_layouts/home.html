@@ -4,13 +4,13 @@ sidebar: false
 ---
 <div class="home">
   <div class="hero">
-    <img src="/assets/images/hero.png" alt="Спираль Сознания" class="hero-image">
+    <img src="{{ site.baseurl }}/assets/images/hero.png" alt="Спираль Сознания" class="hero-image">
     <div class="hero-text">
       <h1>{{ site.data.ui.hero_title[page.lang] }}</h1>
       <p class="hero-subtitle">{{ site.data.ui.hero_subtitle[page.lang] }}</p>
       <div class="hero-cta">
-        <a href="/{{ page.lang }}/map.html" class="btn btn-primary">{{ site.data.ui.start_path[page.lang] }}</a>
-        <a href="/{{ page.lang }}/manifesto.html" class="btn btn-secondary">{{ site.data.ui.read_manifesto[page.lang] }}</a>
+        <a href="{{ site.baseurl }}/{{ page.lang }}/map.html" class="btn btn-primary">{{ site.data.ui.start_path[page.lang] }}</a>
+        <a href="{{ site.baseurl }}/{{ page.lang }}/manifesto.html" class="btn btn-secondary">{{ site.data.ui.read_manifesto[page.lang] }}</a>
       </div>
     </div>
   </div>

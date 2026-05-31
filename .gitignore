@@ -21,3 +21,13 @@ Thumbs.db
 # Archives
 *.7z
 *.7z:Zone.Identifier
+*:Zone.Identifier
+
+# Runtime state
+.opencode/state/
+.opencode/user.db
+.opencode/user.db-shm
+.opencode/user.db-wal
+
+# Lock files
+.lock/

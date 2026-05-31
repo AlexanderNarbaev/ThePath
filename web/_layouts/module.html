@@ -14,9 +14,9 @@ sidebar: true
     {% endif %}
   </div>
   <div class="module-breadcrumb">
-    <a href="/{{ page.lang }}/">{{ site.data.ui.breadcrumb_home[page.lang] }}</a>
+    <a href="{{ site.baseurl }}/{{ page.lang }}/">{{ site.data.ui.breadcrumb_home[page.lang] }}</a>
     &rsaquo;
-    <a href="/{{ page.lang }}/map.html">{{ site.data.ui.breadcrumb_map[page.lang] }}</a>
+    <a href="{{ site.baseurl }}/{{ page.lang }}/map.html">{{ site.data.ui.breadcrumb_map[page.lang] }}</a>
     &rsaquo;
     <span>{{ page.module_title }}</span>
   </div>

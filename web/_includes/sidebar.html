@@ -8,7 +8,7 @@
       {% assign current_num = page.module_number | default: -1 %}
       {% for m in site.data.modules %}
       <li {% if current_num == m.number %}class="active"{% endif %}>
-        <a href="/{{ page.lang }}/module-{{ m.number }}.html">
+        <a href="{{ site.baseurl }}/{{ page.lang }}/module-{{ m.number }}.html">
           <span class="mod-num">{{ m.number }}</span>
           <span class="mod-title">
             {% if page.lang == "en" %}{{ m.title_en }}{% else %}{{ m.title }}{% endif %}
