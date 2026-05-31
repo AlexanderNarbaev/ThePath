@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library — The Path</title>
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+  <header>
+    <nav class="nav-container">
+      <a href="index.html" class="logo"><span class="spiral">❂</span><span>The Path</span></a>
+      <button class="menu-toggle">☰</button>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="practices.html">Practices</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="library.html" class="active">Library</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="quickstart.html">Quick Start</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+        <button class="lang-toggle" id="langToggle">RU</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1>Library</h1>
+        <p>Annotated bibliography — 100+ books in philosophy, science, and ethics</p>
+      </div>
+    </div>
+    <section class="content-section container">
+      <div class="library-search">
+        <input type="text" id="librarySearch" placeholder="Search by title or author..." oninput="filterBooks()">
+      </div>
+      <div class="library-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="philosophy">Philosophy</button>
+        <button class="filter-btn" data-filter="science">Science</button>
+        <button class="filter-btn" data-filter="psychology">Psychology</button>
+        <button class="filter-btn" data-filter="history">History</button>
+        <button class="filter-btn" data-filter="economics">Economics</button>
+      </div>
+      <div class="book-grid">
+        <div class="book-card" data-category="philosophy">
+          <h4>Meditations</h4>
+          <p class="author">Marcus Aurelius</p>
+          <p>Stoic philosophy on virtue, duty, and acceptance. Practical wisdom for daily life.</p>
+          <span class="category">Philosophy</span>
+        </div>
+        <div class="book-card" data-category="philosophy">
+          <h4>The Republic</h4>
+          <p class="author">Plato</p>
+          <p>Foundational work on justice, governance, and the ideal society.</p>
+          <span class="category">Philosophy</span>
+        </div>
+        <div class="book-card" data-category="philosophy">
+          <h4>Utilitarianism</h4>
+          <p class="author">John Stuart Mill</p>
+          <p>The classic defense of the greatest good for the greatest number.</p>
+          <span class="category">Philosophy</span>
+        </div>
+        <div class="book-card" data-category="science">
+          <h4>The Selfish Gene</h4>
+          <p class="author">Richard Dawkins</p>
+          <p>Gene-centered view of evolution and altruism. Foundation for evolutionary ethics.</p>
+          <span class="category">Science</span>
+        </div>
+        <div class="book-card" data-category="science">
+          <h4>Sapiens</h4>
+          <p class="author">Yuval Noah Harari</p>
+          <p>A brief history of humankind — from stone age to the future.</p>
+          <span class="category">History</span>
+        </div>
+        <div class="book-card" data-category="psychology">
+          <h4>Thinking, Fast and Slow</h4>
+          <p class="author">Daniel Kahneman</p>
+          <p>Two systems of thinking — intuitive and deliberate. Essential for decision-making.</p>
+          <span class="category">Psychology</span>
+        </div>
+        <div class="book-card" data-category="economics">
+          <h4>Capital in the Twenty-First Century</h4>
+          <p class="author">Thomas Piketty</p>
+          <p>Analysis of inequality and capital accumulation. Essential for economic understanding.</p>
+          <span class="category">Economics</span>
+        </div>
+        <div class="book-card" data-category="psychology">
+          <h4>Man's Search for Meaning</h4>
+          <p class="author">Viktor Frankl</p>
+          <p>Finding purpose in suffering. Logotherapy and the human quest for meaning.</p>
+          <span class="category">Psychology</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-bottom"><p>© 2026 The Path</p></div>
+    </div>
+  </footer>
+  <script src="src/js/main.js"></script>
+</body>
+</html>

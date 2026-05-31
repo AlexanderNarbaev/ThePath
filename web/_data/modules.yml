@@ -1,0 +1,136 @@
+# Модули Спирали Сознания
+- number: 0
+  title: "Канон Спирали"
+  title_en: "Canon of the Spiral"
+  subtitle: "Неизменное ядро системы"
+  subtitle_en: "The Immutable Core"
+  audience: "Все"
+  audience_en: "Everyone"
+  path: quickstart
+  version: "2.1"
+
+- number: 1
+  title: "Космология и миф"
+  title_en: "Cosmology and Myth"
+  subtitle: "Священная история Спирали Сознания"
+  subtitle_en: "The Sacred History of the Spiral of Consciousness"
+  audience: "Все, изучающие"
+  audience_en: "Everyone, Researchers"
+  path: deep
+
+- number: 2
+  title: "Этика и добродетели"
+  title_en: "Ethics and Virtues"
+  subtitle: "Кодекс чести, этика власти и силы"
+  subtitle_en: "Code of Honor, Ethics of Power and Force"
+  audience: "Все, госслужащие"
+  audience_en: "Everyone, Civil Servants"
+  path: quickstart
+
+- number: 3
+  title: "Практики и ритуалы"
+  title_en: "Practices and Rituals"
+  subtitle: "От 3 минут в день до годовых праздников"
+  subtitle_en: "From 3 Minutes a Day to Annual Festivals"
+  audience: "Все"
+  audience_en: "Everyone"
+  path: quickstart
+
+- number: 4
+  title: "Устойчивость и антихрупкость"
+  title_en: "Resilience and Antifragility"
+  subtitle: "Кризисные планы, община в репрессивном государстве"
+  subtitle_en: "Crisis Plans, Community Under Repressive State"
+  audience: "Наставники, координаторы"
+  audience_en: "Mentors, Coordinators"
+  path: mentor
+
+- number: 5
+  title: "Разрешение конфликтов"
+  title_en: "Conflict Resolution"
+  subtitle: "Круги примирения, медиация, арбитраж"
+  subtitle_en: "Reconciliation Circles, Mediation, Arbitration"
+  audience: "Наставники, юристы"
+  audience_en: "Mentors, Lawyers"
+  path: quickstart
+
+- number: 6
+  title: "Технологии и этика"
+  title_en: "Technology and Ethics"
+  subtitle: "ИИ, цифровой суверенитет, биохакинг"
+  subtitle_en: "AI, Digital Sovereignty, Biohacking"
+  audience: "Изучающие, координаторы, законодатели"
+  audience_en: "Researchers, Coordinators, Legislators"
+  path: deep
+
+- number: 7
+  title: "Экономика"
+  title_en: "Economy"
+  subtitle: "Кооперативный сектор, суверенные фонды"
+  subtitle_en: "Cooperative Sector, Sovereign Funds"
+  audience: "Координаторы, предприниматели, госслужащие"
+  audience_en: "Coordinators, Entrepreneurs, Civil Servants"
+  path: coordinator
+
+- number: 8
+  title: "Политика и управление"
+  title_en: "Politics and Governance"
+  subtitle: "Социократия, гражданские ассамблеи, Совет будущего"
+  subtitle_en: "Sociocracy, Citizens' Assemblies, Council of the Future"
+  audience: "Координаторы, политики, госслужащие"
+  audience_en: "Coordinators, Politicians, Civil Servants"
+  path: coordinator
+
+- number: 9
+  title: "Психология и здоровье"
+  title_en: "Psychology and Health"
+  subtitle: "Профилактика выгорания, работа с травмой"
+  subtitle_en: "Burnout Prevention, Trauma Work"
+  audience: "Все, наставники, военные, врачи"
+  audience_en: "Everyone, Mentors, Military, Doctors"
+  path: mentor
+
+- number: 10
+  title: "Образование и наставничество"
+  title_en: "Education and Mentoring"
+  subtitle: "Педагогика диалога, сертификация наставников"
+  subtitle_en: "Dialogue Pedagogy, Mentor Certification"
+  audience: "Наставники, учителя"
+  audience_en: "Mentors, Teachers"
+  path: mentor
+
+- number: 11
+  title: "Глобальный синтез"
+  title_en: "Global Synthesis"
+  subtitle: "Цивилизационный диалог, Ubuntu и соборность"
+  subtitle_en: "Civilizational Dialogue, Ubuntu and Sobornost"
+  audience: "Изучающие, дипломаты"
+  audience_en: "Researchers, Diplomats"
+  path: deep
+
+- number: 12
+  title: "Библиотека Спирали"
+  title_en: "Library of the Spiral"
+  subtitle: "Аннотированная библиография"
+  subtitle_en: "Annotated Bibliography"
+  audience: "Все"
+  audience_en: "Everyone"
+  path: deep
+
+- number: 13
+  title: "Цивилизационная платформа"
+  title_en: "Civilizational Platform"
+  subtitle: "Модель Этического государства"
+  subtitle_en: "Model of the Ethical State"
+  audience: "Законодатели, госслужащие, координаторы"
+  audience_en: "Legislators, Civil Servants, Coordinators"
+  path: statesman
+
+- number: 14
+  title: "Производство и регенеративная экономика"
+  title_en: "Production and Regenerative Economy"
+  subtitle: "Общинные мастерские, Repair Café, энергокооперативы"
+  subtitle_en: "Community Workshops, Repair Café, Energy Cooperatives"
+  audience: "Координаторы, предприниматели, инженеры"
+  audience_en: "Coordinators, Entrepreneurs, Engineers"
+  path: coordinator

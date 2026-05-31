@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Путь — Эволюционная Фреймворка Процветания</title>
+  <meta name="description" content="Минимальная этическая система координат для сотрудничества. Два постулата, три запрета, три принципа. Живи ярко. Познавай смело. Помогай мудро.">
+  
+  <meta property="og:title" content="Путь — Эволюционная Фреймворка Процветания">
+  <meta property="og:description" content="Минимальная этическая система координат для сотрудничества среди всех людей.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌀</text></svg>">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/ru/" class="logo">
+        <div class="logo-symbol">🌀</div>
+        <span>Путь</span>
+      </a>
+      
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="/ru/">Главная</a></li>
+          <li><a href="/ru/about.html">О Пути</a></li>
+          <li><a href="/ru/practices.html">Практики</a></li>
+          <li><a href="/ru/community.html">Сообщество</a></li>
+          <li><a href="/ru/library.html">Библиотека</a></li>
+          <li><a href="/ru/faq.html">FAQ</a></li>
+        </ul>
+        
+        <div class="header-actions">
+          <div class="lang-switch">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn active" data-lang="ru">RU</button>
+          </div>
+          
+          <button class="theme-toggle" id="theme-toggle" title="Переключить темный режим">🌙</button>
+          
+          <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-spiral">🌀</div>
+      <h1>Путь</h1>
+      <p class="hero-tagline">"Живи ярко. Познавай смело. Помогай мудро."</p>
+      <p style="max-width: 700px; margin: 0 auto 2rem; color: var(--color-gray-400);">
+        Минимальная этическая система координат для сотрудничества среди всех людей, независимо от религии, культуры или мировоззрения. Два постулата. Три запрета. Три принципа.
+      </p>
+      <div class="hero-actions">
+        <a href="/ru/about.html" class="btn btn-primary">Исследовать Путь</a>
+        <a href="/ru/quickstart.html" class="btn btn-secondary">Начать 30-дневный гид</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Summary -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Основа системы</h2>
+        <p>Просто, но глубоко. Путь основан на двух постулатах, которые ведут к трем абсолютным запретам и трем позитивным принципам.</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="card">
+          <div class="card-icon">⚖️</div>
+          <h3>Два Постулата</h3>
+          <p><strong>Постулат 1:</strong> Действия имеют последствия. Мы существуем как сознательные существа в мире, который отвечает на наши действия.</p>
+          <p><strong>Постулат 2:</strong> Будущее открыто. Мы создаем его через сотрудничество, науку и осознанность.</p>
+          <a href="/ru/about.html" class="btn btn-ghost btn-sm">Узнать больше →</a>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">⛔</div>
+          <h3>Три Запрета</h3>
+          <p>Это абсолютные красные линии — действия, которые делают долгосрочное сотрудничество невозможным:</p>
+          <ul style="margin: 0.5rem 0; padding-left: 1.2rem;">
+            <li>Не убивай (кроме самообороны)</li>
+            <li>Не пытай</li>
+            <li>Не порабощай</li>
+          </ul>
+          <a href="/ru/ethics.html" class="btn btn-ghost btn-sm">Этика →</a>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">🌱</div>
+          <h3>Три Принципа</h3>
+          <p>Желательные направления для процветания (не обязательные):</p>
+          <ul style="margin: 0.5rem 0; padding-left: 1.2rem;">
+            <li>Развивай себя</li>
+            <li>Созидай и помогай</li>
+            <li>Думай о долгосрочном</li>
+          </ul>
+          <a href="/ru/practices.html" class="btn btn-ghost btn-sm">Практики →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Daily Practice -->
+  <section class="section" style="background-color: var(--color-white);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Ежедневная практика (2 минуты)</h2>
+        <p>Простые привычки, которые развивают осознанность и ответственность. Попробуйте сейчас.</p>
+      </div>
+      
+      <div class="practice-tracker" id="practice-tracker">
+        <div class="practice-item">
+          <input type="checkbox" id="morning-check" class="practice-checkbox">
+          <div class="practice-text">
+            <strong>Утреннее намерение</strong>
+            <small>Спроси: "Каким человеком я хочу быть сегодня?" "Что я сделаю при конфликте?" "Кому я могу помочь?"</small>
+          </div>
+        </div>
+        <div class="practice-item">
+          <input type="checkbox" id="evening-check" class="practice-checkbox">
+          <div class="practice-text">
+            <strong>Вечернее размышление</strong>
+            <small>Спроси: "Что я сделал хорошо сегодня?" "Что я мог сделать лучше?" "Кому я помог или навредил?"</small>
+          </div>
+        </div>
+        <button class="btn btn-ghost btn-sm" id="reset-practice" style="margin-top: 1rem;">Сбросить</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Cards -->
+  <section class="section">
+    <div class="container">
+      <div class="card-grid">
+        <a href="/ru/about.html" class="card">
+          <h3>О Пути</h3>
+          <p>Что такое Путь, два постулата, три запрета и три принципа.</p>
+        </a>
+        <a href="/ru/ethics.html" class="card">
+          <h3>Этика</h3>
+          <p>Как применять запреты в повседневной жизни, профессиях и конфликтах.</p>
+        </a>
+        <a href="/ru/practices.html" class="card">
+          <h3>Практики</h3>
+          <p>Ежедневные, еженедельные, ежемесячные и ежегодные практики.</p>
+        </a>
+        <a href="/ru/community.html" class="card">
+          <h3>Сообщество</h3>
+          <p>Как создать или присоединиться к сообществу, устав сообщества.</p>
+        </a>
+        <a href="/ru/economy.html" class="card">
+          <h3>Экономика</h3>
+          <p>Трехуровневая экономическая модель.</p>
+        </a>
+        <a href="/ru/politics.html" class="card">
+          <h3>Политика</h3>
+          <p>Политические принципы, субсидиарность, право на выход.</p>
+        </a>
+        <a href="/ru/education.html" class="card">
+          <h3>Образование</h3>
+          <p>Практики по возрасту, обучение без индоктринации.</p>
+        </a>
+        <a href="/ru/health.html" class="card">
+          <h3>Здоровье</h3>
+          <p>Профилактическое здоровье, гигиена разума.</p>
+        </a>
+        <a href="/ru/family.html" class="card">
+          <h3>Семья</h3>
+          <p>Любовь, воспитание, забота о пожилых.</p>
+        </a>
+        <a href="/ru/library.html" class="card">
+          <h3>Библиотека</h3>
+          <p>100+ аннотированных книг по философии, этике, экономике.</p>
+        </a>
+        <a href="/ru/stories.html" class="card">
+          <h3>Истории</h3>
+          <p>Притчи и моральные истории из традиции Пути.</p>
+        </a>
+        <a href="/ru/symbols.html" class="card">
+          <h3>Символы</h3>
+          <p>Открытая спираль, цвета, рекомендации по искусству.</p>
+        </a>
+        <a href="/ru/festivals.html" class="card">
+          <h3>Праздники</h3>
+          <p>Четыре ежегодных праздника, привязанных к солнцестояниям и равноденствиям.</p>
+        </a>
+        <a href="/ru/global.html" class="card">
+          <h3>Глобальная координация</h3>
+          <p>Как сообщества координируют действия на планетарном уровне.</p>
+        </a>
+        <a href="/ru/evolution.html" style="background-color: var(--color-gray-100);" class="card">
+          <h3>Эволюция системы</h3>
+          <p>Как изменять документы: 90% для ядра, 2/3 для остальных.</p>
+        </a>
+        <a href="/ru/faq.html" class="card">
+          <h3>FAQ</h3>
+          <p>Часто задаваемые вопросы и распространенные заблуждения.</p>
+        </a>
+        <a href="/ru/manifesto.html" class="card">
+          <h3>Манифест</h3>
+          <p>Почему принять Путь? Убедительный случай сотрудничества.</p>
+        </a>
+        <a href="/ru/roadmap.html" class="card">
+          <h3>Дорожная карта</h3>
+          <p>Шестифазный план реализации Пути.</p>
+        </a>
+        <a href="/ru/quickstart.html" class="card">
+          <h3>Быстрый старт</h3>
+          <p>30-дневный интерактивный гид для начала путешествия.</p>
+        </a>
+        <a href="/ru/resources.html" class="card">
+          <h3>Ресурсы</h3>
+          <p>Скачать PDF, найти сообщества, контакты.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Festival Countdown -->
+  <section class="section">
+    <div class="container">
+      <div class="festival-countdown" id="festival-countdown">
+        <h3>Следующий праздник: <span id="festival-name">Загрузка...</span></h3>
+        <div class="countdown-timer">
+          <div class="countdown-item">
+            <div class="number" id="countdown-days">--</div>
+            <div class="label">Дней</div>
+          </div>
+          <div class="countdown-item">
+            <div class="number" id="countdown-hours">--</div>
+            <div class="label">Часов</div>
+          </div>
+          <div class="countdown-item">
+            <div class="number" id="countdown-minutes">--</div>
+            <div class="label">Минут</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="section">
+    <div class="container">
+      <div class="disclaimer">
+        <strong>Отказ от ответственности:</strong> Этот контент предназначен только для академических, философских и научных исследовательских целей. Он не устанавливает религию, культ или систему убеждений. Это минимальная этическая система координат для сотрудничества, основанная на рациональном анализе, теории игр и эволюционной этике.
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Путь</h4>
+          <p style="font-size: 0.9rem; color: var(--color-gray-400);">
+            Минимальная этическая система координат для сотрудничества среди всех людей.
+          </p>
+        </div>
+        <div>
+          <h4>Быстрые ссылки</h4>
+          <ul class="footer-links">
+            <li><a href="/ru/about.html">О Пути</a></li>
+            <li><a href="/ru/practices.html">Практики</a></li>
+            <li><a href="/ru/community.html">Сообщество</a></li>
+            <li><a href="/ru/quickstart.html">Быстрый старт</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Документы</h4>
+          <ul class="footer-links">
+            <li><a href="/ru/library.html">Библиотека</a></li>
+            <li><a href="/ru/faq.html">FAQ</a></li>
+            <li><a href="/ru/manifesto.html">Манифест</a></li>
+            <li><a href="/ru/resources.html">Ресурсы</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Связь</h4>
+          <ul class="footer-links">
+            <li><a href="https://t.me/path_framework" target="_blank">Telegram канал</a></li>
+            <li><a href="mailto:contact@pathframework.org">Контакт</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Путь — Эволюционная Фреймворка Процветания, Версия 12.1</p>
+        <p>Creative Commons Attribution 4.0 International (CC BY 4.0)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

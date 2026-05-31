@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Jekyll build output
+web/_site/
+web/.jekyll-cache/
+web/.jekyll-metadata
+
+# System
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local
+
+# Archives
+*.7z
+*.7z:Zone.Identifier

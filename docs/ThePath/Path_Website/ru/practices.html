@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Практики — Путь</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌀</text></svg>">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/ru/" class="logo"><div class="logo-symbol">🌀</div><span>Путь</span></a>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="/ru/">Главная</a></li>
+          <li><a href="/ru/about.html">О Пути</a></li>
+          <li><a href="/ru/practices.html" class="active">Практики</a></li>
+          <li><a href="/ru/community.html">Сообщество</a></li>
+          <li><a href="/ru/library.html">Библиотека</a></li>
+          <li><a href="/ru/faq.html">FAQ</a></li>
+        </ul>
+        <div class="header-actions">
+          <div class="lang-switch">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn active" data-lang="ru">RU</button>
+          </div>
+          <button class="theme-toggle" id="theme-toggle">🌙</button>
+          <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Практики и Ритуали</h1>
+      <p>Ежедневные, еженедельные, ежемесячные и ежегодные практики.</p>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/ru/">Главная</a> <span>›</span> Практики
+      </div>
+      
+      <div class="content-area">
+        <h2>Чому практики важливі</h2>
+        <p>Практики забезпечують <strong>звичну структуру</strong>, що робить життя згідно з Шляхом природним і автоматичним.</p>
+        <p>Практики <strong>опційні</strong>, але настоятельно рекомендуються.</p>
+
+        <h2>Рівень 1: Щоденні практики (2 хвилини)</h2>
+        
+        <h3>Ранковий намір (1 хвилина)</h3>
+        <ol>
+          <li>Зупинись і зроби глибокий вдих.</li>
+          <li>Задай собі три питання:
+            <ul>
+              <li>"Яким человеком я хочу быть сегодня?"</li>
+              <li>"Що я зроблю при гніві/страху/конфлікті?"</li>
+              <li>"Кому я можу допомогти сьогодні?"</li>
+            </ul>
+          </li>
+        </ol>
+
+        <h3>Вечірнє роздум (1 хвилина)</h3>
+        <ol>
+          <li>Зупинись перед сном.</li>
+          <li>Задай собі три питання:
+            <ul>
+              <li>"Що я зробив добре сьогодні?"</li>
+              <li>"Що я міг би зробити краще?"</li>
+              <li>"Кому я допоміг або заподіяв шкоду сьогодні?"</li>
+            </ul>
+          </li>
+        </ol>
+
+        <h2>Інтерактивна щоденна практика</h2>
+        <div class="practice-tracker" id="practice-tracker">
+          <div class="practice-item">
+            <input type="checkbox" id="morning-check" class="practice-checkbox">
+            <div class="practice-text">
+              <strong>Ранковий намір</strong>
+              <small>"Яким человеком я хочу быть сегодня?"</small>
+            </div>
+          </div>
+          <div class="practice-item">
+            <input type="checkbox" id="evening-check" class="practice-checkbox">
+            <div class="practice-text">
+              <strong>Вечірнє роздум</strong>
+              <small>"Що я зробив добре сьогодні?"</small>
+            </div>
+          </div>
+          <button class="btn btn-ghost btn-sm" id="reset-practice" style="margin-top: 1rem;">Скинути</button>
+        </div>
+
+        <h2>Рівень 2: Тижневі практики</h2>
+        
+        <h3>Збори Розуму</h3>
+        <p>Тижневі збори (60-90 хвилин).</p>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr><th>Сегмент</th><th>Час</th><th>Опис</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Відкриття</td><td>5 хв</td><td>Колокольчик.</td></tr>
+              <tr><td>Перевірка</td><td>10 хв</td><td>Кожен говорить ім'я та почуття.</td></tr>
+              <tr><td>Тема</td><td>30 хв</td><td>Заявлена тема.</td></tr>
+              <tr><td>Обговорення</td><td>20 хв</td><td>Відкрита розмова.</td></tr>
+              <tr><td>Закриття</td><td>5 хв</td><td>"Ми — спільнота."</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Рівень 3: Місячні практики</h2>
+        
+        <h3>Година визнаного невігластва</h3>
+        <p>Визнай, що ти не знаєш.</p>
+
+        <h2>Рівень 4: Річні свята</h2>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr><th>Свято</th><th>Дата</th><th>Значення</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Весняне рівнодення</td><td>~20 березня</td><td>Оновлення</td></tr>
+              <tr><td>Літнє сонцестояння</td><td>~21 червня</td><td>Пік енергії</td></tr>
+              <tr><td>Осіннє рівнодення</td><td>~22 вересня</td><td>Врожай</td></tr>
+              <tr><td>Зимове сонцестояння</td><td>~21 грудня</td><td>Пам'ять</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center;">
+          <a href="/ru/quickstart.html" class="btn btn-primary">Почати 30-дневий гід</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 Путь — Эволюционная Фреймворка Процветания, Версия 12.1 | CC BY 4.0</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

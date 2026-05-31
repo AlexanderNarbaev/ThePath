@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library — The Path</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌀</text></svg>">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/en/" class="logo"><div class="logo-symbol">🌀</div><span>The Path</span></a>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="/en/">Home</a></li>
+          <li><a href="/en/about.html">About</a></li>
+          <li><a href="/en/practices.html">Practices</a></li>
+          <li><a href="/en/community.html">Community</a></li>
+          <li><a href="/en/library.html" class="active">Library</a></li>
+          <li><a href="/en/faq.html">FAQ</a></li>
+        </ul>
+        <div class="header-actions">
+          <div class="lang-switch">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ru">RU</button>
+          </div>
+          <button class="theme-toggle" id="theme-toggle">🌙</button>
+          <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Library</h1>
+      <p>100+ annotated books on philosophy, ethics, politics, economics, and more.</p>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/en/">Home</a> <span>›</span> Library
+      </div>
+      
+      <div class="content-area">
+        <h2>Search & Filter</h2>
+        <div class="search-container">
+          <input type="text" id="library-search" class="search-input" placeholder="Search by title, author, or topic...">
+          <div class="category-filter">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="philosophy">Philosophy</button>
+            <button class="category-btn" data-category="ethics">Ethics</button>
+            <button class="category-btn" data-category="politics">Politics</button>
+            <button class="category-btn" data-category="economics">Economics</button>
+            <button class="category-btn" data-category="psychology">Psychology</button>
+            <button class="category-btn" data-category="religion">Religion</button>
+            <button class="category-btn" data-category="fiction">Fiction</button>
+          </div>
+        </div>
+
+        <h2>Philosophy</h2>
+        
+        <h3>Classical Philosophy</h3>
+        <div class="book-item" data-title="Republic" data-author="Plato" data-category="philosophy">
+          <strong>Republic</strong> — Plato. Classic exploration of justice, the ideal state, and the role of the philosopher-king.
+        </div>
+        <div class="book-item" data-title="Nicomachean Ethics" data-author="Aristotle" data-category="philosophy">
+          <strong>Nicomachean Ethics</strong> — Aristotle. Foundations of virtue ethics, the concept of eudaimonia (flourishing).
+        </div>
+        <div class="book-item" data-title="Meditations" data-author="Marcus Aurelius" data-category="philosophy">
+          <strong>Meditations</strong> — Marcus Aurelius. Stoic philosophy in practice, daily reflections on duty and virtue.
+        </div>
+
+        <h3>Modern Philosophy</h3>
+        <div class="book-item" data-title="Groundwork of the Metaphysics of Morals" data-author="Immanuel Kant" data-category="philosophy">
+          <strong>Groundwork of the Metaphysics of Morals</strong> — Kant. The categorical imperative: treat humanity as an end, never merely as a means.
+        </div>
+        <div class="book-item" data-title="On Liberty" data-author="John Stuart Mill" data-category="philosophy">
+          <strong>On Liberty</strong> — Mill. Freedom of speech, self-sovereignty, harm principle.
+        </div>
+
+        <h2>Ethics & Cooperation</h2>
+        <div class="book-item" data-title="The Evolution of Cooperation" data-author="Robert Axelrod" data-category="ethics">
+          <strong>The Evolution of Cooperation</strong> — Axelrod. How cooperation emerges in iterated prisoner's dilemma.
+        </div>
+        <div class="book-item" data-title="Governing the Commons" data-author="Elinor Ostrom" data-category="ethics">
+          <strong>Governing the Commons</strong> — Ostrom. Collective management of shared resources.
+        </div>
+        <div class="book-item" data-title="The Righteous Mind" data-author="Jonathan Haidt" data-category="ethics">
+          <strong>The Righteous Mind</strong> — Haidt. Moral psychology, intuition and reasoning.
+        </div>
+
+        <h2>Politics</h2>
+        <div class="book-item" data-title="A Theory of Justice" data-author="John Rawls" data-category="politics">
+          <strong>A Theory of Justice</strong> — Rawls. Justice as fairness, original position.
+        </div>
+        <div class="book-item" data-title="The Power of the Powerless" data-author="Vaclav Havel" data-category="politics">
+          <strong>The Power of the Powerless</strong> — Havel. Dissidence, civil society, living in truth.
+        </div>
+
+        <h2>Economics</h2>
+        <div class="book-item" data-title="Doughnut Economics" data-author="Kate Raworth" data-category="economics">
+          <strong>Doughnut Economics</strong> — Raworth. Sustainable economics.
+        </div>
+        <div class="book-item" data-title="Development as Freedom" data-author="Amartya Sen" data-category="economics">
+          <strong>Development as Freedom</strong> — Sen. Freedom as development.
+        </div>
+
+        <h2>Psychology</h2>
+        <div class="book-item" data-title="Thinking Fast and Slow" data-author="Daniel Kahneman" data-category="psychology">
+          <strong>Thinking, Fast and Slow</strong> — Kahneman. Cognitive biases, dual-process theory.
+        </div>
+        <div class="book-item" data-title="The Lucifer Effect" data-author="Philip Zimbardo" data-category="psychology">
+          <strong>The Lucifer Effect</strong> — Zimbardo. Situational forces and evil.
+        </div>
+
+        <h2>Religion & Spirituality</h2>
+        <div class="book-item" data-title="Tao Te Ching" data-author="Lao Tzu" data-category="religion">
+          <strong>Tao Te Ching</strong> — Lao Tzu. Wu wei (non-action), natural order.
+        </div>
+        <div class="book-item" data-title="Dhammapada" data-author="Buddha" data-category="religion">
+          <strong>Dhammapada</strong> — Buddha. Buddhist ethics, Middle Path.
+        </div>
+
+        <h2>Science Fiction</h2>
+        <div class="book-item" data-title="The Dispossessed" data-author="Ursula K. Le Guin" data-category="fiction">
+          <strong>The Dispossessed</strong> — Le Guin. Anarchism and cooperation.
+        </div>
+        <div class="book-item" data-title="Mars Trilogy" data-author="Kim Stanley Robinson" data-category="fiction">
+          <strong>Mars Trilogy</strong> — Robinson. Long-term terraforming.
+        </div>
+
+        <h2>Modern Thinkers</h2>
+        <div class="book-item" data-title="Superintelligence" data-author="Nick Bostrom" data-category="philosophy">
+          <strong>Superintelligence</strong> — Bostrom. AI risk.
+        </div>
+        <div class="book-item" data-title="What We Owe the Future" data-author="William MacAskill" data-category="philosophy">
+          <strong>What We Owe the Future</strong> — MacAskill. Longtermism.
+        </div>
+        <div class="book-item" data-title="The Precipice" data-author="Toby Ord" data-category="philosophy">
+          <strong>The Precipice</strong> — Ord. Existential risk.
+        </div>
+
+        <div class="disclaimer" style="margin-top: 2rem;">
+          <strong>Note:</strong> This library is a starting point, not an endorsement. Inclusion does not mean endorsement of every idea in a book. The Path encourages reading broadly and thinking critically.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 The Path — Evolutionary Framework of Flourishing, Version 12.1 | CC BY 4.0</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

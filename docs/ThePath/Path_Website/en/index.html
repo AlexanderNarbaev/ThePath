@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Path — Evolutionary Framework of Flourishing</title>
+  <meta name="description" content="A minimal ethical framework for cooperation. Two axioms, three prohibitions, three principles. Live brightly. Know boldly. Help wisely.">
+  
+  <meta property="og:title" content="The Path — Evolutionary Framework of Flourishing">
+  <meta property="og:description" content="A minimal ethical framework for cooperation among all human beings.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌀</text></svg>">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/en/" class="logo">
+        <div class="logo-symbol">🌀</div>
+        <span>The Path</span>
+      </a>
+      
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="/en/">Home</a></li>
+          <li><a href="/en/about.html">About</a></li>
+          <li><a href="/en/practices.html">Practices</a></li>
+          <li><a href="/en/community.html">Community</a></li>
+          <li><a href="/en/library.html">Library</a></li>
+          <li><a href="/en/faq.html">FAQ</a></li>
+        </ul>
+        
+        <div class="header-actions">
+          <div class="lang-switch">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ru">RU</button>
+          </div>
+          
+          <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">🌙</button>
+          
+          <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-spiral">🌀</div>
+      <h1>The Path</h1>
+      <p class="hero-tagline">"Live brightly. Know boldly. Help wisely."</p>
+      <p style="max-width: 700px; margin: 0 auto 2rem; color: var(--color-gray-400);">
+        A minimal ethical framework for cooperation among all human beings, regardless of religion, culture, or worldview. Two axioms. Three prohibitions. Three principles.
+      </p>
+      <div class="hero-actions">
+        <a href="/en/about.html" class="btn btn-primary">Explore the Path</a>
+        <a href="/en/quickstart.html" class="btn btn-secondary">Start 30-Day Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Summary -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>The Core Framework</h2>
+        <p>Simple but profound. The Path rests on two foundational axioms that lead to three absolute prohibitions and three positive principles.</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="card">
+          <div class="card-icon">⚖️</div>
+          <h3>Two Axioms</h3>
+          <p><strong>Axiom 1:</strong> Actions have consequences. We exist as conscious beings in a world that responds to our actions.</p>
+          <p><strong>Axiom 2:</strong> The future is open. We create it through cooperation, science, and awareness.</p>
+          <a href="/en/about.html" class="btn btn-ghost btn-sm">Learn more →</a>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">⛔</div>
+          <h3>Three Prohibitions</h3>
+          <p>These are absolute red lines — actions that make long-term cooperation impossible:</p>
+          <ul style="margin: 0.5rem 0; padding-left: 1.2rem;">
+            <li>Do not kill (except self-defense)</li>
+            <li>Do not torture</li>
+            <li>Do not enslave</li>
+          </ul>
+          <a href="/en/ethics.html" class="btn btn-ghost btn-sm">See ethics →</a>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">🌱</div>
+          <h3>Three Principles</h3>
+          <p>Desirable directions for flourishing (not mandatory):</p>
+          <ul style="margin: 0.5rem 0; padding-left: 1.2rem;">
+            <li>Develop yourself</li>
+            <li>Create and help</li>
+            <li>Think long-term</li>
+          </ul>
+          <a href="/en/practices.html" class="btn btn-ghost btn-sm">Explore practices →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Daily Practice -->
+  <section class="section" style="background-color: var(--color-white);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Daily Practice (2 Minutes)</h2>
+        <p>Simple habits that build awareness and accountability. Try it now.</p>
+      </div>
+      
+      <div class="practice-tracker" id="practice-tracker">
+        <div class="practice-item">
+          <input type="checkbox" id="morning-check" class="practice-checkbox">
+          <div class="practice-text">
+            <strong>Morning Intention</strong>
+            <small>Ask: "What kind of person do I want to be today?" "What will I do if I face conflict?" "Whom can I help?"</small>
+          </div>
+        </div>
+        <div class="practice-item">
+          <input type="checkbox" id="evening-check" class="practice-checkbox">
+          <div class="practice-text">
+            <strong>Evening Reflection</strong>
+            <small>Ask: "What did I do well today?" "What could I have done better?" "Who did I help or harm?"</small>
+          </div>
+        </div>
+        <button class="btn btn-ghost btn-sm" id="reset-practice" style="margin-top: 1rem;">Reset</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Cards -->
+  <section class="section">
+    <div class="container">
+      <div class="card-grid">
+        <a href="/en/about.html" class="card">
+          <h3>About</h3>
+          <p>What is the Path, the two axioms, three prohibitions, and three principles explained in detail.</p>
+        </a>
+        <a href="/en/ethics.html" class="card">
+          <h3>Ethics</h3>
+          <p>How to apply the prohibitions in daily life, professions, conflict, and extreme situations.</p>
+        </a>
+        <a href="/en/practices.html" class="card">
+          <h3>Practices</h3>
+          <p>Daily, weekly, monthly, and yearly practices including the Assembly of Reason.</p>
+        </a>
+        <a href="/en/community.html" class="card">
+          <h3>Community</h3>
+          <p>How to start or join a community, conflict resolution, and the community charter.</p>
+        </a>
+        <a href="/en/economy.html" class="card">
+          <h3>Economy</h3>
+          <p>The three-tier economic model: abundance, markets, and voluntary contributions.</p>
+        </a>
+        <a href="/en/politics.html" class="card">
+          <h3>Politics</h3>
+          <p>Political principles, subsidiarity, separation of powers, and the right to exit.</p>
+        </a>
+        <a href="/en/education.html" class="card">
+          <h3>Education</h3>
+          <p>Age-appropriate practices, teaching without indoctrination, lifelong learning.</p>
+        </a>
+        <a href="/en/health.html" class="card">
+          <h3>Health</h3>
+          <p>Preventive health, mental hygiene, and ethical medicine.</p>
+        </a>
+        <a href="/en/family.html" class="card">
+          <h3>Family</h3>
+          <p>Love, parenting, elderly care, and relationships.</p>
+        </a>
+        <a href="/en/library.html" class="card">
+          <h3>Library</h3>
+          <p>100+ annotated books on philosophy, ethics, politics, economics, and more.</p>
+        </a>
+        <a href="/en/stories.html" class="card">
+          <h3>Stories</h3>
+          <p>Parables and moral stories from the Path tradition.</p>
+        </a>
+        <a href="/en/symbols.html" class="card">
+          <h3>Symbols</h3>
+          <p>The open spiral, colors, and art guidelines.</p>
+        </a>
+        <a href="/en/festivals.html" class="card">
+          <h3>Festivals</h3>
+          <p>Four yearly festivals aligned with solstices and equinoxes.</p>
+        </a>
+        <a href="/en/global.html" class="card">
+          <h3>Global Coordination</h3>
+          <p>How communities network and coordinate on planetary challenges.</p>
+        </a>
+        <a href="/en/evolution.html" class="card">
+          <h3>System Evolution</h3>
+          <p>How to change documents: 90% for core, 2/3 for others.</p>
+        </a>
+        <a href="/en/faq.html" class="card">
+          <h3>FAQ</h3>
+          <p>Frequently asked questions and common misconceptions.</p>
+        </a>
+        <a href="/en/manifesto.html" class="card">
+          <h3>Manifesto</h3>
+          <p>Why adopt the Path? A persuasive case for cooperation.</p>
+        </a>
+        <a href="/en/roadmap.html" class="card">
+          <h3>Roadmap</h3>
+          <p>Six-phase implementation plan for the Path.</p>
+        </a>
+        <a href="/en/quickstart.html" class="card">
+          <h3>Quick Start</h3>
+          <p>30-day interactive guide to begin your journey.</p>
+        </a>
+        <a href="/en/resources.html" class="card">
+          <h3>Resources</h3>
+          <p>Download PDFs, find community platforms, contact information.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Festival Countdown -->
+  <section class="section">
+    <div class="container">
+      <div class="festival-countdown" id="festival-countdown">
+        <h3>Next Festival: <span id="festival-name">Loading...</span></h3>
+        <div class="countdown-timer">
+          <div class="countdown-item">
+            <div class="number" id="countdown-days">--</div>
+            <div class="label">Days</div>
+          </div>
+          <div class="countdown-item">
+            <div class="number" id="countdown-hours">--</div>
+            <div class="label">Hours</div>
+          </div>
+          <div class="countdown-item">
+            <div class="number" id="countdown-minutes">--</div>
+            <div class="label">Minutes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="section">
+    <div class="container">
+      <div class="disclaimer">
+        <strong>Disclaimer:</strong> This content is for academic, philosophical, and scientific research purposes only. It does not establish a religion, cult, or belief system. It is a minimal ethical framework for cooperation based on rational analysis, game theory, and evolutionary ethics. No supernatural claims are made.
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>The Path</h4>
+          <p style="font-size: 0.9rem; color: var(--color-gray-400);">
+            A minimal ethical framework for cooperation among all human beings.
+          </p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/en/about.html">About</a></li>
+            <li><a href="/en/practices.html">Practices</a></li>
+            <li><a href="/en/community.html">Community</a></li>
+            <li><a href="/en/quickstart.html">Quick Start</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Documents</h4>
+          <ul class="footer-links">
+            <li><a href="/en/library.html">Library</a></li>
+            <li><a href="/en/faq.html">FAQ</a></li>
+            <li><a href="/en/manifesto.html">Manifesto</a></li>
+            <li><a href="/en/resources.html">Resources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="https://t.me/path_framework" target="_blank">Telegram Channel</a></li>
+            <li><a href="mailto:contact@pathframework.org">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 The Path — Evolutionary Framework of Flourishing, Version 12.1</p>
+        <p>Creative Commons Attribution 4.0 International (CC BY 4.0)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

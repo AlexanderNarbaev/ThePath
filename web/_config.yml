@@ -1,0 +1,22 @@
+title: Спираль Сознания
+title_en: Spiral of Consciousness
+description: Моральный компас для человека, гражданина и власти
+description_en: A Moral Compass for the Individual, the Citizen, and Authority
+baseurl: ""
+url: "https://spiralconsciousness.org"
+
+defaults:
+  - scope:
+      path: "ru"
+    values:
+      lang: ru
+  - scope:
+      path: "en"
+    values:
+      lang: en
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
