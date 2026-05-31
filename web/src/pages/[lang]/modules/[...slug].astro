@@ -25,13 +25,13 @@ const doc = allMods.find((entry) => entry.id === entryId);
 
 if (!doc) return Astro.redirect(`/ThePath/${lang}`);
 
-const { Content } = await doc.render();
+const { Content, headings } = await doc.render();
 
 const meta = modules.find((m) => m.slug === slug);
 const title = meta?.title[lang] ?? doc.data.title;
 const subtitle = meta?.subtitle[lang] ?? doc.data.subtitle;
 ---
 
-<ModuleLayout lang={lang} title={title} subtitle={subtitle} moduleNumber={doc.data.module_number} version={doc.data.version}>
+<ModuleLayout lang={lang} title={title} subtitle={subtitle} moduleNumber={doc.data.module_number} version={doc.data.version} headings={headings}>
   <Content />
 </ModuleLayout>
