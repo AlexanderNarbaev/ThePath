@@ -26,7 +26,7 @@ jobs:
           BASE_PATH: /thepath
 
       - name: Upload pages artifact
-        uses: gitverse/upload-pages-artifact@v1.0.0
+        uses: actions/upload-pages-artifact@v1
         with:
           path: web/dist
 
@@ -34,4 +34,15 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: gitverse/deploy-pages@v1.0.0
+      - uses: actions/setup-go@v4
+        with:
+          go-version: '>=1.23'
+
+      - name: Deploy to GitVerse Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+        with:
+          artifact_name: gitverse-pages
+
+      - name: Print deploy URL
+        run: echo "🌐 page_url = ${{ steps.deployment.outputs.page_url }}"
