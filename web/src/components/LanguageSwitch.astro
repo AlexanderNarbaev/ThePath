@@ -2,16 +2,16 @@
 import type { Lang } from '../i18n/ui';
 const { lang, currentPath } = Astro.props as { lang: Lang; currentPath: string };
 const otherLang = lang === 'ru' ? 'en' : 'ru';
-const base = Astro.site?.base ?? '';
+const base = '/ThePath';
 const relPath = currentPath.startsWith(base) ? currentPath.slice(base.length) : currentPath;
 const otherPath = relPath.replace(`/${lang}`, `/${otherLang}`) || `/${otherLang}`;
 ---
 
 <div class="lang-switch">
   {lang === 'ru' ? (
-    <><span class="lang-active">RU</span><a href={otherPath} class="lang-link">EN</a></>
+    <><span class="lang-active">RU</span><a href={base + otherPath} class="lang-link">EN</a></>
   ) : (
-    <><a href={otherPath} class="lang-link">RU</a><span class="lang-active">EN</span></>
+    <><a href={base + otherPath} class="lang-link">RU</a><span class="lang-active">EN</span></>
   )}
 </div>
 

@@ -9,7 +9,7 @@ interface Props { lang: Lang; title: string; description?: string; }
 const { lang, title, description } = Astro.props;
 const siteName = t('site.name', lang);
 const pageDesc = description ?? t('hero.subtitle', lang);
-const base = Astro.site?.base ?? '';
+const base = '/ThePath';
 ---
 
 <!doctype html>
@@ -19,8 +19,8 @@ const base = Astro.site?.base ?? '';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title} — {siteName}</title>
   <meta name="description" content={pageDesc} />
-  <link rel="icon" type="image/x-icon" href={`${base}/favicon.ico`} />
-  <link rel="apple-touch-icon" href={`${base}/apple-touch-icon.png`} />
+  <link rel="icon" type="image/x-icon" href="/ThePath/favicon.ico" />
+  <link rel="apple-touch-icon" href="/ThePath/apple-touch-icon.png" />
   <meta property="og:title" content={`${title} — ${siteName}`} />
   <meta property="og:description" content={pageDesc} />
   <meta property="og:type" content="website" />

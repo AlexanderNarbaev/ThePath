@@ -15,7 +15,7 @@ const allPages = await getCollection('pages');
 const page = allPages.find((e) => e.id.includes('map') && e.data?.lang === lang);
 if (!page) return Astro.redirect(`/ThePath/${lang}`);
 const { Content } = await page.render();
-const base = Astro.site?.base ?? '';
+const base = '/ThePath';
 ---
 
 <BaseLayout lang={lang as 'ru' | 'en'} title={t('map.title' as any, lang as 'ru' | 'en')}>
