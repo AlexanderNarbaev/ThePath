@@ -1,13 +1,5 @@
-# GLOBAL WAL — 2026-05-31
-| Module | Status | Last_Agent | Last_Action |
-|--------|--------|------------|-------------|
-| Git | done | opencode | init repo, dual remotes (origin=GitHub, gitverse=GitVerse), pushed |
-| Docs | done | opencode | INDEX.md created with full knowledge map of 15 modules + meta |
-| Icons | done | opencode | extracted logo + 10 icon elements from 1024x1024 composite; web-optimised |
-| Web | done | opencode | Jekyll site in web/: 36 pages (RU+EN), 4 layouts, 4 includes, responsive CSS |
-| CI/CD | done | opencode | deploy.yml via peaceiris/actions-gh-pages → gh-pages branch, runs OK |
-| Deploy | pending | user | Set GitHub Pages source to gh-pages branch + GitVerse Pages setup |
+# GLOBAL WAL
 
-📍 Status: Jekyll-сайт «Спираль Сознания» собран, workflow green, ждёт ручной настройки Pages
-🚀 Active: Settings → Pages → Source: gh-pages / (root); GitVerse — аналогично
-🛑 Protected: PAT-токены в .git/config; docs/Archive/ — старые версии
+📍 Status: 53 страницы, 17 модулей, ~80 FAQ, 7 символов, 6 интерактивных компонентов. Astro 5 + Preact + Tailwind. GitHub Pages + GitVerse Pages. Сайт полностью автономен — удалены все внешние ссылки, контакты, Google Fonts. Главная переписана.
+🚀 Active: Ожидает публикации на GitVerse. Пользователь должен переключить источник Pages на «Воркфлоу» в настройках репозитория GitVerse.
+🛑 Protected: Канон (Модуль 0) — только дополнения, ядро неизменно. BASE_PATH через env var: GitHub=/ThePath, GitVerse=/thepath. Никаких внешних ссылок. 2026-05-31.

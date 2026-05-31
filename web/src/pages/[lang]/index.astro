@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import HomeLayout from '../../layouts/HomeLayout.astro';
 import Hero from '../../components/home/Hero.astro';
 import ProhibitionsCards from '../../components/home/ProhibitionsCards.astro';
+import PrinciplesCards from '../../components/home/PrinciplesCards.astro';
 import PathCards from '../../components/home/PathCards.astro';
 import DailyChecklist from '../../components/interactive/DailyChecklist';
 import EthicalCompass from '../../components/interactive/EthicalCompass';
@@ -22,6 +23,7 @@ const { Content } = page ? await page.render() : { Content: null };
   <Hero lang={lang as 'ru' | 'en'} />
   <div class="home-content">
     <ProhibitionsCards lang={lang as 'ru' | 'en'} />
+    <PrinciplesCards lang={lang as 'ru' | 'en'} />
     {Content && <div class="home-prose"><Content /></div>}
     <div class="home-interactive">
       <DailyChecklist lang={lang as 'ru' | 'en'} client:load />

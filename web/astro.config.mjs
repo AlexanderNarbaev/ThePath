@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://alexandernarbaev.github.io',
-  base: '/ThePath',
+  base: process.env.BASE_PATH || '/ThePath',
   integrations: [preact()],
   vite: {
     plugins: [tailwindcss()],

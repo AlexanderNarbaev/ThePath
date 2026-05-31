@@ -87,21 +87,9 @@ Understanding the philosophical foundations, technological challenges, and globa
 
 The "Spiral of Consciousness" is a living system, and we welcome community participation.
 
-- **Propose an improvement to a module** — create an issue on GitHub or write on Telegram.
-- **Report an error or lack of clarity** — use the contacts below.
-- **Become a mentor** — undergo training and obtain certification.
+- **Become a mentor** — follow the "Mentor" path and apply the practices in your life.
 - **Create a local community** — use Module 5 for conflict resolution and Module 8 for governance.
 - **Implement Spiral principles in public service** — use the "State Official" path.
-- **Translate modules into another language** — contact the coordinators.
-
----
-
-## 🌐 Contacts and Resources
-
-- **Website:** [https://spiralconsciousness.org](https://spiralconsciousness.org) *(placeholder)*
-- **Telegram channel:** [t.me/spiral_consciousness](https://t.me/spiral_consciousness) *(announcements, news)*
-- **Community chat:** [t.me/spiral_chat](https://t.me/spiral_chat) *(discussions, support)*
-- **GitHub (module source texts):** [github.com/spiral‑consciousness](https://github.com/spiral‑consciousness) *(placeholder)*
 
 ---
 

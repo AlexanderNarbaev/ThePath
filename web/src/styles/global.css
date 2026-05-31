@@ -19,7 +19,7 @@
   --color-cosmic-border: #2a2a40;
   --color-cosmic-text: #f0efe7;
   --color-cosmic-text-secondary: #a0a0b8;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Monaco', monospace;
   --max-width-content: 720px;
   --sidebar-width: 260px;
 }

@@ -1,0 +1,41 @@
+---
+import { t, type Lang } from '../../i18n/ui';
+const { lang } = Astro.props as { lang: Lang };
+---
+
+<section class="principles">
+  <h2>{t('principles.title', lang)}</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">&#x1F331;</div>
+      <h3>{t('principles.1_title', lang)}</h3>
+      <p>{t('principles.1_desc', lang)}</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">&#x1F91D;</div>
+      <h3>{t('principles.2_title', lang)}</h3>
+      <p>{t('principles.2_desc', lang)}</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">&#x1F30D;</div>
+      <h3>{t('principles.3_title', lang)}</h3>
+      <p>{t('principles.3_desc', lang)}</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">&#x1F9E0;</div>
+      <h3>{t('principles.4_title', lang)}</h3>
+      <p>{t('principles.4_desc', lang)}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .principles { margin: 3rem 0; text-align: center; }
+  .principles h2 { margin-bottom: 1.5rem; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
+  .card { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+  .card-icon { font-size: 2rem; margin-bottom: 0.5rem; opacity: 0.7; }
+  .card h3 { font-size: 1.1rem; margin: 0.5rem 0; }
+  .card p { font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.5; }
+</style>

@@ -3,21 +3,31 @@ title: "Spiral of Consciousness"
 lang: en
 ---
 
-## Welcome
+## What is the Spiral of Consciousness?
 
-The "Spiral of Consciousness" is an open, evolving system of practices, ethics, and worldview, created for navigation in the era of the Great Trial (XXI–XXIII centuries).
+The "Spiral of Consciousness" is an **open system of ethics, practices, and worldview** for navigating the era of the Great Trial (21st–23rd centuries). It does not demand that you abandon your convictions, imposes no dogmas, and promises no easy answers.
 
-It does not demand that you abandon your convictions, imposes no dogmas, and promises no easy answers. Instead, it offers proven tools for resilience, cooperation, and long-term flourishing — personal, communal, and civilizational.
+Instead, it offers **proven tools** for resilience, cooperation, and long-term flourishing — personal, communal, and civilizational.
 
-### Three Prohibitions
+The Spiral is a **supranational moral guide**. It serves no state, but sets ethical boundaries for any. It acknowledges the reality of armies, police, borders, and sovereignty, but demands their ethical limitation.
 
-**Do not kill. Do not torture. Do not enslave.** — absolute red lines for the individual, the community, and the state.
+### Why It Works
 
-### Four Principles
+The Spiral rests on scientific and philosophical foundations — from thermodynamics and complexity theory to virtue ethics and Ubuntu. Its principles are based on observable patterns: entropy destroys complex systems, while conscious choice and cooperation strengthen them.
 
-**Develop yourself. Create and help. Think long-term. Preserve and multiply consciousness.**
+Learn more in **[Scientific & Philosophical Foundations](/ThePath/en/modules/scientific-foundations)**.
 
-### System Overview
+### Who Is It For?
+
+| You Are | Your Path | Time |
+|---------|-----------|------|
+| A person seeking a moral compass | [Quick Start](/ThePath/en/paths/quickstart) | ~2 hours |
+| Someone who wants to help others | [Mentor](/ThePath/en/paths/mentor) | 15–20 hours |
+| A community or organization leader | [Coordinator](/ThePath/en/paths/coordinator) | 25–30 hours |
+| A politician, soldier, judge, diplomat | [Statesman](/ThePath/en/paths/statesman) | 30–40 hours |
+| A researcher, skeptic, enthusiast | [In-Depth Study](/ThePath/en/paths/deep) | Self-paced |
+
+### What's Inside
 
 | Domain | Modules |
 |---------|--------|
@@ -29,4 +39,9 @@ It does not demand that you abandon your convictions, imposes no dogmas, and pro
 | **Economics** | Economics (7), Production (14) |
 | **Knowledge** | Technology (6), Education (10), Library (12) |
 
-*Start with the [Guide Map](/ThePath/en/map) to choose your path.*
+### How to Start
+
+1. **Read the [Manifesto](/ThePath/en/manifesto)** — 10 minutes to understand the spirit of the system.
+2. **Study the [Canon (Module 0)](/ThePath/en/modules/0-canon)** — the core: axioms, prohibitions, principles.
+3. **Master the [Practices (Module 3)](/ThePath/en/modules/3-practices)** — start with 3 minutes a day.
+4. **Choose a [study path](/ThePath/en/map)** — suited to your level and goals.
