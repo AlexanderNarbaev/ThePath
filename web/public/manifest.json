@@ -1,0 +1,14 @@
+{
+  "name": "Спираль Сознания",
+  "short_name": "Spiral",
+  "description": "Моральный компас для человека, гражданина и власти",
+  "start_url": "/ThePath/ru/",
+  "display": "standalone",
+  "background_color": "#0a0a14",
+  "theme_color": "#e6c17b",
+  "icons": [
+    { "src": "/ThePath/favicon.ico", "sizes": "32x32", "type": "image/x-icon" }
+  ],
+  "lang": "ru",
+  "dir": "ltr"
+}
