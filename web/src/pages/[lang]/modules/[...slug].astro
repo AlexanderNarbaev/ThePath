@@ -13,14 +13,19 @@ export async function getStaticPaths() {
         lang: entry.data.lang,
         slug: entry.id.replace(/^modules\//, '').replace(/\.md$/, '').split('/').pop() || '',
       },
+      props: { entryId: entry.id },
     }));
 }
 
 const { lang, slug } = Astro.params as { lang: Lang; slug: string };
+const { entryId } = Astro.props as { entryId: string };
+
 const allMods = await getCollection('modules');
-const doc = allMods.find((entry) => entry.data?.lang === lang && entry.id.includes(`/${slug}.md`));
+const doc = allMods.find((entry) => entry.id === entryId);
 
 if (!doc) return Astro.redirect(`/ThePath/${lang}`);
+
+const { Content } = await doc.render();
 
 const meta = modules.find((m) => m.slug === slug);
 const title = meta?.title[lang] ?? doc.data.title;
@@ -28,5 +33,5 @@ const subtitle = meta?.subtitle[lang] ?? doc.data.subtitle;
 ---
 
 <ModuleLayout lang={lang} title={title} subtitle={subtitle} moduleNumber={doc.data.module_number} version={doc.data.version}>
-  <article set:html={doc.body} />
+  <Content />
 </ModuleLayout>

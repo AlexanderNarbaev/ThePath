@@ -4,23 +4,24 @@ import HomeLayout from '../../layouts/HomeLayout.astro';
 import Hero from '../../components/home/Hero.astro';
 import ProhibitionsCards from '../../components/home/ProhibitionsCards.astro';
 import PathCards from '../../components/home/PathCards.astro';
-import { t, type Lang } from '../../i18n/ui';
+import { t } from '../../i18n/ui';
 
 export async function getStaticPaths() {
   return [{ params: { lang: 'ru' } }, { params: { lang: 'en' } }];
 }
 
-const { lang } = Astro.params as { lang: Lang };
-const pages = await getCollection('pages', ({ data }) => data && data.lang === lang);
-const page = pages.find((p) => p.id.includes('index'));
+const { lang } = Astro.params;
+const allPages = await getCollection('pages');
+const page = allPages.find((e) => e.id.includes('index') && e.data?.lang === lang);
+const { Content } = page ? await page.render() : { Content: null };
 ---
 
-<HomeLayout lang={lang} title={t('site.name', lang)}>
-  <Hero lang={lang} />
+<HomeLayout lang={lang as 'ru' | 'en'} title={t('site.name', lang as 'ru' | 'en')}>
+  <Hero lang={lang as 'ru' | 'en'} />
   <div class="home-content">
-    <ProhibitionsCards lang={lang} />
-    {page && <div class="home-prose" set:html={page.body} />}
-    <PathCards lang={lang} />
+    <ProhibitionsCards lang={lang as 'ru' | 'en'} />
+    {Content && <div class="home-prose"><Content /></div>}
+    <PathCards lang={lang as 'ru' | 'en'} />
   </div>
 </HomeLayout>
 

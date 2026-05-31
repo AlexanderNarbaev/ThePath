@@ -1,21 +1,23 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { t, type Lang } from '../../i18n/ui';
+import { t } from '../../i18n/ui';
 
 export async function getStaticPaths() {
   return [{ params: { lang: 'ru' } }, { params: { lang: 'en' } }];
 }
 
-const { lang } = Astro.params as { lang: Lang };
-const pages = await getCollection('pages', ({ data }) => data && data.lang === lang);
-const page = pages.find((p) => p.id.includes('manifesto'));
+const { lang } = Astro.params;
+const allPages = await getCollection('pages');
+const page = allPages.find((e) => e.id.includes('manifesto') && e.data?.lang === lang);
+if (!page) return Astro.redirect(`/ThePath/${lang}`);
+const { Content } = await page.render();
 ---
 
-<BaseLayout lang={lang} title={t('manifesto.title', lang)}>
+<BaseLayout lang={lang as 'ru' | 'en'} title={t('manifesto.title' as any, lang as 'ru' | 'en')}>
   <div class="content-wide">
     <article class="manifesto">
-      {page && <div set:html={page.body} />}
+      <Content />
     </article>
   </div>
 </BaseLayout>

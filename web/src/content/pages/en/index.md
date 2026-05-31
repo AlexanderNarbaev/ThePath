@@ -29,4 +29,4 @@ It does not demand that you abandon your convictions, imposes no dogmas, and pro
 | **Economics** | Economics (7), Production (14) |
 | **Knowledge** | Technology (6), Education (10), Library (12) |
 
-*Start with the [Guide Map]({{ site.baseurl }}/en/map.html) to choose your path.*
+*Start with the [Guide Map](/ThePath/en/map) to choose your path.*
