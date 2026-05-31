@@ -1,0 +1,15 @@
+---
+import { t, type Lang } from '../../i18n/ui';
+const { lang, number, version } = Astro.props as { lang: Lang; number: number; version?: string };
+---
+
+<div class="module-meta">
+  <span class="module-number">{t('module.number', lang)} {number}</span>
+  {version && <span class="module-version">{t('module.version', lang)} {version}</span>}
+</div>
+
+<style>
+  .module-meta { display: flex; gap: 1rem; margin-bottom: 0.5rem; font-size: 0.85rem; color: var(--color-text-secondary); }
+  .module-number { font-weight: 600; }
+  .module-version { opacity: 0.7; }
+</style>

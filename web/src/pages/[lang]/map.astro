@@ -1,0 +1,74 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ModuleGraph from '../../components/map/ModuleGraph';
+import { t, type Lang } from '../../i18n/ui';
+import { modules } from '../../i18n/modules';
+import { paths } from '../../i18n/paths';
+
+export async function getStaticPaths() {
+  return [{ params: { lang: 'ru' } }, { params: { lang: 'en' } }];
+}
+
+const { lang } = Astro.params as { lang: Lang };
+const base = Astro.site?.base ?? '';
+const pages = await getCollection('pages', ({ data }) => data && data.lang === lang);
+const page = pages.find((p) => p.id.includes('map'));
+---
+
+<BaseLayout lang={lang} title={t('map.title', lang)}>
+  <div class="content-wide">
+    <h1>{t('map.title', lang)}</h1>
+    {page && <div set:html={page.body} />}
+
+    <section style="margin:2rem 0;">
+      <h2>{t('map.modules', lang)}</h2>
+      <ModuleGraph lang={lang} client:load />
+    </section>
+
+    <section style="margin:2rem 0;">
+      <table>
+        <thead><tr><th>#</th><th>{lang === 'ru' ? 'Название' : 'Title'}</th><th>{lang === 'ru' ? 'Аудитория' : 'Audience'}</th><th>{lang === 'ru' ? 'Путь' : 'Path'}</th></tr></thead>
+        <tbody>
+          {modules.map((m) => (
+            <tr><td>{m.number}</td><td><a href={`${base}/${lang}/modules/${m.slug}`}>{m.title[lang]}</a></td><td>{m.audience[lang]}</td><td><span class="path-badge">{m.path}</span></td></tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+
+    <section style="margin:2rem 0;">
+      <h2>{t('map.paths', lang)}</h2>
+      {paths.map((p) => (
+        <div class="path-detail">
+          <h3>{p.name[lang]}</h3>
+          <p class="path-meta">{p.time[lang]} &middot; {p.audience[lang]}</p>
+          <p>{p.description[lang]}</p>
+          <div class="path-modules"><span class="label">{t('paths.required', lang)}:</span>
+            {p.modules.map((n) => { const mod = modules.find((m) => m.number === n); return mod ? <a href={`${base}/${lang}/modules/${mod.slug}`} class="module-chip">{mod.title[lang]}</a> : null; })}
+          </div>
+          {p.optional && (<div class="path-modules"><span class="label">{t('paths.optional', lang)}:</span>
+            {p.optional.map((n) => { const mod = modules.find((m) => m.number === n); return mod ? <a href={`${base}/${lang}/modules/${mod.slug}`} class="module-chip chip-opt">{mod.title[lang]}</a> : null; })}
+          </div>)}
+          {p.recommended && (<div class="path-modules"><span class="label">{t('paths.recommended', lang)}:</span>
+            {p.recommended.map((n) => { const mod = modules.find((m) => m.number === n); return mod ? <a href={`${base}/${lang}/modules/${mod.slug}`} class="module-chip chip-rec">{mod.title[lang]}</a> : null; })}
+          </div>)}
+          <a href={`${base}/${lang}/paths/${p.id}`} class="path-start-link">{t('paths.start', lang)} &rarr;</a>
+        </div>
+      ))}
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .path-badge { font-size: 0.75rem; padding: 0.15rem 0.5rem; border-radius: 4px; background: var(--color-bg-secondary); display: inline-block; }
+  .path-detail { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; }
+  .path-detail h3 { margin-top: 0; }
+  .path-meta { color: var(--color-text-secondary); font-size: 0.9rem; }
+  .path-modules { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 0.5rem 0; }
+  .label { font-size: 0.8rem; font-weight: 600; min-width: 7em; }
+  .module-chip { font-size: 0.8rem; padding: 0.2rem 0.6rem; border-radius: 4px; background: var(--color-accent); color: white; text-decoration: none; display: inline-block; }
+  .chip-opt { opacity: 0.5; }
+  .chip-rec { background: var(--color-bg-secondary); color: var(--color-accent); border: 1px solid var(--color-accent); }
+  .path-start-link { display: inline-block; margin-top: 0.75rem; font-weight: 600; color: var(--color-gold); }
+</style>

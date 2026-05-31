@@ -1,0 +1,40 @@
+---
+import { t, type Lang } from '../../i18n/ui';
+const { lang } = Astro.props as { lang: Lang };
+---
+
+<div class="hero">
+  <div class="hero-bg">
+    <svg class="hero-spiral" viewBox="0 0 400 400" aria-hidden="true">
+      <path d="M200 200 Q220 180 200 160 Q170 130 200 100 Q240 60 200 40" stroke="var(--color-gold)" stroke-width="1" fill="none" opacity="0.3" />
+      <circle cx="200" cy="200" r="180" stroke="var(--color-gold)" stroke-width="0.5" fill="none" opacity="0.1" />
+      <circle cx="200" cy="200" r="120" stroke="var(--color-gold)" stroke-width="0.5" fill="none" opacity="0.15" />
+      <circle cx="200" cy="200" r="60" stroke="var(--color-gold)" stroke-width="0.5" fill="none" opacity="0.2" />
+    </svg>
+  </div>
+  <div class="hero-content">
+    <h1>{t('hero.title', lang)}</h1>
+    <p class="hero-subtitle">{t('hero.subtitle', lang)}</p>
+    <div class="hero-cta">
+      <a href={`${Astro.site?.base ?? ''}/${lang}/map`} class="btn-primary">{t('hero.cta_path', lang)}</a>
+      <a href={`${Astro.site?.base ?? ''}/${lang}/manifesto`} class="btn-secondary">{t('hero.cta_manifesto', lang)}</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .hero { position: relative; text-align: center; padding: 5rem 1.5rem 3rem; background: radial-gradient(ellipse at center, var(--color-bg-secondary) 0%, var(--color-bg-primary) 70%); border-bottom: 1px solid var(--color-border); overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+  .hero-spiral { width: 400px; height: 400px; animation: spin 60s linear infinite; }
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .hero-spiral { animation: none; } }
+  .hero-content { position: relative; z-index: 1; }
+  .hero h1 { font-size: 3rem; font-weight: 800; letter-spacing: -0.02em; background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-accent) 50%, var(--color-gold-hover) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.75rem; }
+  .hero-subtitle { font-size: 1.25rem; color: var(--color-text-secondary); max-width: 500px; margin: 0 auto 2rem; line-height: 1.6; }
+  .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-primary { display: inline-block; padding: 0.75rem 2rem; background: var(--color-gold); color: #0a0a14; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+  .btn-primary:hover { background: var(--color-gold-hover); transform: translateY(-1px); color: #0a0a14; }
+  .btn-secondary { display: inline-block; padding: 0.75rem 2rem; border: 2px solid var(--color-gold); color: var(--color-gold); border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+  .btn-secondary:hover { background: rgba(230, 193, 123, 0.1); }
+  @media (max-width: 768px) { .hero { padding: 3rem 1rem 2rem; } .hero h1 { font-size: 2rem; } .hero-subtitle { font-size: 1.05rem; } .hero-spiral { width: 250px; height: 250px; } }
+</style>

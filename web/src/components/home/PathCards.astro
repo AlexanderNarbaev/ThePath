@@ -1,0 +1,35 @@
+---
+import { t, type Lang } from '../../i18n/ui';
+import { paths } from '../../i18n/paths';
+const { lang } = Astro.props as { lang: Lang };
+const base = Astro.site?.base ?? '';
+---
+
+<section class="paths">
+  <h2>{t('paths.title', lang)}</h2>
+  <p class="paths-subtitle">{t('paths.choose', lang)}</p>
+  <div class="path-cards">
+    {paths.map(p => (
+      <a href={`${base}/${lang}/paths/${p.id}`} class="path-card">
+        <h3>{p.name[lang]}</h3>
+        <p class="path-time">{p.time[lang]}</p>
+        <p class="path-audience">{p.audience[lang]}</p>
+        <p class="path-desc">{p.description[lang]}</p>
+        <span class="path-start">{t('paths.start', lang)} &rarr;</span>
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  .paths { margin: 3rem 0; text-align: center; }
+  .paths-subtitle { color: var(--color-text-secondary); margin-bottom: 1.5rem; }
+  .path-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; text-align: left; }
+  .path-card { display: block; background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; text-decoration: none; color: var(--color-text-primary); transition: all 0.2s; }
+  .path-card:hover { border-color: var(--color-gold); transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+  .path-card h3 { font-size: 1.1rem; margin: 0 0 0.25rem; }
+  .path-time { font-size: 0.8rem; color: var(--color-accent); font-weight: 500; margin-bottom: 0.25rem; }
+  .path-audience { font-size: 0.8rem; color: var(--color-text-secondary); margin-bottom: 0.5rem; }
+  .path-desc { font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.5; }
+  .path-start { display: inline-block; margin-top: 0.75rem; font-weight: 600; color: var(--color-gold); font-size: 0.85rem; }
+</style>

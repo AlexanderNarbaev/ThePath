@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import HomeLayout from '../../layouts/HomeLayout.astro';
+import Hero from '../../components/home/Hero.astro';
+import ProhibitionsCards from '../../components/home/ProhibitionsCards.astro';
+import PathCards from '../../components/home/PathCards.astro';
+import { t, type Lang } from '../../i18n/ui';
+
+export async function getStaticPaths() {
+  return [{ params: { lang: 'ru' } }, { params: { lang: 'en' } }];
+}
+
+const { lang } = Astro.params as { lang: Lang };
+const pages = await getCollection('pages', ({ data }) => data && data.lang === lang);
+const page = pages.find((p) => p.id.includes('index'));
+---
+
+<HomeLayout lang={lang} title={t('site.name', lang)}>
+  <Hero lang={lang} />
+  <div class="home-content">
+    <ProhibitionsCards lang={lang} />
+    {page && <div class="home-prose" set:html={page.body} />}
+    <PathCards lang={lang} />
+  </div>
+</HomeLayout>
+
+<style>
+  .home-content { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .home-prose { max-width: 720px; margin: 3rem auto 0; }
+  .home-prose :global(h2) { font-size: 1.75rem; margin-top: 2rem; }
+  .home-prose :global(table) { width: 100%; }
+</style>

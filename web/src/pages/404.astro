@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t } from '../i18n/ui';
+const url = Astro.url.pathname;
+const lang = (url.includes('/en/') || url.startsWith('/ThePath/en')) ? 'en' : 'ru';
+const base = Astro.site?.base ?? '';
+---
+
+<BaseLayout lang={lang as 'ru' | 'en'} title={t('404.title', lang as 'ru' | 'en')}>
+  <div style="text-align:center;padding:6rem 1.5rem;">
+    <h1 style="font-size:4rem;margin-bottom:0.5rem;">404</h1>
+    <p style="font-size:1.25rem;color:var(--color-text-secondary);margin-bottom:2rem;">{t('404.title', lang as 'ru' | 'en')}</p>
+    <a href={`${base}/${lang}`} class="btn-primary">{t('404.back', lang as 'ru' | 'en')}</a>
+  </div>
+</BaseLayout>
+
+<style>
+  .btn-primary { display: inline-block; padding: 0.75rem 2rem; background: var(--color-gold); color: #0a0a14; border-radius: 8px; font-weight: 600; text-decoration: none; }
+</style>

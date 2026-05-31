@@ -1,0 +1,22 @@
+---
+import { t, type Lang } from '../i18n/ui';
+const { lang } = Astro.props as { lang: Lang };
+---
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-quote">{t('footer.text', lang)}</p>
+    <div class="footer-bottom">
+      <p>&copy; {new Date().getFullYear()} {t('footer.license', lang)}</p>
+      <p class="footer-version">{t('footer.version', lang)}</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer { background: var(--color-cosmic); color: var(--color-cosmic-text-secondary); padding: 2rem 1.5rem; margin-top: auto; }
+  .footer-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+  .footer-quote { font-style: italic; font-size: 1rem; color: var(--color-gold); margin-bottom: 1rem; line-height: 1.6; }
+  .footer-bottom { font-size: 0.8rem; opacity: 0.7; }
+  .footer-version { margin-top: 0.25rem; }
+</style>

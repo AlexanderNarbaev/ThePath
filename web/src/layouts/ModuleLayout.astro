@@ -1,0 +1,50 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Sidebar from '../components/Sidebar.astro';
+import ModuleMeta from '../components/module/ModuleMeta.astro';
+import ModuleBreadcrumb from '../components/module/ModuleBreadcrumb.astro';
+import ProgressBar from '../components/progress/ProgressBar';
+import BookmarkButton from '../components/progress/BookmarkButton';
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  subtitle?: string;
+  moduleNumber: number;
+  version?: string;
+}
+
+const { lang, title, subtitle, moduleNumber, version } = Astro.props;
+---
+
+<BaseLayout lang={lang} title={title}>
+  <div class="page-layout">
+    <Sidebar lang={lang} currentModule={moduleNumber} />
+    <article class="content">
+      <ProgressBar module_number={moduleNumber} lang={lang} client:load />
+      <ModuleMeta lang={lang} number={moduleNumber} version={version} />
+      <ModuleBreadcrumb lang={lang} title={title} />
+      <div class="module-header">
+        <h1>{title}</h1>
+        {subtitle && <p class="module-subtitle">{subtitle}</p>}
+      </div>
+      <BookmarkButton module_number={moduleNumber} lang={lang} client:load />
+      <div class="prose">
+        <slot />
+      </div>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .module-header { margin-bottom: 1.5rem; }
+  .module-subtitle { font-size: 1.1rem; color: var(--color-text-secondary); }
+  .prose { margin-top: 1rem; }
+  .prose :global(h1) { font-size: 2rem; }
+  .prose :global(h2) { border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; }
+  .prose :global(img) { max-width: 100%; border-radius: 8px; }
+  .prose :global(blockquote) { background: var(--color-bg-secondary); border-radius: 0 8px 8px 0; }
+  .prose :global(table) { font-size: 0.9rem; }
+  .prose :global(th) { font-size: 0.85rem; }
+</style>

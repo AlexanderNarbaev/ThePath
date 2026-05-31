@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { t, type Lang } from '../../../i18n/ui';
+import { paths } from '../../../i18n/paths';
+import { modules } from '../../../i18n/modules';
+
+export async function getStaticPaths() {
+  const entries: { params: { lang: string; path: string } }[] = [];
+  for (const lang of ['ru', 'en']) {
+    for (const p of paths) { entries.push({ params: { lang, path: p.id } }); }
+  }
+  return entries;
+}
+
+const { lang, path } = Astro.params as { lang: Lang; path: string };
+const base = Astro.site?.base ?? '';
+const studyPath = paths.find((p) => p.id === path);
+if (!studyPath) return Astro.redirect(`/ThePath/${lang}/404`);
+
+const pathModules = studyPath.modules.map((n) => modules.find((m) => m.number === n)).filter(Boolean);
+const optionalModules = (studyPath.optional || []).map((n) => modules.find((m) => m.number === n)).filter(Boolean);
+const recomModules = (studyPath.recommended || []).map((n) => modules.find((m) => m.number === n)).filter(Boolean);
+---
+
+<BaseLayout lang={lang} title={studyPath.name[lang]}>
+  <div class="content-wide">
+    <h1>{studyPath.name[lang]}</h1>
+    <p class="path-meta">{studyPath.time[lang]} &middot; {studyPath.audience[lang]}</p>
+    <p class="path-desc">{studyPath.description[lang]}</p>
+
+    <h2>{t('paths.required', lang)}</h2>
+    <div class="module-list">
+      {pathModules.map((m) => m ? (
+        <a href={`${base}/${lang}/modules/${m.slug}`} class="module-card">
+          <span class="module-card-num">{m.number}</span>
+          <div><strong>{m.title[lang]}</strong><p>{m.subtitle[lang]}</p></div>
+        </a>
+      ) : null)}
+    </div>
+
+    {recomModules.length > 0 && (<>
+      <h2>{t('paths.recommended', lang)}</h2>
+      <div class="module-list">
+        {recomModules.map((m) => m ? (
+          <a href={`${base}/${lang}/modules/${m.slug}`} class="module-card">
+            <span class="module-card-num">{m.number}</span>
+            <div><strong>{m.title[lang]}</strong><p>{m.subtitle[lang]}</p></div>
+          </a>
+        ) : null)}
+      </div>
+    </>)}
+
+    {optionalModules.length > 0 && (<>
+      <h2>{t('paths.optional', lang)}</h2>
+      <div class="module-list">
+        {optionalModules.map((m) => m ? (
+          <a href={`${base}/${lang}/modules/${m.slug}`} class="module-card module-card-optional">
+            <span class="module-card-num">{m.number}</span>
+            <div><strong>{m.title[lang]}</strong><p>{m.subtitle[lang]}</p></div>
+          </a>
+        ) : null)}
+      </div>
+    </>)}
+
+    {pathModules[0] && (
+      <a href={`${base}/${lang}/modules/${pathModules[0].slug}`} class="btn-primary" style="display:inline-block;margin-top:2rem;">
+        {t('paths.start', lang)} &rarr;
+      </a>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .path-meta { color: var(--color-text-secondary); font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .path-desc { font-size: 1.05rem; margin-bottom: 2rem; color: var(--color-text-secondary); }
+  .module-list { display: flex; flex-direction: column; gap: 0.75rem; margin: 1rem 0 2rem; }
+  .module-card { display: flex; align-items: flex-start; gap: 1rem; background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 8px; padding: 1rem 1.25rem; text-decoration: none; color: var(--color-text-primary); transition: all 0.2s; }
+  .module-card:hover { border-color: var(--color-gold); transform: translateX(4px); }
+  .module-card-optional { opacity: 0.6; }
+  .module-card-num { font-size: 1.5rem; font-weight: 700; color: var(--color-accent); min-width: 2rem; text-align: center; }
+  .module-card p { font-size: 0.85rem; color: var(--color-text-secondary); margin: 0.25rem 0 0; }
+  .btn-primary { padding: 0.75rem 2rem; background: var(--color-gold); color: #0a0a14; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+  .btn-primary:hover { background: var(--color-gold-hover); color: #0a0a14; }
+</style>

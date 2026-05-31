@@ -1,0 +1,20 @@
+---
+import { t, type Lang } from '../../i18n/ui';
+const { lang, title } = Astro.props as { lang: Lang; title: string };
+const base = Astro.site?.base ?? '';
+---
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href={`${base}/${lang}`}>{t('breadcrumb.home', lang)}</a>
+  <span aria-hidden="true">&rsaquo;</span>
+  <a href={`${base}/${lang}/map`}>{t('breadcrumb.map', lang)}</a>
+  <span aria-hidden="true">&rsaquo;</span>
+  <span aria-current="page">{title}</span>
+</nav>
+
+<style>
+  .breadcrumb { font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+  .breadcrumb a { color: var(--color-text-secondary); }
+  .breadcrumb a:hover { color: var(--color-accent); }
+  .breadcrumb [aria-current="page"] { color: var(--color-text-primary); font-weight: 500; }
+</style>

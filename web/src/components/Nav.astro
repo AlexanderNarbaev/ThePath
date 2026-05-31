@@ -1,0 +1,55 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+import LanguageSwitch from './LanguageSwitch.astro';
+import SearchModal from './search/SearchModal';
+import { t, type Lang } from '../i18n/ui';
+
+const { lang } = Astro.props as { lang: Lang };
+const siteName = t('site.name', lang);
+const currentPath = Astro.url.pathname;
+const base = Astro.site?.base ?? '';
+const langPath = `/${lang}`;
+---
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href={`${base}${langPath}`} class="nav-logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" stroke="var(--color-gold)" stroke-width="2" />
+        <path d="M16 4 Q24 12 16 28 Q8 12 16 4" stroke="var(--color-gold)" stroke-width="1.5" fill="none" />
+      </svg>
+      <span>{siteName}</span>
+    </a>
+    <div class="nav-links" id="nav-menu">
+      <a href={`${base}${langPath}`} class:list={['nav-link', { active: currentPath === `${base}${langPath}/` || currentPath === base + langPath }]}>{t('nav.home', lang)}</a>
+      <a href={`${base}${langPath}/map`} class:list={['nav-link', { active: currentPath.includes('/map') }]}>{t('nav.map', lang)}</a>
+      <a href={`${base}${langPath}/manifesto`} class:list={['nav-link', { active: currentPath.includes('/manifesto') }]}>{t('nav.manifesto', lang)}</a>
+      <LanguageSwitch lang={lang} currentPath={currentPath} />
+      <ThemeToggle lang={lang} />
+      <SearchModal lang={lang} client:load />
+    </div>
+    <button class="nav-toggle" aria-label="Menu"
+      onclick="document.getElementById('nav-menu')?.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<style>
+  .nav { position: sticky; top: 0; z-index: 50; background: var(--color-nav-bg); border-bottom: 1px solid var(--color-border); backdrop-filter: blur(8px); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1.5rem; gap: 1rem; }
+  .nav-logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.05rem; color: var(--color-text-primary); text-decoration: none; }
+  .nav-logo:hover { color: var(--color-accent); }
+  .nav-links { display: flex; align-items: center; gap: 0.25rem; }
+  .nav-link { padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.9rem; color: var(--color-text-secondary); text-decoration: none; transition: all 0.2s; }
+  .nav-link:hover { color: var(--color-text-primary); background: var(--color-bg-secondary); }
+  .nav-link.active { color: var(--color-accent); font-weight: 600; }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.25rem; }
+  .nav-toggle span { display: block; width: 22px; height: 2px; margin: 5px 0; background: var(--color-text-primary); border-radius: 2px; }
+  @media (max-width: 768px) {
+    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--color-nav-bg); flex-direction: column; padding: 1rem; border-bottom: 1px solid var(--color-border); gap: 0.5rem; align-items: stretch; z-index: 50; }
+    .nav-links.open { display: flex; }
+    .nav-toggle { display: block; }
+    .nav-link { padding: 0.75rem 1rem; }
+  }
+</style>

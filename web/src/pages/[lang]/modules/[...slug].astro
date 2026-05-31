@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import ModuleLayout from '../../../layouts/ModuleLayout.astro';
+import { modules } from '../../../i18n/modules';
+import type { Lang } from '../../../i18n/ui';
+
+export async function getStaticPaths() {
+  const allModules = await getCollection('modules');
+  return allModules
+    .filter((entry) => entry.data?.lang)
+    .map((entry) => ({
+      params: {
+        lang: entry.data.lang,
+        slug: entry.id.replace(/^modules\//, '').replace(/\.md$/, '').split('/').pop() || '',
+      },
+    }));
+}
+
+const { lang, slug } = Astro.params as { lang: Lang; slug: string };
+const allMods = await getCollection('modules');
+const doc = allMods.find((entry) => entry.data?.lang === lang && entry.id.includes(`/${slug}.md`));
+
+if (!doc) return Astro.redirect(`/ThePath/${lang}`);
+
+const meta = modules.find((m) => m.slug === slug);
+const title = meta?.title[lang] ?? doc.data.title;
+const subtitle = meta?.subtitle[lang] ?? doc.data.subtitle;
+---
+
+<ModuleLayout lang={lang} title={title} subtitle={subtitle} moduleNumber={doc.data.module_number} version={doc.data.version}>
+  <article set:html={doc.body} />
+</ModuleLayout>

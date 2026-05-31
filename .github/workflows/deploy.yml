@@ -1,42 +1,47 @@
-name: Deploy Jekyll site to Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
-    paths:
-      - 'web/**'
-      - '.github/workflows/deploy.yml'
+    branches: [main]
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          ruby-version: '3.3'
-          working-directory: ./web
-          bundler-cache: true
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+        working-directory: web
+      - name: Build
+        run: npm run build
+        working-directory: web
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
 
-      - name: Build with Jekyll
-        working-directory: ./web
-        run: bundle exec jekyll build --baseurl "/ThePath"
-        env:
-          JEKYLL_ENV: production
-
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./web/_site
-          publish_branch: gh-pages
-          force_orphan: true
+        id: deployment
+        uses: actions/deploy-pages@v4

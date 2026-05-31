@@ -1,10 +1,14 @@
 # Dependencies
 node_modules/
 
-# Jekyll build output
+# Astro build
+web/dist/
+web/.astro/
+
+# Jekyll build (legacy)
 web/_site/
 web/.jekyll-cache/
-web/.jekyll-metadata
+web/.jekyll-metadata/
 
 # System
 .DS_Store
