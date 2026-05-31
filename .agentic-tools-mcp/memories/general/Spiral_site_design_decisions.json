@@ -1,0 +1,8 @@
+{
+  "id": "8df171e4-ea1d-4aa7-b56a-256d9abdd126",
+  "title": "Spiral site design decisions",
+  "details": "Design decisions for the Spiral of Consciousness site:\n\n1. Astro over Jekyll — needed i18n routing, Preact islands, better DX\n2. Tailwind CSS v4 with custom design tokens — \"Cosmic Minimalism\" (dark: #0a0a14, gold: #e6c17b, light: #fafaf5, indigo: #2c3e9e)\n3. Content Collections for modules — enables typed schemas and render()\n4. Preact over React — lighter for static site, same API\n5. D3.js for module graph — force-directed layout, path-colored nodes\n6. Lunr.js for search — client-side, no backend needed\n7. localStorage for progress/bookmarks/theme/daily checklist — no accounts needed\n8. View Transitions not yet added — could improve navigation feel\n9. CSS custom properties for theming — [data-theme=\"dark\"] toggle\n10. JetBrains Mono for code/quotes — from Google Fonts\n11. All static build (SSG) — works on any static host (GH Pages, GitVerse, Netlify, Vercel)",
+  "category": "general",
+  "dateCreated": "2026-05-31T16:18:31.594Z",
+  "dateUpdated": "2026-05-31T16:18:31.594Z"
+}

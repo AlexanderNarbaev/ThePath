@@ -5,6 +5,7 @@ import ModuleMeta from '../components/module/ModuleMeta.astro';
 import ModuleBreadcrumb from '../components/module/ModuleBreadcrumb.astro';
 import ProgressBar from '../components/progress/ProgressBar';
 import BookmarkButton from '../components/progress/BookmarkButton';
+import ModuleNav from '../components/module/ModuleNav.astro';
 import type { Lang } from '../i18n/ui';
 
 interface Props {
@@ -33,6 +34,7 @@ const { lang, title, subtitle, moduleNumber, version } = Astro.props;
       <div class="prose">
         <slot />
       </div>
+      <ModuleNav lang={lang} current={moduleNumber} />
     </article>
   </div>
 </BaseLayout>

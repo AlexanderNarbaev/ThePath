@@ -1,0 +1,70 @@
+---
+import { modules } from '../../i18n/modules';
+import type { Lang } from '../../i18n/ui';
+
+interface Props { lang: Lang; current: number; }
+
+const { lang, current } = Astro.props;
+const idx = modules.findIndex((m) => m.number === current);
+const prev = idx > 0 ? modules[idx - 1] : null;
+const next = idx < modules.length - 1 ? modules[idx + 1] : null;
+const base = '/ThePath';
+---
+
+{idx >= 0 && (
+  <nav class="module-nav">
+    <div class="module-nav-prev">
+      {prev ? (
+        <a href={`${base}/${lang}/modules/${prev.slug}`}>
+          <span class="nav-arrow">&larr;</span>
+          <span class="nav-label">{lang === 'ru' ? 'Предыдущий' : 'Previous'}</span>
+          <span class="nav-title">{prev.title[lang]}</span>
+        </a>
+      ) : <span />}
+    </div>
+    <div class="module-nav-next">
+      {next ? (
+        <a href={`${base}/${lang}/modules/${next.slug}`}>
+          <span class="nav-label">{lang === 'ru' ? 'Следующий' : 'Next'}</span>
+          <span class="nav-title">{next.title[lang]}</span>
+          <span class="nav-arrow">&rarr;</span>
+        </a>
+      ) : <span />}
+    </div>
+  </nav>
+)}
+
+<style>
+  .module-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+    gap: 1rem;
+  }
+  .module-nav-prev, .module-nav-next { flex: 1; max-width: 48%; }
+  .module-nav-next { text-align: right; margin-left: auto; }
+  .module-nav a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.5rem;
+    text-decoration: none;
+    color: var(--color-text-primary);
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    transition: all 0.2s;
+  }
+  .module-nav a:hover { border-color: var(--color-gold); }
+  .nav-arrow { font-size: 1.2rem; color: var(--color-gold); }
+  .nav-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-secondary); width: 100%; }
+  .nav-title { font-size: 0.9rem; font-weight: 500; }
+  .module-nav-next a { justify-content: flex-end; }
+  @media (max-width: 768px) {
+    .module-nav { flex-direction: column; gap: 0.75rem; }
+    .module-nav-prev, .module-nav-next { max-width: 100%; }
+    .module-nav-next { text-align: left; }
+  }
+</style>
