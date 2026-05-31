@@ -226,3 +226,23 @@ For a state striving toward the Ethical State (orientation point):
 ---
 
 *This document is part of the Spiral of Consciousness system. When distributing, please always include a reference to the full set of modules.*
+
+---
+
+## Frequently Asked Questions
+
+### 1. "Won't sociocracy lead to endless meetings and paralysis?"
+
+This is the most common fear, and it is based on the experience of poorly run meetings, not on the practice of sociocracy. Sociocracy is not "everyone decides everything." It is a system of circles, each of which possesses a clearly defined domain of authority. The base circle does not discuss the colour of a fence, and the operational circle does not adopt the constitution. Decisions are made by consent — meaning an absence of reasoned objections, not unanimous enthusiasm — not by consensus, which requires everyone to be "in favour." An objection must be reasoned: "this decision will prevent us from achieving our goal." A well-executed sociocracy is faster than the hierarchical model: a decision is brought for discussion only in its own circle, not through endless vertical approvals. The main enemy is not sociocracy, but a lack of facilitation skills — and it is precisely these that we develop in Modules 5 and 10.
+
+### 2. "The Council of the Future with veto power — isn't that too much power for an unelected body?"
+
+This is a fair question about democratic legitimacy. The answer is three-layered. First: the Council of the Future represents the interests of those who cannot vote — future generations, ecosystems, people not yet born. Their interests are represented in no parliament. Second: the Council does not possess an absolute veto — its decision may be overridden by a qualified majority (2/3) of parliament with mandatory public justification, meaning the final word rests with elected representatives. Third: Council members are not appointed by the government, but nominated by universities, academies, and civic organisations, and cannot be dismissed by the authorities. A term of 12 years without re-election removes them from the pressure of the electoral cycle. This is not "unelected power," but "power with a different legitimacy" — the legitimacy of knowledge, long-term perspective, and ethical expertise.
+
+### 3. "How do you prevent citizens' assemblies from being hijacked by populists?"
+
+A citizens' assembly is fundamentally different from a rally or a talk show. Its participants are not self-nominated, but citizens selected by sortition, stratified by demographic characteristics. A populist cannot "force their way" into an assembly — they can only be chosen randomly, like anyone else. The process is moderated by professional facilitators whose task is to ensure that every voice is heard, not that the loudest rhetoric wins. Participants receive balanced information from experts and stakeholders, not just slogans. Deliberation in small groups, where each person speaks in turn, extinguishes demagoguery. Finally, assembly recommendations are adopted by a high threshold (2/3), which requires coalition-building, not division. The system is designed so that a populist has nowhere to unfold — it is an environment for reflection, not for mobilising a crowd.
+
+### 4. "What if the majority of citizens do not want the Ethical State?"
+
+The Spiral is not imposed by force. If the majority of citizens are not ready — that means society has not yet travelled its path of awareness, and the task of Spiral followers is not the seizure of power, but enlightenment, witness, and practice. Create communities, show the example of functioning cooperatives, participate in municipal budgeting, train mentors. Changing political culture is work for generations, not for an electoral cycle. The roadmap of reforms (Section 7) is deliberately stretched over 50–100 years, so that each stage relies on real, not imaginary, public support. Moreover, the Spiral acknowledges: the Ethical State is an orientation point, not a mandatory goal for every country. Humanity may move toward it at different speeds and by different paths. Coercion toward ethics is an oxymoron. The Three Prohibitions are absolute precisely because their observance cannot be the result of a vote — but their *institutional embodiment* requires the voluntary consent of civil society.

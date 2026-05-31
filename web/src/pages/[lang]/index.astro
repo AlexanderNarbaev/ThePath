@@ -4,6 +4,8 @@ import HomeLayout from '../../layouts/HomeLayout.astro';
 import Hero from '../../components/home/Hero.astro';
 import ProhibitionsCards from '../../components/home/ProhibitionsCards.astro';
 import PathCards from '../../components/home/PathCards.astro';
+import DailyChecklist from '../../components/interactive/DailyChecklist';
+import EthicalCompass from '../../components/interactive/EthicalCompass';
 import { t } from '../../i18n/ui';
 
 export async function getStaticPaths() {
@@ -21,6 +23,10 @@ const { Content } = page ? await page.render() : { Content: null };
   <div class="home-content">
     <ProhibitionsCards lang={lang as 'ru' | 'en'} />
     {Content && <div class="home-prose"><Content /></div>}
+    <div class="home-interactive">
+      <DailyChecklist lang={lang as 'ru' | 'en'} client:load />
+      <EthicalCompass lang={lang as 'ru' | 'en'} client:load />
+    </div>
     <PathCards lang={lang as 'ru' | 'en'} />
   </div>
 </HomeLayout>
@@ -30,4 +36,5 @@ const { Content } = page ? await page.render() : { Content: null };
   .home-prose { max-width: 720px; margin: 3rem auto 0; }
   .home-prose :global(h2) { font-size: 1.75rem; margin-top: 2rem; }
   .home-prose :global(table) { width: 100%; }
+  .home-interactive { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
 </style>

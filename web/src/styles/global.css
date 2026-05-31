@@ -140,3 +140,39 @@
 /* Bookmark */
 .bookmark-btn { background: none; border: none; cursor: pointer; padding: 0.25rem; margin-bottom: 1rem; transition: transform 0.2s; }
 .bookmark-btn:hover { transform: scale(1.15); }
+
+/* Path Tracker */
+.path-tracker { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.5rem; }
+.path-selector { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+.path-tab { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid var(--color-border); background: transparent; color: var(--color-text-secondary); cursor: pointer; font-size: 0.8rem; transition: all 0.2s; }
+.path-tab:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.path-tab.active { background: var(--color-accent); color: white; border-color: var(--color-accent); }
+.path-modules h4 { font-size: 0.9rem; margin: 0 0 0.75rem; color: var(--color-text-secondary); }
+.path-module { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.5rem; border-radius: 6px; text-decoration: none; color: var(--color-text-primary); font-size: 0.85rem; transition: background 0.15s; }
+.path-module:hover { background: var(--color-bg-secondary); }
+.path-module.done { opacity: 0.6; }
+.pm-num { font-weight: 700; color: var(--color-accent); font-size: 0.8rem; min-width: 1.5em; }
+.pm-title { flex: 1; }
+.pm-progress { width: 60px; height: 4px; background: var(--color-border); border-radius: 2px; overflow: hidden; }
+.pm-bar { display: block; height: 100%; background: var(--color-gold); border-radius: 2px; transition: width 0.3s; }
+.pm-pct { font-size: 0.7rem; color: var(--color-text-secondary); min-width: 2.5em; text-align: right; }
+
+/* Daily Checklist */
+.daily-checklist { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+.daily-checklist.done { border-color: var(--color-gold); }
+.dc-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+.dc-title { font-size: 0.85rem; font-weight: 600; }
+.dc-count { font-size: 0.8rem; color: var(--color-text-secondary); }
+.dc-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0; cursor: pointer; font-size: 0.9rem; }
+.dc-item input { accent-color: var(--color-gold); width: 1.1em; height: 1.1em; cursor: pointer; }
+.dc-item.checked span { text-decoration: line-through; opacity: 0.5; }
+.dc-done { margin-top: 0.75rem; padding: 0.5rem; background: rgba(230,193,123,0.15); border-radius: 6px; text-align: center; font-size: 0.85rem; color: var(--color-gold); font-weight: 500; }
+
+/* Ethical Compass */
+.ethical-compass { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+.ethical-compass h3 { margin: 0 0 0.75rem; font-size: 1rem; }
+.ec-text { font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 1rem; line-height: 1.5; }
+.ec-options { display: flex; flex-direction: column; gap: 0.5rem; }
+.ec-btn { padding: 0.6rem 1rem; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-bg-secondary); color: var(--color-text-primary); cursor: pointer; font-size: 0.85rem; text-align: left; transition: all 0.2s; }
+.ec-btn:hover { border-color: var(--color-gold); background: rgba(230,193,123,0.1); color: var(--color-gold); }
+.ec-reset { padding: 0.5rem 1rem; border: none; background: transparent; color: var(--color-accent); cursor: pointer; font-size: 0.85rem; margin-top: 0.75rem; }

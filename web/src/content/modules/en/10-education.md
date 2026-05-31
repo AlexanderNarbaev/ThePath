@@ -248,3 +248,23 @@ For a community of any size:
 ---
 
 *This document is part of the "Spiral of Consciousness" system. When distributing, be sure to include a link to the full set of modules.*
+
+---
+
+## Frequently Asked Questions
+
+### 1. "How do we teach children the Spiral without imposing it?"
+
+The key word is "dialogue," not "lesson." The pedagogy of liberation by Paulo Freire (Section 1) provides the method: do not deposit answers, ask questions. Not "the Spiral says killing is forbidden," but "what do you think — can killing ever be justified? What if someone threatens you?" Not "here are the Three Prohibitions — memorise them," but "what rules do you consider most important for all people?" The child will arrive at conclusions resonant with the Spiral on their own, or will propose different ones — both are valuable as objects of reflection. Second: do not separate "the Spiral's teaching" from the rest of life. The Three Prohibitions run through a fairy tale about a little hedgehog for five-year-olds and through debates about drones for adolescents — the form changes, the content emerges naturally. Third: your life is the main textbook. Children absorb not words but behaviour: if you preach non-violence and shout at your loved ones — you are teaching hypocrisy, not the Spiral. Fourth: respect the child's right to say "I disagree." Doubt is not a failure of pedagogy, but its success.
+
+### 2. "What if the school forbids mentioning the Spiral?"
+
+The Spiral does not require mentioning itself by name. The Three Prohibitions can be discussed as "universal ethical principles." Cooperatives — as "the economy for the common good." Circles of Reconciliation — as "restorative justice." Content is more important than brand. The optional course "Foundations of the Spiral" is designed as secular, voluntary, and compatible with the framework of social studies, ethics, or philosophy (Section 4.3). If the school forbids even this — seek extracurricular formats: a club, a debate society, a volunteer project. The community can organise an educational space outside the school. And remember: prohibition often intensifies interest. History knows many examples where ideas banned at school became subjects of the deepest independent study by adolescents. Do not fight the school — that will exhaust you and harm the children. Seek parallel paths, and let the quality of your pedagogy speak for itself.
+
+### 3. "How do you distinguish imposition from mentoring?"
+
+Three tests. The test of voluntariness: "Can the student refuse the session without consequences for their status in the community?" If yes — it is mentoring. If refusal entails condemnation or a loss of rights — it is imposition. The test of doubt: "Can the student say 'I disagree' and receive in response not an argument, but an exploration of their position?" If yes — it is dialogue. If disagreement is met with "you're just not mature enough to understand" — it is indoctrination. The test of purpose: "Do I want the student to think like me, or to think for themselves?" A mentor cultivates thinking; a propagandist cultivates loyalty. The certification programme (Section 2) specifically includes a module on active listening and dialogue facilitation — these are skills opposite to imposition. The best mentor is not the one whose students repeat their words, but the one whose students ask questions to which the mentor themselves has no ready answer.
+
+### 4. "Should mentors be certified, and won't that create a hierarchy?"
+
+Certification is necessary, but it is structured differently from traditional systems. Its purpose is not to create a privileged caste, but to ensure quality and safety. A mentor works with people's psyches, leads Circles of Reconciliation where what is at stake is people's ability to live together after conflict. A dilettante here can do harm. The certificate confirms that the person has mastered skills (facilitation, active listening, ethical analysis), not that they are "above" others. The certificate grants no power to command or exclude, is valid for two years, and requires re-qualification (Section 5.3). Moreover, in a sociocratic community, the mentor is embedded in the system of double links and rotation — they are accountable to the circle of mentors and cannot transform their role into a throne. Hierarchy arises not from certification as such, but from whether the certificate can be monetised into power. In the Spiral — it cannot. Competence and equality do not contradict each other; what contradicts are competence and unaccountability.

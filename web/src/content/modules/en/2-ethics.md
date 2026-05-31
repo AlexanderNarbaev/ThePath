@@ -272,4 +272,34 @@ Use this checklist for weekly reflection (ideally on Sunday evening).
 
 ---
 
+---
+
+## Frequently Asked Questions and Practical Cases
+
+### 1. "What should I do if my boss demands that I violate the principles of the Spiral?"
+
+This is the classic situation for which Section 3.2 on the criminal order was introduced into the Module. Let us recall: any order demanding that one kill without a direct threat, torture, or enslave — is **legally and ethically void**, even if it comes from the highest leadership. Your duty as a follower of the Spiral is to refuse to carry it out. Practically: record the order in writing (if possible), contact a community lawyer, activate the support circle. If refusal threatens dismissal or persecution — the community is obligated to support you. Refusal of a criminal order is not a breach of subordination, but an act of fidelity to a higher ethical law (see the Code of Honor for the Civil Servant, Section 7). Remember: a boss who demands torture or murder has already violated their duty, not you.
+
+### 2. "How can one combine service in the police with the prohibition on torture?"
+
+Service in the police and the prohibition on torture are not merely compatible — the prohibition on torture is the very condition of genuine, rather than punitive, law enforcement. Section 3.1 clearly defines: force is permissible only for the defense of life, stopping violence, and enforcement of a lawful court decision. Torture, on the other hand, is the use of force to obtain information, which is directly prohibited. A good police officer solves crimes through professionalism — gathering evidence, interviewing witnesses, forensics — and not through torture, which moreover yields unreliable information and destroys citizens' trust in the law enforcement system. Ethical consultation for colleagues (Module 3, Part 6.2) — is a practical tool for discussing such dilemmas in a professional environment. If torture is systematic in your unit — you are obligated to report this through legal channels (Section 9, the duty of the civil servant).
+
+### 3. "Is it permissible to deceive for the good? To lie to save a life?"
+
+This is one of the deepest ethical questions, and the Spiral does not give a simplistic answer. On the one hand, truthfulness is one of the virtues (Section 6), and systematic lying destroys trust. On the other — the three prohibitions are absolute: murder is impermissible. If a lie prevents a direct and imminent murder — for example, you are hiding an innocent person from pursuers — this is not a violation of the spirit of the precepts, because you are defending life. However, it is important to distinguish such an emergency situation from everyday self-justification. The Spiral cautions: the logic of "deception for the good" easily becomes a justification for manipulation (recall Section 4 on the "dirty hands" dilemma — where one exception opens the door to a thousand abuses). If you had to lie to save a life — treat it as a forced measure, not as a norm. In the evening reflection (Module 3, Part 1.3), honestly ask yourself: was the threat real and imminent, and was there no other way.
+
+### 4. "How should one evaluate historical figures who violated the prohibitions but did much good?"
+
+The ethics of the Spiral proposes not to cancel the complexity of history, but to learn to see it wholly, without simplification. We evaluate a figure by the totality of their actions and their long-term consequences (the principle of "Think for the Long-Term Future"). Reforms, scientific discoveries, cultural contributions — these are facts we acknowledge and study. But violations of the three prohibitions are not "written off" by merits. For example, a ruler who built schools and roads but destroyed thousands of innocents — their constructive deeds deserve study, and their destructive ones — unequivocal ethical condemnation. The Spiral does not demand that we "cancel" a historical figure or, conversely, close our eyes to their crimes. It demands an adult position: the capacity to hold in mind both the light and the darkness, without justifying one by the other. This is especially important in education: Module 10 (Education) recommends analyzing such figures at Gatherings of Reason as ethical case studies.
+
+### 5. "What if I violated a prohibition unknowingly or in a state of affect?"
+
+The scale of consequences (Section 8.1) specifically separates unconscious errors (Level 0) from conscious violations. If you violated a prohibition unknowingly — for example, participated in a system that, as it later turned out, exploited people — this is not a reason for self-flagellation, but a reason for correction. Acknowledge the fact, offer apologies to those harmed, take measures so that such a thing does not recur. Violation in a state of affect — is more complex: affect reduces control but does not fully cancel responsibility. Here, work with the causes is important (Module 9, Psychology): what led to the breakdown, how to strengthen self-control, whether you need a mentor's help. If harm was caused — initiate a Reconciliation Circle (Module 5). Neither guilt-culture of "torment yourself eternally" nor shame-culture of "forget and move on" corresponds to the spirit of the Spiral. The correct path: acknowledgment, correction, extraction of the lesson.
+
+### 6. "Must I report a violation of the prohibitions by another community member?"
+
+Yes, if the violation is serious (Level 3 or 4 on the Scale of Consequences). The three prohibitions are not a private matter, but the foundation of cooperation on which the entire community stands (Section 4). Covering up violations destroys trust more powerfully than the violation itself: it creates a culture of mutual cover-up and impunity. Order of actions: first, speak with the person themselves — perhaps they do not realize the gravity of the act. If conversation is impossible or yielded no result — turn to the community coordinator, a mentor, or the council. In case of violation of the three prohibitions (Level 4), reporting is mandatory and without delay: the council is obligated to convene an emergency session within 24 hours (Section 8.2). At the same time, the Spiral cautions against denunciation as a style of relations: minor errors and awkwardness (Level 0–1) do not require formal reports — a private conversation and apologies are sufficient for them.
+
+---
+
 *This document is part of the "Spiral of Consciousness" system. When distributing, be sure to include a reference to the full set of modules.*

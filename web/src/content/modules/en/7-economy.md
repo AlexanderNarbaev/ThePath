@@ -208,3 +208,27 @@ For annual review:
 ---
 
 *This document is part of the Spiral of Consciousness system. When distributing, please always include a reference to the full set of modules.*
+
+---
+
+## Frequently Asked Questions
+
+### 1. "Won't a 30-hour work week cause the economy to collapse?"
+
+The concerns are understandable, but the data contradict intuition. Iceland tested a four-day work week (35–36 hours) on a large scale with preserved pay: productivity either did not fall or rose, staff turnover dropped, burnout decreased. A well-rested worker is more effective than an exhausted one — beyond a certain threshold, each additional hour yields a negligible increase in output. Moreover, a 30-hour week is not an immediate directive but a phased transition over 10–15 years with monitoring of consequences at every step. Automation and AI are reducing the need for human-hours — the question is not *whether* to reduce working time, but *who gets* the gains from automation: a narrow group of capital owners, or all workers through increased free time. The Spiral chooses the latter.
+
+### 2. "How do cooperatives compete with corporations?"
+
+Cooperatives compete not through price dumping, but through a different structure of costs and motivation. A corporation's goal is profit maximisation for external shareholders. A cooperative's goal is the sustainable well-being of its worker-owners. This gives cooperatives paradoxical advantages: in a crisis they do not "fire themselves," but reduce wages proportionally while preserving the collective; staff turnover is lower, accumulated experience is not lost; motivation is higher, because the worker sees a direct link between their labour and their well-being. The Mondragon example proves: a cooperative with 80,000 workers can successfully compete in the global market. The state is not obliged to make cooperatives the sole form of enterprise, but it is entitled to level the playing field through tax incentives, compensating for the systemic advantages of large capital.
+
+### 3. "Sovereign funds — isn't this too much like state capitalism?"
+
+The difference is fundamental. State capitalism is when the state directly owns enterprises and manages them in the interests of the current government. The Spiral's sovereign funds are institutions independent of the government, whose capital is constitutionally protected and cannot be seized for current needs. Their boards of trustees consist of experts with long terms, who cannot be dismissed by the executive branch. This is not "the state as businessman," but "the state as trustee," setting aside resources for future generations. The Norwegian Pension Fund is the closest analogue: it does not manage oil platforms, but accumulates revenues from resources and invests them globally in the interests of future pensioners. The Spiral scales this logic to climate, space, and genetic heritage.
+
+### 4. "What about cryptocurrencies and decentralised finance?"
+
+The Spiral takes no dogmatic position "for" or "against." It applies the same ethical filter as to any technology. Cryptocurrencies that enable financial autonomy for citizens in repressive states, anonymous donations to human rights defenders, decentralised cooperative finance — these are instruments of liberation, and they resonate with the Spiral's principles. But the same technology is used for fraud, laundering proceeds from human trafficking, and creating new forms of debt bondage. The question is not "is cryptocurrency evil or good," but "does the specific application violate the Three Prohibitions" and "is it accountable to a community, not a narrow group." Decentralised Autonomous Organisations (DAOs) on the blockchain may become the technical foundation for cooperative governance — this is a direction the Spiral welcomes, without worshipping technology as a panacea.
+
+### 5. "Participatory budgeting — how do you convince a state to introduce it?"
+
+The most persuasive argument is data, not slogans. In Porto Alegre (Brazil), PB has been operating since 1989: attendance at budget assemblies reached tens of thousands, corruption fell, investments shifted in favour of the poorest neighbourhoods, tax collection rose. Citizens pay taxes more willingly when they see that a portion of the budget is under their direct control. The practical path: start at the municipal level, where resistance is lower. Propose a pilot — 5% of the budget, a simple procedure, a transparent online tool. Document the results: what was funded, how many citizens participated, how trust changed. Leading municipalities become an argument for regions; regions — for the state. PB does not require a change of constitutional order — it embeds into any representative system as a supplement that expands, rather than abolishes, it.

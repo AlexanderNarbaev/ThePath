@@ -209,3 +209,23 @@ In an era when the forces of degradation seek to set civilizations against one a
 ---
 
 *This document is part of the "Spiral of Consciousness" system. When distributing, be sure to include a link to the full set of modules.*
+
+---
+
+## Frequently Asked Questions
+
+### 1. "Isn't the Spiral an attempt to impose Western values on other cultures?"
+
+No, and here is why. First, the Three Absolute Prohibitions (do not kill, do not torture, do not enslave) are not "Western" — they appear in the ethical systems of all major civilisations: in Confucianism, in Ubuntu, in Islamic jurisprudence, in Buddhist ahimsa. The Spiral does not invent them; it illuminates them as the pan-human minimum. Second, the Spiral explicitly rejects Western universalism as a form of cultural imperialism (Section 1.1) and insists on civilisational dialogue, where no culture is the "gold standard." Third, the two key ethical pillars of the Spiral — African Ubuntu and Russian sobornost — are deliberately chosen as non-Western traditions, to demonstrate that a deep ethics of unity without uniformity exists in many cultures. The Spiral is not a Western project in Eastern packaging, but a conscious attempt to build a bridge where every shore is of equal worth. If someone uses the Spiral to promote Western or any other "national values" — they violate its spirit.
+
+### 2. "How do Ubuntu and sobornost fit with individual freedom?"
+
+This apparent contradiction is a product of the Western dichotomy of "the individual versus society." Both Ubuntu ("a person becomes a person through other people") and sobornost ("unity in diversity, where the person does not dissolve but flourishes") proceed from a different premise: the person neither precedes nor opposes the community — they *emerge* in communion and *unfold* through it. Imagine a musician in an orchestra: they are free enough that their part can be heard, and constrained enough not to drown out others — yet it is precisely within these bounds that a symphony is born, impossible for a soloist. Individual freedom in these ethics is not freedom *from* others (isolation), but freedom *with* and *for* others. This does not negate personal boundaries or the right to solitude, but places them in context: you are free not when you are alone, but when your uniqueness is recognised and called for by a community that does not absorb you.
+
+### 3. "What about cultural practices that contradict the Spiral's prohibitions?"
+
+This is the most difficult question, and the Spiral offers no simple answer. The Three Prohibitions are absolute — this means that no cultural tradition can serve as justification for torture, killing, or enslavement. Female genital mutilation, ritual killing, caste enslavement, "honour killings" — the Spiral cannot recognise them as acceptable, even if they are hallowed by tradition. But — and this is critically important — the *method* of abandoning such practices cannot be neo-colonial. One cannot simply prohibit from the outside: that breeds resistance and drives the practice underground. What is needed is internal dialogue within the culture itself — with the participation of its bearers, especially women and youth, who are often the primary victims of such practices. The protocols of inter-civilisational synthesis (Section 3) offer a methodology: acknowledgment of history, joint mapping of knowledge, deliberation, the right of voice for all affected parties. Changing a cultural practice is work for generations, and it can proceed only from within, with support from outside, but not under external dictate.
+
+### 4. "Isn't the Council of Civilizations at the UN a utopia?"
+
+The Council of Civilizations is not a utopia in the sense of an "impossible dream," but a project analogous to already existing institutions. The UN already has consultative bodies with moral authority but without coercive force: the Permanent Forum on Indigenous Issues, the Commission on Human Rights (prior to its replacement by the Council). The Council of Civilizations is proposed precisely as a consultative, ethical body — without veto power over Security Council resolutions, without an army, without a budget comparable to military expenditures. Its strength lies in the quality of its expertise, the public nature of its reports, and its capacity to create space for dialogue before a conflict escalates into a military phase. Utopia is expecting it to solve all problems. Realism is recognising that humanity today has no institution representing the interests of civilisations as integral cultural realms, not merely states. The Council of Civilizations is a step toward filling this gap, not a replacement for the existing security architecture.

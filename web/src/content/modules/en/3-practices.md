@@ -425,6 +425,36 @@ All practices are voluntary. You may perform only the daily 3 minutes — and th
 
 ---
 
-*Version 1.1. Release date: May 30, 2026.*
-*Changes from version 1.0: added the Civic Ritual, the ritual for civil servants, the intensified digital fast for Keepers, separate support circles for victims, expanded earth practices.*
+---
+
+## Frequently Asked Questions and Practical Cases
+
+### 1. "I tried 3 minutes a day, but I feel nothing. Does it work?"
+
+The absence of vivid sensations in the early stages is not a sign of failure, but the norm. The practices of the Spiral are a training of attention and awareness, not the ingestion of psychoactive substances: their effect is cumulative, like that of physical exercise. Imagine doing one squat a day — in a week you won't become an athlete, but in half a year, the muscles will begin to change. It is the same here: the morning intention gradually shifts the focus from reactive existence to conscious choice, the digital shield sharpens the ability to notice automatic impulses, and the evening reflection strengthens the "muscle of self-observation." If after a month of practice you truly notice no changes, try increasing the time to 5–10 minutes for a week, or add one weekly practice (Gathering of Reason or deep attention — Part 2). The main thing: do not evaluate the result daily; evaluate once a month, keeping a brief observation journal.
+
+### 2. "Is it possible to adapt the practices to one's own religion? I am a Christian / Muslim / Buddhist."
+
+Not just possible — it is built into the architecture of the Spiral. All practices are intentionally constructed as psychological and social tools, not as religious sacraments (see Introduction). The morning intention easily combines with morning prayer in any tradition — add the intention after or before it. Apophatic silence (Part 2.2) resonates with the apophatic theology of Christianity, Sufi dhikr, and Buddhist meditation — use the form of negation that is consonant with your tradition. The digital fast can be timed to religious fasts (Ramadan, Lent), amplifying their meaning. The only thing the Spiral asks not to change is the three prohibitions and the four principles of Flourishing, which are the ethical minimum, compatible with any developed religious system. If you feel a contradiction between a specific Spiral practice and your faith — skip that practice or discuss the dilemma with a mentor. You are not obligated to perform what causes internal conflict.
+
+### 3. "What if I skipped a day, a week, a month?"
+
+Return without drama. The Spiral fundamentally rejects the logic of accumulating "karmic debts" and guilt for omissions (see Conclusion: "do not force yourself"). A skip is not a sin, but information: why did you skip? Were you overloaded? Did the practice seem pointless? Did you forget? An honest answer to this question is more important than the return itself. If you skipped a day — simply begin the next one with the morning intention. If a week or a month — start with one minute, rather than trying to "catch up" on everything at once. It is useful to discuss a long break with a mentor or at a Gathering of Reason: perhaps your current form of practice does not suit you, and an adaptation is needed (lightened variants are provided for each exercise in the module). Practice is not an exam one can "fail." It is a tool you take up when you need it.
+
+### 4. "How can I explain the practices to a family that does not share the principles of the Spiral?"
+
+Explain through benefit, not ideology. Do not say: "I do this because the teaching commands it." Say: "I noticed that when I sit in silence for a minute in the morning, I snap at you less." Or: "My friends and I have a day without phones once a month — shall we try it as a family? The children also get tired of screens." Practical demonstration works better than doctrinal explanations. If the family is skeptical — do not impose: 3 minutes a day can be performed unobtrusively (while everyone is asleep, in the bathroom, before bed). If the family is religious — emphasize that the Spiral is compatible with any faith (see Question 2 above). If loved ones fear "sectarianism" — show them this document: it openly speaks of voluntariness and the right to skip practices. No practice of the Spiral requires breaking with family or isolation from non-members. If your activities cause conflict — perhaps the issue is not in the practices, but in how you present them: discuss this with a mentor.
+
+### 5. "Is the digital fast for a Keeper forever, or temporary? My job requires being online."
+
+A Keeper's digital fast (Part 9.2) is not permanent hermitage, but a monthly practice lasting 72 hours. The point is not to leave the online world forever, but to give the brain a regular "reboot" from artificial stimuli. For a Keeper, this is a commitment, but even within it there is a caveat: "except in emergencies." If your work does not allow you to fully disconnect for 72 hours — discuss an adapted schedule with the community council (for example, twice a month for 36 hours, or weekly for 24 hours). A Keeper does not lose status if their professional circumstances require an adjustment of the vow — but the adjustment must be transparent, not a silent ignoring. If your work does not permit digital breaks at all — ask yourself the question from Part 1.2 ("Digital Shield"): is this truly an objective necessity, or a habit you are justifying? The answer to this question is often more important than the strictness of observing the fast.
+
+### 6. "Can Spiral rituals be conducted online?"
+
+Yes, and the pandemic proved that it works. For most rituals in the module, online adaptations are provided: Gathering of Reason (Part 2.1) — via Zoom or Discord with raised hand; the Night of the Spiral (Part 4.1) — in a video call format, where each person lights a candle at home; Apophatic silence — with a shared audio recording. However, the online format has limitations: it transmits non-verbal signals less well, makes it harder to create a sense of shared "container," and Reconciliation Circles conducted online are highly undesirable (the risk of misunderstanding and a feeling of unsafety is too high). Practical rule: use online for informational and supportive meetings; for emotionally charged rituals (reconciliation, initiation, farewell), meet physically whenever possible. The ideal hybrid is regular online gatherings plus in-person meetings at annual festivals. Technical recommendations regarding decentralized platforms — in Module 4, Section 5 ("Digital Fortress").
+
+---
+
+*Version 1.1. Release date: May 30, 2026.*  
+*Changes from version 1.0: added the Civic Ritual, the ritual for civil servants, the intensified digital fast for Keepers, separate support circles for victims, expanded earth practices.*  
 *References to other modules: see the beginning of the document.*

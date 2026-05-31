@@ -294,3 +294,19 @@ In this updated edition, special attention is given to the themes of state gover
 ---
 
 *This document is part of the "Spiral of Consciousness" system. When distributing, be sure to include a link to the full set of modules.*
+
+---
+
+## Frequently Asked Questions
+
+### 1. "Why so many books? Is it enough just to read the Canon?"
+
+The Canon (Module 0) is the core, the ethical minimum sufficient for membership in a community. But the "Spiral of Consciousness" system is not a catechism; it is an invitation to a lifetime of reflection. The Library is not an "obligatory list," but a map of a territory you may enter in any order and at any depth. The Canon answers the question of "what" (the Three Prohibitions, the Four Principles). The Library answers the question of "why" and "from where do we know this." A person who has read only the Canon can be a fine community member. A person who has also read Aristotle, Freire, Walzer, and Kimmerer will be a deeper mentor, because they will see how the same ethical truths are refracted in different eras and cultures. The Library is a resource for growth, not an exam ticket.
+
+### 2. "How do I choose what to read if I have little time?"
+
+Use the modules as a navigator. If politics and governance concern you most — start with Section 2 (Plato, Montesquieu, Rawls, Ostrom). If you work with trauma — Section 7 (Frankl, van der Kolk). If you are an engineer thinking about AI — Section 10 (Bostrom, Zuboff). For a first rapid immersion, three books suffice: Aristotle — "Nicomachean Ethics" (the foundation of virtue ethics), Frankl — "Man's Search for Meaning" (how to preserve humanity), and Ostrom — "Governing the Commons" (how people self-organise without the state or the market). These are three books from entirely different angles, yet all of them lead to the core of the Spiral. After them, you will know yourself which direction to dig further. And remember: one deeply read book is worth more than ten skimmed ones. Quality of reading is more important than quantity.
+
+### 3. "Are non-Western thinkers represented?"
+
+Yes, and consciously and systematically. Section 13 (African Philosophy) includes Chinua Achebe, Kwasi Wiredu, Desmond Tutu, Léopold Sédar Senghor. Section 14 (Asian Thought) — Laozi, Confucius, Gandhi, Amartya Sen. Section 15 (Russian Philosophy) — Khomyakov, Fyodorov, Vernadsky, Berdyaev. Section 16 (Latin American Thought) — Freire, Dussel, Gutiérrez, Galeano. Section 12 (Indigenous Knowledge) — Marshall, Kimmerer, Linda Smith. This is not a "diversity checkbox" for show, but a structural feature of the Spiral: if a system claims to engage in global ethical dialogue, its intellectual foundation cannot be monocultural. We do not claim that the library is perfectly balanced — it will continue to be expanded. But the direction is set: from the Western canon as the "only one" — toward a global chorus, where every voice matters.

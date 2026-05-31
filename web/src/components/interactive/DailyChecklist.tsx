@@ -1,0 +1,47 @@
+import { useState, useEffect } from 'preact/hooks';
+import { t, type Lang } from '../../i18n/ui';
+
+interface Props { lang: Lang; }
+
+export default function DailyChecklist({ lang }: Props) {
+  const today = new Date().toISOString().slice(0, 10);
+  const [items, setItems] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem('spiral-daily') || '{}');
+    setItems(data[today] || { morning: false, shield: false, evening: false });
+  }, []);
+
+  function toggle(key: string) {
+    const newItems = { ...items, [key]: !items[key] };
+    setItems(newItems);
+    const data = JSON.parse(localStorage.getItem('spiral-daily') || '{}');
+    data[today] = newItems;
+    localStorage.setItem('spiral-daily', JSON.stringify(data));
+  }
+
+  const done = items.morning && items.shield && items.evening;
+  const count = [items.morning, items.shield, items.evening].filter(Boolean).length;
+
+  return (
+    <div class={`daily-checklist ${done ? 'done' : ''}`}>
+      <div class="dc-header">
+        <span class="dc-title">{today.replace(/-/g, '.')}</span>
+        <span class="dc-count">{count}/3</span>
+      </div>
+      <label class={`dc-item ${items.morning ? 'checked' : ''}`}>
+        <input type="checkbox" checked={items.morning || false} onChange={() => toggle('morning')} />
+        <span>{lang === 'ru' ? 'Утреннее намерение' : 'Morning intention'}</span>
+      </label>
+      <label class={`dc-item ${items.shield ? 'checked' : ''}`}>
+        <input type="checkbox" checked={items.shield || false} onChange={() => toggle('shield')} />
+        <span>{lang === 'ru' ? 'Цифровой щит' : 'Digital shield'}</span>
+      </label>
+      <label class={`dc-item ${items.evening ? 'checked' : ''}`}>
+        <input type="checkbox" checked={items.evening || false} onChange={() => toggle('evening')} />
+        <span>{lang === 'ru' ? 'Вечерняя рефлексия' : 'Evening reflection'}</span>
+      </label>
+      {done && <div class="dc-done">{lang === 'ru' ? '✓ Все практики выполнены' : '✓ All practices complete'}</div>}
+    </div>
+  );
+}

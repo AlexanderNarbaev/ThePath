@@ -218,6 +218,110 @@ A state that systematically violates the three prohibitions (tortures, executes 
 
 ---
 
-*Version 2.1. The Canon is affirmed and not subject to change without global consensus (90% of communities).*  
+## 10. Frequently Asked Questions
+
+Questions that inevitably arise upon first acquaintance with the Canon. The answers are not dogma, but express the position of the system's core.
+
+---
+
+**"Is this a religion?"**
+
+No. No metaphysics, no demands of faith, no deities, no promises of an afterlife. Only pragmatic axioms, ethical prohibitions, and principles derived from experience and reason.
+
+Religions can coexist with the Spiral — it does not demand the renunciation of faith, but neither does it require faith. A person can be a Christian, a Muslim, a Buddhist, an atheist — and simultaneously walk the Spiral. The Canon does not intrude into the sphere of the metaphysical: it speaks of what happens here and now, not of what lies beyond death.
+
+The Spiral is an operating system, not a creed. It answers the question "how to live?" rather than "what to believe in?"
+
+---
+
+**"Why exactly three prohibitions, and not ten, not five?"**
+
+The three prohibitions are the minimum necessary set. They cover the entire field of what makes long-term cooperation impossible.
+
+- **Murder** destroys the very possibility of reaching agreement: the dead do not negotiate.
+- **Torture** destroys trust in authority: the torturer cannot be a partner.
+- **Enslavement** destroys autonomy: the enslaved cannot choose.
+
+All other ethical norms are derivatives of these three. Theft — a form of enslavement (deprivation of the fruits of labor without consent). Deception — a form of the murder of trust. Humiliation — a form of torture. Adding a fourth or fifth prohibition would create duplication and blur clarity. Reducing to two would leave a blind spot.
+
+Three is the minimum number that provides full coverage.
+
+---
+
+**"What about war? Doesn't defending one's country require killing?"**
+
+Defense against a direct, imminent threat is not a violation of the first prohibition. A soldier defending their home from an attack acts within the exception provided by the Canon.
+
+But aggressive war, preemptive strikes, killing without a direct threat — these are prohibited. The army exists for defense, not conquest.
+
+A soldier of the Spiral:
+- defends, but does not torture prisoners;
+- does not kill the unarmed;
+- does not carry out criminal orders.
+
+This is a difficult path — it requires distinguishing between necessary and excessive violence right in the midst of combat. But it is the only path that remains ethically tenable. There are no easy answers in war. The Spiral does not offer easy answers.
+
+---
+
+**"What if a criminal threatens many? Can they be tortured to save the innocent?"**
+
+This is the famous "ticking bomb" problem. The Spiral's answer is **no**.
+
+First, torture rarely yields reliable information. A person under torture will say anything to make the pain stop — and the investigation will go down a false path.
+
+Second, the permission to torture "in exceptional cases" inevitably expands. History shows: every "exception" becomes the norm. Today — to save a city, tomorrow — to save a neighborhood, the day after — for prevention. There is not a single historical example where a "limited" permission to torture remained limited.
+
+Third, a society that permits torture loses the moral right to demand that others observe human rights. You cannot say "do not torture ours" if you yourself torture "theirs."
+
+The absolute prohibition is the only reliable protection. Not because we are naive. Because we have studied history.
+
+---
+
+**"What to do if the state I live in systematically violates the three prohibitions?"**
+
+The Canon recognizes: a state that tortures, executes without trial, enslaves — loses ethical legitimacy. Section 8 describes this directly.
+
+Your duties in such a situation:
+
+1. **Do not be complicit.** If you are an official, soldier, police officer — refuse criminal orders. If you are a witness — do not remain silent.
+2. **Use peaceful means.** The word, testimony, cooperation, the creation of alternative institutions — these are the weapons of the Spiral.
+3. **Do not become a mirror of evil.** The Spiral does not call for the violent overthrow of power. History teaches: revolutions almost always lead to even greater tyranny, because they demolish not only what is bad, but all institutions of order.
+4. **Create alternatives.** A Spiral community is already an alternative. A school where they do not lie. A workshop where they do not steal. A circle where they do not humiliate. Each such island is a step toward the future.
+
+The Spiral does not demand martyrdom. But it demands that you not be an accomplice.
+
+---
+
+**"How does the Spiral differ from secular humanism?"**
+
+Close. Secular humanism is one of the Spiral's intellectual sources. But there are differences:
+
+- **Center.** Humanism places the human being at the center. The Spiral places consciousness at the center — a broader concept. It includes the human, but potentially also AI, extraterrestrial intelligence, and future forms of life we cannot yet imagine. It is not the form of the vessel that matters, but the capacity to perceive, choose, and bear consequences.
+- **Tone.** Humanism is often optimistic by default. The Spiral acknowledges the reality of entropy — the force pulling everything downward — and demands an active, daily choice. "The human is good" versus "the human chooses — every day."
+- **Practice.** Humanism offers values. The Spiral offers values plus a minimum set of practices: 3 minutes a day, accessible to everyone. Ideas without habits are weak.
+- **Narrative.** The Spiral has a condensed myth — not a dogma, but a poetic frame. Humanism generally avoids narrative, relying solely on rational argumentation. The Spiral believes that people need both reason and story.
+
+---
+
+**"What if one Spiral community violates the principles? Who will stop it?"**
+
+The Spiral has no central authority, and this is a conscious decision. Communities are autonomous. But the absence of hierarchy does not mean the absence of protective mechanisms.
+
+The main mechanism is **reputation**. A community that violates the prohibitions:
+- loses recognition by other communities;
+- its Keepers are stripped of their status;
+- its members are excluded from the common network;
+- its name becomes a warning.
+
+The network self-regulates. Each community has an interest in the purity of its reputation, because isolation is death for a community built on cooperation.
+
+This is not ideal. There will be mistakes, disputes, conflicts. But it is better than a church hierarchy that breeds abuses, or state control over conscience that kills freedom.
+
+The Spiral chooses trust in the networked intelligence of free people. If people are incapable of self-regulation — the Spiral is impossible. If they are capable — central authority is unnecessary.
+
+---
+
+*Version 2.2. The Canon is affirmed and not subject to change without global consensus (90% of communities).*  
 *Changes in version 2.1: added clarification of the term "conscious node," strengthened formulations on the inadmissibility of justifying violations of the prohibitions, explicitly limited the authority of the Keeper, added the section "The Spiral and the State."*  
+*Changes in version 2.2: added Section 10 "Frequently Asked Questions" with answers on religion, the three prohibitions, war, torture, a violating state, differences from humanism, and community self-regulation.*  
 *So may it be.*
