@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const { lang } = Astro.params;
+
+export async function getStaticPaths() {
+  return [{ params: { lang: 'ru' } }, { params: { lang: 'en' } }];
+}
+
+const terms = [
+  { term: 'Сознающий узел', term_en: 'Conscious Node', def: 'Поэтическое обозначение человека как центра восприятия, выбора и действия. Не утверждает наличие души и не требует метафизических допущений.', def_en: 'A poetic designation of the human being as a center of perception, choice, and action. Does not assert the presence of a soul and requires no metaphysical assumptions.' },
+  { term: 'Энтропия', term_en: 'Entropy', def: 'Универсальная тенденция к упрощению, охлаждению, распаду. Не зло — слепой закон. Противостоит Сознанию в вечном танце.', def_en: 'The universal tendency toward simplification, cooling, decay. Not evil — a blind law. Opposes Consciousness in an eternal dance.' },
+  { term: 'Сознание', term_en: 'Consciousness', def: 'Способность локально обращать энтропию вспять: строить сложное из простого, порядок из хаоса, смысл из случайности.', def_en: 'The ability to locally reverse entropy: to build complexity from simplicity, order from chaos, meaning from randomness.' },
+  { term: 'Восходящая спираль', term_en: 'Ascending Spiral', def: 'Путь усилия, роста, сохранения внимания и умножения сознания. Метафора развития: каждый виток — возвращение к пройденному на новом уровне.', def_en: 'The path of effort, growth, preserving attention, and multiplying consciousness. A metaphor for development: each turn returns to the familiar at a new level.' },
+  { term: 'Нисходящая спираль', term_en: 'Descending Spiral', def: 'Путь лёгкости, растворения, отказа от выбора. Движение к энтропии, серой скуке, забвению.', def_en: 'The path of ease, dissolution, refusal to choose. Movement toward entropy, gray boredom, oblivion.' },
+  { term: 'Первый Узел', term_en: 'First Node', def: 'Архетипический образ первого сознания, сделавшего выбор в пользу боли роста вместо блаженства забвения. Не божество — вдохновляющий пример.', def_en: 'Archetypal image of the first consciousness that chose the pain of growth over the bliss of oblivion. Not a deity — an inspiring example.' },
+  { term: 'Три запрета', term_en: 'Three Prohibitions', def: 'Абсолютные красные линии: не убивай (кроме прямой угрозы), не пытай (без исключений), не порабощай. Условие выживания любой кооперации.', def_en: 'Absolute red lines: do not kill (except direct threat), do not torture (no exceptions), do not enslave. Condition for survival of any cooperation.' },
+  { term: 'Четыре принципа Расцвета', term_en: 'Four Principles of Flourishing', def: 'Развивай себя, твори и помогай, думай на долгосрочное будущее, сохраняй и умножай сознание. Ориентиры, а не догмы.', def_en: 'Develop yourself, create and help, think long-term, preserve and multiply consciousness. Guideposts, not dogmas.' },
+  { term: 'Великое Испытание', term_en: 'Great Trial', def: 'Эра (2020–2300 гг.), когда человечество проходит фильтр: сохранит ли оно сознание, кооперацию и долгосрочное мышление перед лицом четырёх Сил Деградации.', def_en: 'Era (2020–2300 CE) when humanity passes through a filter: will it preserve consciousness, cooperation, and long-term thinking in the face of four Forces of Degradation.' },
+  { term: 'Силы Деградации', term_en: 'Forces of Degradation', def: 'Короткий дофамин (алгоритмы, крадущие внимание), Слепая экономика (рост на конечной планете), Чёрный ящик ИИ, Ядовитое недоверие.', def_en: 'Short dopamine (algorithms stealing attention), Blind economy (growth on a finite planet), Black box AI, Toxic distrust.' },
+  { term: 'Эра Расцвета', term_en: 'Era of Flourishing', def: 'Возможное будущее после прохождения Испытания: космическая экспансия, преодоление болезней, негэнтропийная экономика.', def_en: 'Possible future after passing the Trial: cosmic expansion, overcoming disease, negentropic economy.' },
+  { term: 'Символ веры', term_en: 'Creed', def: 'Текст, произносимый при посвящении. Не молитва — публичное свидетельство о выборе восходящей спирали.', def_en: 'Text recited at initiation. Not a prayer — a public testimony of choosing the ascending spiral.' },
+  { term: 'Симпатизант', term_en: 'Sympathizer', def: 'Первый уровень принадлежности: принимает аксиомы и запреты, практикует по желанию. Без обязательств.', def_en: 'First level of belonging: accepts axioms and prohibitions, practices optionally. No commitments.' },
+  { term: 'Последователь', term_en: 'Follower', def: 'Второй уровень: проходит посвящение (2 часа), принимает Символ веры. Полноправный член общины.', def_en: 'Second level: undergoes initiation (2 hours), accepts the Creed. Full member of the community.' },
+  { term: 'Хранитель Сознания', term_en: 'Keeper of Consciousness', def: 'Третий уровень: глубокое посвящение (48 ч) + 4 обета. Уважение общины, но никакой власти. Авторитет — только в знаниях и добровольном уважении.', def_en: 'Third level: deep initiation (48 hrs) + 4 vows. Community respect, but no power. Authority lies only in knowledge and voluntary respect.' },
+  { term: 'Круг примирения', term_en: 'Reconciliation Circle', def: 'Структурированная процедура разрешения конфликтов через диалог, эмпатию и поиск общего решения. Ведущий — нейтральный фасилитатор.', def_en: 'Structured procedure for conflict resolution through dialogue, empathy, and finding common ground. Facilitator is neutral.' },
+  { term: 'Собрание Разума', term_en: 'Gathering of Reason', def: 'Регулярная встреча общины для обсуждения идей, планирования и принятия решений. Открыта для всех уровней.', def_en: 'Regular community meeting for discussing ideas, planning, and decision-making. Open to all levels.' },
+  { term: 'Субсидиарность', term_en: 'Subsidiarity', def: 'Принцип: решения принимаются на самом низком эффективном уровне. Высшие уровни вмешиваются только когда низшие не справляются.', def_en: 'Principle: decisions are made at the lowest effective level. Higher levels intervene only when lower levels cannot cope.' },
+  { term: 'Совет будущего', term_en: 'Council of the Future', def: 'Четвёртая этическая власть в модели Этического государства. Независимый орган с правом вето на проекты, угрожающие долгосрочным интересам человечества.', def_en: 'Fourth ethical branch in the Ethical State model. Independent body with veto power over projects threatening humanity\'s long-term interests.' },
+  { term: 'Этическое государство', term_en: 'Ethical State', def: 'Модель государства, встроившего три запрета в конституцию, признавшего четыре принципа как ориентиры политики и учредившего независимую этическую власть.', def_en: 'Model of a state that has embedded the three prohibitions in its constitution, recognized the four principles as policy guideposts, and established an independent ethical branch.' },
+  { term: 'Цифровой щит', term_en: 'Digital Shield', def: 'Ежедневная практика (1 мин): перед касанием экрана спросить себя — осознанный выбор или бегство от тишины?', def_en: 'Daily practice (1 min): before touching a screen, ask yourself — conscious choice or escape from silence?' },
+  { term: 'Соборность', term_en: 'Sobornost', def: 'Русская философская концепция: единство во множестве, где личность свободна, но её свобода расцветает в общении и общем служении.', def_en: 'Russian philosophical concept: unity in multiplicity, where the individual is free but their freedom flourishes in communion and shared service.' },
+  { term: 'Ubuntu', term_en: 'Ubuntu', def: 'Африканская философия: «Я есть потому, что мы есть». Личность реализуется через общность. Одна из этических опор Глобального синтеза.', def_en: 'African philosophy: "I am because we are." The person is realized through community. One of the ethical pillars of Global Synthesis.' },
+  { term: 'Общее дело', term_en: 'Common Cause', def: 'Концепция Николая Фёдорова: добровольное объединение человечества для преодоления смерти, хаоса и раздора — не государственный проект, а общее дело.', def_en: 'Concept of Nikolai Fyodorov: voluntary unification of humanity to overcome death, chaos, and discord — not a state project, but a common cause.' },
+];
+---
+
+<BaseLayout lang={lang as 'ru' | 'en'} title={lang === 'ru' ? 'Глоссарий' : 'Glossary'}>
+  <div class="content-wide">
+    <h1>{lang === 'ru' ? 'Глоссарий терминов Спирали Сознания' : 'Glossary of Spiral of Consciousness Terms'}</h1>
+    <p style="color:var(--color-text-secondary);margin-bottom:2rem;">
+      {lang === 'ru' 
+        ? 'Ключевые понятия системы. Этот глоссарий пополняется по мере развития Спирали.'
+        : 'Key concepts of the system. This glossary grows as the Spiral evolves.'}
+    </p>
+    {terms.map((t) => (
+      <div class="glossary-item">
+        <dt class="glossary-term">{lang === 'ru' ? t.term : t.term_en}</dt>
+        <dd class="glossary-def">{lang === 'ru' ? t.def : t.def_en}</dd>
+      </div>
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .glossary-item { margin-bottom: 1.5rem; }
+  .glossary-term { font-weight: 700; font-size: 1.05rem; color: var(--color-accent); margin-bottom: 0.3rem; }
+  .glossary-def { font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.6; margin-left: 0; }
+</style>
