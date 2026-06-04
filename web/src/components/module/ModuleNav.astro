@@ -1,6 +1,6 @@
 ---
+import { t, type Lang } from '../../i18n/ui';
 import { modules } from '../../i18n/modules';
-import type { Lang } from '../../i18n/ui';
 
 interface Props { lang: Lang; current: number; }
 
@@ -17,7 +17,7 @@ const base = '/ThePath';
       {prev ? (
         <a href={`${base}/${lang}/modules/${prev.slug}`}>
           <span class="nav-arrow">&larr;</span>
-          <span class="nav-label">{lang === 'ru' ? 'Предыдущий' : 'Previous'}</span>
+           <span class="nav-label">{t('module.prev', lang)}</span>
           <span class="nav-title">{prev.title[lang]}</span>
         </a>
       ) : <span />}
@@ -25,7 +25,7 @@ const base = '/ThePath';
     <div class="module-nav-next">
       {next ? (
         <a href={`${base}/${lang}/modules/${next.slug}`}>
-          <span class="nav-label">{lang === 'ru' ? 'Следующий' : 'Next'}</span>
+           <span class="nav-label">{t('module.next', lang)}</span>
           <span class="nav-title">{next.title[lang]}</span>
           <span class="nav-arrow">&rarr;</span>
         </a>
