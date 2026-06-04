@@ -1,0 +1,8 @@
+{
+  "id": "b7ae3498-1c72-44ae-a719-e43bff372376",
+  "title": "Автономный сайт и GitVerse Pages деплой",
+  "details": "За сессию выполнено:\n1. GitVerse Pages workflow: actions/upload-pages-artifact@v1 + actions/deploy-pages@v1, setup-go обязателен\n2. BASE_PATH через env var: GitHub=/ThePath, GitVerse=/thepath\n3. Удалены все внешние ссылки: spiralconsciousness.org, Telegram, GitHub, контакты\n4. Удалены Google Fonts → системный monospace\n5. Главная переписана: Что это → Почему работает → Для кого → Что внутри → С чего начать\n6. Добавлен PrinciplesCards (4 принципа)\n7. map.md очищены от секций контактов и GitHub/Telegram\n8. 2 коммита, запушены в gitverse + github",
+  "category": "project_context",
+  "dateCreated": "2026-05-31T20:37:15.015Z",
+  "dateUpdated": "2026-05-31T20:37:15.015Z"
+}

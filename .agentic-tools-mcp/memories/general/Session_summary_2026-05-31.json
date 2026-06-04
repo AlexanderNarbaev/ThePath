@@ -1,0 +1,8 @@
+{
+  "id": "58c01bbb-97cd-4a8f-9f2b-6330f7cbc1fb",
+  "title": "Session summary 2026-05-31",
+  "details": "Session 2026-05-31: Major project enhancement. \n\nCompleted in this session:\n1. Migrated from Jekyll to Astro 5 + Preact + Tailwind CSS v4\n2. Full English translations of all 15 modules (~200-400 lines each, not stubs)\n3. Added ~80 FAQ sections across all 15 modules in RU+EN\n4. Expanded Module 1 (Cosmology) with 4 new symbols: Bridge (Мост), Mirror (Зеркало), Threshold (Порог), Seed (Семя)\n5. Created Scientific Foundations appendix (Module 99): thermodynamics, neuroscience, evolutionary ethics, systems thinking, philosophy\n6. Created Community Startup Guide (Module 98): 8 sections, 9-step checklist\n7. Glossary: 24 key terms in RU+EN\n8. Interactive components: PathTracker, DailyChecklist, EthicalCompass, Search, ProgressBar, BookmarkButton, ModuleGraph (D3)\n9. Table of Contents auto-generation on module pages\n10. Prev/Next module navigation\n11. Print styles, PWA manifest, sitemap.xml, RSS feed, Twitter cards\n12. Improved 404 with search suggestions\n13. Standard repo files: README, LICENSE (CC BY-SA 4.0), CONTRIBUTING, TRANSLATION, CODE_OF_CONDUCT\n14. CodeGraph initialized\n15. All docs/ synced with web/src/content/\n16. Git: 8 commits on main, pushed to GitHub + GitVerse\n\nSite: 53 pages at https://alexandernarbaev.github.io/ThePath/\nBase path: /ThePath (hardcoded in all components)\nCI/CD: .github/workflows/deploy.yml + .gitverse/workflows/deploy.yml\nDual remotes: origin (GitHub) + gitverse (GitVerse)",
+  "category": "general",
+  "dateCreated": "2026-05-31T17:16:09.040Z",
+  "dateUpdated": "2026-05-31T17:16:09.040Z"
+}
