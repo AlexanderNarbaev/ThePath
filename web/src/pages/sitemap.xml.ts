@@ -18,6 +18,10 @@ export const GET: APIRoute = () => {
   pages.push({ loc: `${BASE}/en/manifesto`, lastmod: now, priority: 0.9 });
   pages.push({ loc: `${BASE}/ru/glossary`, lastmod: now, priority: 0.8 });
   pages.push({ loc: `${BASE}/en/glossary`, lastmod: now, priority: 0.8 });
+  pages.push({ loc: `${BASE}/ru/contact`, lastmod: now, priority: 0.6 });
+  pages.push({ loc: `${BASE}/en/contact`, lastmod: now, priority: 0.6 });
+  pages.push({ loc: `${BASE}/ru/simulator`, lastmod: now, priority: 0.7 });
+  pages.push({ loc: `${BASE}/en/simulator`, lastmod: now, priority: 0.7 });
 
   const langs = ['ru', 'en'] as const;
   for (const lang of langs) {
@@ -32,11 +36,20 @@ export const GET: APIRoute = () => {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${pages.map((p) => `  <url>
+${pages.map((p) => {
+    const isRu = p.loc.includes('/ru/');
+    const otherLang = isRu ? 'en' : 'ru';
+    const altUrl = isRu
+      ? p.loc.replace('/ru/', '/en/')
+      : p.loc.replace('/en/', '/ru/');
+    return `  <url>
     <loc>${p.loc}</loc>
     <lastmod>${p.lastmod}</lastmod>
     <priority>${p.priority}</priority>
-  </url>`).join('\n')}
+    <xhtml:link rel="alternate" hreflang="${isRu ? 'ru' : 'en'}" href="${p.loc}" />
+    <xhtml:link rel="alternate" hreflang="${otherLang}" href="${altUrl}" />
+  </url>`;
+  }).join('\n')}
 </urlset>`;
 
   return new Response(xml, {
