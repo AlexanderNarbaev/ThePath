@@ -75,6 +75,7 @@ export const ui = {
     'glossary.title': 'Глоссарий',
     'glossary.heading': 'Глоссарий терминов Спирали Сознания',
     'glossary.description': 'Ключевые понятия системы. Этот глоссарий пополняется по мере развития Спирали.',
+    'counter.visitors': 'посетителей',
   },
   en: {
     'site.name': 'Spiral of Consciousness',
@@ -152,6 +153,7 @@ export const ui = {
     'glossary.title': 'Glossary',
     'glossary.heading': 'Glossary of Spiral of Consciousness Terms',
     'glossary.description': 'Key concepts of the system. This glossary grows as the Spiral evolves.',
+    'counter.visitors': 'visitors',
   },
 } as const;
 

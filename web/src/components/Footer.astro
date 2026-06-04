@@ -1,5 +1,6 @@
 ---
 import { t, type Lang } from '../i18n/ui';
+import VisitorCounter from './analytics/VisitorCounter';
 const { lang } = Astro.props as { lang: Lang };
 ---
 
@@ -9,6 +10,9 @@ const { lang } = Astro.props as { lang: Lang };
     <div class="footer-bottom">
       <p>&copy; {new Date().getFullYear()} {t('footer.license', lang)}</p>
       <p class="footer-version">{t('footer.version', lang)}</p>
+    </div>
+    <div class="footer-counter" style="margin-top:0.5rem;font-size:0.8rem;opacity:0.5;">
+      <VisitorCounter lang={lang} client:load />
     </div>
   </div>
 </footer>
