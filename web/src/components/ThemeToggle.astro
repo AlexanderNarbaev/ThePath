@@ -12,8 +12,8 @@ const { lang } = Astro.props as { lang: Lang };
 <style>
   .theme-toggle { background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 8px; padding: 0.4rem; cursor: pointer; color: var(--color-text-secondary); display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
   .theme-toggle:hover { color: var(--color-accent); border-color: var(--color-accent); }
-  [data-theme="dark"] .icon-sun, :root .icon-sun { display: none; }
-  [data-theme="dark"] .icon-moon, :root .icon-sun { display: block; }
-  :root .icon-moon, [data-theme="light"] .icon-moon { display: none; }
+  :root .icon-sun { display: none; }
+  :root .icon-moon { display: block; }
   [data-theme="light"] .icon-sun { display: block; }
+  [data-theme="light"] .icon-moon { display: none; }
 </style>
