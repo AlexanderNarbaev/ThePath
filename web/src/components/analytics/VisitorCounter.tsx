@@ -8,7 +8,7 @@ export default function VisitorCounter({ lang }: Props) {
 
   useEffect(() => {
     const path = window.location.pathname;
-    fetch(`https://spiral.goatcounter.com/counter/${encodeURIComponent(path)}.json`)
+    fetch(`https://alex-narbaev.goatcounter.com/counter/${encodeURIComponent(path)}.json`)
       .then(r => r.json())
       .then(d => setCount(d.count || 0))
       .catch(() => setCount(null));
