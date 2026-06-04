@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EthicalSimulator from '../../components/interactive/EthicalSimulator';
+import { t, type Lang } from '../../i18n/ui';
+
+export async function getStaticPaths() {
+  return [{ params: { lang: 'ru' } }, { params: { lang: 'en' } }];
+}
+
+const lang = Astro.params.lang as Lang;
+---
+
+<BaseLayout lang={lang} title={t('simulator.title', lang)}>
+  <div class="content-wide" style="max-width:700px;">
+    <EthicalSimulator lang={lang} client:load />
+  </div>
+</BaseLayout>
+
+<style>
+  .simulator { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 2rem; }
+  .sim-subtitle { color: var(--color-text-secondary); margin-bottom: 1.5rem; }
+  .sim-text { color: var(--color-text-secondary); margin-bottom: 1.5rem; line-height: 1.6; }
+  .sim-progress { font-size: 0.8rem; color: var(--color-text-secondary); margin-bottom: 1rem; }
+  .sim-options { display: flex; flex-direction: column; gap: 0.75rem; }
+  .sim-option { padding: 1rem; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-bg-secondary); color: var(--color-text-primary); text-align: left; cursor: pointer; font-size: 0.95rem; transition: all 0.2s; }
+  .sim-option:hover { border-color: var(--color-gold); }
+  .sim-btn { padding: 0.75rem 2rem; background: var(--color-gold); color: #0a0a14; border: none; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer; }
+  .sim-btn-secondary { background: transparent; color: var(--color-text-secondary); border: 1px solid var(--color-border); }
+  .sim-actions { display: flex; gap: 1rem; margin-top: 1.5rem; }
+  .sim-scales { display: flex; flex-direction: column; gap: 1.5rem; margin: 1.5rem 0; }
+  .sim-scale-label { font-weight: 600; margin-bottom: 0.25rem; color: var(--color-accent); }
+  .sim-scale-bar { height: 8px; background: var(--color-bg-secondary); border-radius: 4px; overflow: hidden; }
+  .sim-scale-fill { height: 100%; background: var(--color-gold); border-radius: 4px; transition: width 0.5s ease; }
+  .sim-scale-text { font-size: 0.85rem; color: var(--color-text-secondary); margin-top: 0.25rem; }
+</style>
