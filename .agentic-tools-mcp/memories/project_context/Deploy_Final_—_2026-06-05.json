@@ -1,0 +1,8 @@
+{
+  "id": "a30d22ce-aa61-479f-9ddd-22a37cee4b67",
+  "title": "Deploy Final — 2026-06-05",
+  "details": "Финальная сессия 2026-06-05: билд 57 страниц, деплой на GitHub Pages + GitVerse Pages. Web3Forms ключ: 35bd2f30-526a-416a-84c7-14c4436477fe (публичный, в .env). GoatCounter: alex-narbaev.goatcounter.com (скрипт в BaseLayout.astro). giscus: плейсхолдеры, нужны repo-id и category-id от GitHub Discussions. Проект: Astro 5 + Preact + Tailwind 4. Репозитории: github.com/AlexanderNarbaev/ThePath, gitverse.ru/AlexandrNarbaev/ThePath.",
+  "category": "project_context",
+  "dateCreated": "2026-06-04T21:43:24.754Z",
+  "dateUpdated": "2026-06-04T21:43:24.754Z"
+}
