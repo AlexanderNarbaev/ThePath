@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ModuleGraph from '../../components/map/ModuleGraph';
 import PathTracker from '../../components/interactive/PathTracker';
-import { t } from '../../i18n/ui';
+import { t, type Lang } from '../../i18n/ui';
 import { modules } from '../../i18n/modules';
 import { paths } from '../../i18n/paths';
 
@@ -11,7 +11,7 @@ export async function getStaticPaths() {
   return [{ params: { lang: 'ru' } }, { params: { lang: 'en' } }];
 }
 
-const { lang } = Astro.params;
+const lang = Astro.params.lang as Lang;
 const allPages = await getCollection('pages');
 const page = allPages.find((e) => e.id.includes('map') && e.data?.lang === lang);
 if (!page) return Astro.redirect(`/ThePath/${lang}`);
@@ -19,20 +19,20 @@ const { Content } = await page.render();
 const base = '/ThePath';
 ---
 
-<BaseLayout lang={lang as 'ru' | 'en'} title={t('map.title' as any, lang as 'ru' | 'en')}>
+<BaseLayout lang={lang} title={t('map.title', lang)}>
   <div class="content-wide">
-    <h1>{t('map.title' as any, lang as 'ru' | 'en')}</h1>
-    <PathTracker lang={lang as 'ru' | 'en'} client:load />
+    <h1>{t('map.title', lang)}</h1>
+      <PathTracker lang={lang} client:load />
     <Content />
 
     <section style="margin:2rem 0;">
-      <h2>{t('map.modules' as any, lang as 'ru' | 'en')}</h2>
-      <ModuleGraph lang={lang as 'ru' | 'en'} client:load />
+      <h2>{t('map.modules', lang)}</h2>
+        <ModuleGraph lang={lang} client:load />
     </section>
 
     <section style="margin:2rem 0;">
       <table>
-        <thead><tr><th>#</th><th>{lang === 'ru' ? 'Название' : 'Title'}</th><th>{lang === 'ru' ? 'Аудитория' : 'Audience'}</th><th>{lang === 'ru' ? 'Путь' : 'Path'}</th></tr></thead>
+        <thead><tr><th>{t('table.number', lang)}</th><th>{t('table.title', lang)}</th><th>{t('table.audience', lang)}</th><th>{t('table.path', lang)}</th></tr></thead>
         <tbody>
           {modules.map((m) => (
             <tr><td>{m.number}</td><td><a href={`${base}/${lang}/modules/${m.slug}`}>{lang === 'ru' ? m.title.ru : m.title.en}</a></td><td>{lang === 'ru' ? m.audience.ru : m.audience.en}</td><td><span class="path-badge">{m.path}</span></td></tr>
@@ -42,7 +42,7 @@ const base = '/ThePath';
     </section>
 
     <section style="margin:2rem 0;">
-      <h2>{t('map.paths' as any, lang as 'ru' | 'en')}</h2>
+      <h2>{t('map.paths', lang)}</h2>
       {paths.map((p) => {
         const requiredModules = p.modules.map((n) => modules.find((m) => m.number === n)).filter(Boolean);
         const optionalMods = (p.optional || []).map((n) => modules.find((m) => m.number === n)).filter(Boolean);
@@ -52,16 +52,16 @@ const base = '/ThePath';
             <h3>{lang === 'ru' ? p.name.ru : p.name.en}</h3>
             <p class="path-meta">{lang === 'ru' ? p.time.ru : p.time.en} &middot; {lang === 'ru' ? p.audience.ru : p.audience.en}</p>
             <p>{lang === 'ru' ? p.description.ru : p.description.en}</p>
-            <div class="path-modules"><span class="label">{t('paths.required' as any, lang as 'ru' | 'en')}:</span>
+            <div class="path-modules"><span class="label">{t('paths.required', lang)}:</span>
               {requiredModules.map((m) => m ? <a href={`${base}/${lang}/modules/${m.slug}`} class="module-chip">{lang === 'ru' ? m.title.ru : m.title.en}</a> : null)}
             </div>
-            {p.optional && optionalMods.length > 0 && (<div class="path-modules"><span class="label">{t('paths.optional' as any, lang as 'ru' | 'en')}:</span>
+            {p.optional && optionalMods.length > 0 && (<div class="path-modules"><span class="label">{t('paths.optional', lang)}:</span>
               {optionalMods.map((m) => m ? <a href={`${base}/${lang}/modules/${m.slug}`} class="module-chip chip-opt">{lang === 'ru' ? m.title.ru : m.title.en}</a> : null)}
             </div>)}
-            {p.recommended && recomMods.length > 0 && (<div class="path-modules"><span class="label">{t('paths.recommended' as any, lang as 'ru' | 'en')}:</span>
+            {p.recommended && recomMods.length > 0 && (<div class="path-modules"><span class="label">{t('paths.recommended', lang)}:</span>
               {recomMods.map((m) => m ? <a href={`${base}/${lang}/modules/${m.slug}`} class="module-chip chip-rec">{lang === 'ru' ? m.title.ru : m.title.en}</a> : null)}
             </div>)}
-            <a href={`${base}/${lang}/paths/${p.id}`} class="path-start-link">{t('paths.start' as any, lang as 'ru' | 'en')} &rarr;</a>
+            <a href={`${base}/${lang}/paths/${p.id}`} class="path-start-link">{t('paths.start', lang)} &rarr;</a>
           </div>
         );
       })}
