@@ -123,7 +123,7 @@
 .search-trigger { background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 8px; padding: 0.35rem 0.65rem; cursor: pointer; color: var(--color-text-secondary); display: flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; }
 .search-trigger:hover { color: var(--color-accent); border-color: var(--color-accent); }
 .search-shortcut { font-size: 0.7rem; opacity: 0.5; font-family: var(--font-mono); }
-.search-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 100; display: flex; align-items: flex-start; justify-content: center; padding-top: 15vh; }
+.search-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 101; display: flex; align-items: flex-start; justify-content: center; padding-top: 15vh; }
 .search-modal { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px; width: 90%; max-width: 500px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
 .search-input { width: 100%; padding: 1rem 1.25rem; font-size: 1.1rem; border: none; border-bottom: 1px solid var(--color-border); background: transparent; color: var(--color-text-primary); outline: none; }
 .search-input::placeholder { color: var(--color-text-secondary); }
