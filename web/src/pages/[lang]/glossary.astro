@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const { lang } = Astro.params;
+import { t, type Lang } from '../../i18n/ui';
+const lang = Astro.params.lang as Lang;
 
 export async function getStaticPaths() {
   return [{ params: { lang: 'ru' } }, { params: { lang: 'en' } }];
@@ -34,13 +35,11 @@ const terms = [
 ];
 ---
 
-<BaseLayout lang={lang as 'ru' | 'en'} title={lang === 'ru' ? 'Глоссарий' : 'Glossary'}>
+<BaseLayout lang={lang} title={t('glossary.title', lang)}>
   <div class="content-wide">
-    <h1>{lang === 'ru' ? 'Глоссарий терминов Спирали Сознания' : 'Glossary of Spiral of Consciousness Terms'}</h1>
+    <h1>{t('glossary.heading', lang)}</h1>
     <p style="color:var(--color-text-secondary);margin-bottom:2rem;">
-      {lang === 'ru' 
-        ? 'Ключевые понятия системы. Этот глоссарий пополняется по мере развития Спирали.'
-        : 'Key concepts of the system. This glossary grows as the Spiral evolves.'}
+      {t('glossary.description', lang)}
     </p>
     {terms.map((t) => (
       <div class="glossary-item">
