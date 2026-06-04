@@ -1,14 +1,13 @@
 ---
+import { t, type Lang } from '../../i18n/ui';
 interface Heading { depth: number; text: string; slug: string; }
-
-const { headings = [] } = Astro.props as { headings?: Heading[] };
-
+const { headings = [], lang = 'ru' } = Astro.props as { headings?: Heading[]; lang?: Lang };
 if (headings.length === 0) return null;
 ---
 
 <nav class="toc" aria-label="Table of contents">
   <details open>
-    <summary class="toc-title">Содержание</summary>
+    <summary class="toc-title">{t('toc.title', lang)}</summary>
     <ul class="toc-list">
       {headings.map((h) => (
         <li class={`toc-item toc-depth-${h.depth}`}>

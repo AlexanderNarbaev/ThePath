@@ -33,7 +33,7 @@ const { lang, title, subtitle, moduleNumber, version, headings = [] } = Astro.pr
         {subtitle && <p class="module-subtitle">{subtitle}</p>}
       </div>
       <BookmarkButton module_number={moduleNumber} lang={lang} client:load />
-      <TableOfContents headings={headings} />
+      <TableOfContents headings={headings} lang={lang} />
       <div class="prose">
         <slot />
       </div>
