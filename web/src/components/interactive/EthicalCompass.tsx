@@ -107,7 +107,7 @@ export default function EthicalCompass({ lang }: Props) {
       )}
       {!s.options && (
         <button class="ec-reset" onClick={() => setStep('intro')}>
-          {lang === 'ru' ? '← Новый вопрос' : '← New question'}
+          {t('compass.reset', lang)}
         </button>
       )}
     </div>
