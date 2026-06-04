@@ -31,17 +31,17 @@ export default function DailyChecklist({ lang }: Props) {
       </div>
       <label class={`dc-item ${items.morning ? 'checked' : ''}`}>
         <input type="checkbox" checked={items.morning || false} onChange={() => toggle('morning')} />
-        <span>{lang === 'ru' ? 'Утреннее намерение' : 'Morning intention'}</span>
+        <span>{t('daily.morning', lang)}</span>
       </label>
       <label class={`dc-item ${items.shield ? 'checked' : ''}`}>
         <input type="checkbox" checked={items.shield || false} onChange={() => toggle('shield')} />
-        <span>{lang === 'ru' ? 'Цифровой щит' : 'Digital shield'}</span>
+        <span>{t('daily.shield', lang)}</span>
       </label>
       <label class={`dc-item ${items.evening ? 'checked' : ''}`}>
         <input type="checkbox" checked={items.evening || false} onChange={() => toggle('evening')} />
-        <span>{lang === 'ru' ? 'Вечерняя рефлексия' : 'Evening reflection'}</span>
+        <span>{t('daily.evening', lang)}</span>
       </label>
-      {done && <div class="dc-done">{lang === 'ru' ? '✓ Все практики выполнены' : '✓ All practices complete'}</div>}
+      {done && <div class="dc-done">{t('daily.allDone', lang)}</div>}
     </div>
   );
 }
