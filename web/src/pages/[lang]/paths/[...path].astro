@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 const { lang, path } = Astro.params as { lang: Lang; path: string };
 const base = '/ThePath';
 const studyPath = paths.find((p) => p.id === path);
-if (!studyPath) return Astro.redirect(`/ThePath/${lang}/404`);
+if (!studyPath) return Astro.redirect(`/ThePath/404`);
 
 const pathModules = studyPath.modules.map((n) => modules.find((m) => m.number === n)).filter(Boolean);
 const optionalModules = (studyPath.optional || []).map((n) => modules.find((m) => m.number === n)).filter(Boolean);
