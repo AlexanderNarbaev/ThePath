@@ -1,30 +1,30 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { t } from '../i18n/ui';
+import { t, type Lang } from '../i18n/ui';
 import SearchModal from '../components/search/SearchModal';
 const url = Astro.url.pathname;
-const lang = (url.includes('/en/') || url.startsWith('/ThePath/en')) ? 'en' : 'ru';
+const lang: Lang = (url.includes('/en/') || url.startsWith('/ThePath/en')) ? 'en' : 'ru';
 const base = '/ThePath';
 ---
 
-<BaseLayout lang={lang as 'ru' | 'en'} title={t('404.title', lang as 'ru' | 'en')}>
+<BaseLayout lang={lang} title={t('404.title', lang)}>
   <div class="content" style="text-align:center;padding:4rem 1.5rem 2rem;">
     <h1 style="font-size:5rem;margin-bottom:0;opacity:0.3;">404</h1>
     <p style="font-size:1.25rem;color:var(--color-text-secondary);margin-bottom:1rem;">
-      {lang === 'ru' ? 'Страница не найдена' : 'Page not found'}
+      {t('404.title', lang)}
     </p>
     <div style="display:flex;justify-content:center;margin-bottom:2rem;">
-      <SearchModal lang={lang as 'ru' | 'en'} client:load />
+      <SearchModal lang={lang} client:load />
     </div>
     <p style="font-size:0.9rem;color:var(--color-text-secondary);margin-bottom:2rem;">
-      {lang === 'ru' ? 'Попробуйте поиск или перейдите на одну из страниц:' : 'Try searching or visit one of these pages:'}
+      {t('404.suggestions', lang)}
     </p>
     <div class="suggestions">
-      <a href={`${base}/${lang}/`} class="sugg-link">{lang === 'ru' ? 'Главная' : 'Home'}</a>
-      <a href={`${base}/${lang}/map`} class="sugg-link">{lang === 'ru' ? 'Карта-путеводитель' : 'Guide Map'}</a>
-      <a href={`${base}/${lang}/manifesto`} class="sugg-link">{lang === 'ru' ? 'Манифест' : 'Manifesto'}</a>
-      <a href={`${base}/${lang}/glossary`} class="sugg-link">{lang === 'ru' ? 'Глоссарий' : 'Glossary'}</a>
-      <a href={`${base}/${lang}/modules/0-canon`} class="sugg-link">{lang === 'ru' ? 'Канон Спирали' : 'Canon of the Spiral'}</a>
+      <a href={`${base}/${lang}/`} class="sugg-link">{t('nav.home', lang)}</a>
+      <a href={`${base}/${lang}/map`} class="sugg-link">{t('nav.map', lang)}</a>
+      <a href={`${base}/${lang}/manifesto`} class="sugg-link">{t('nav.manifesto', lang)}</a>
+      <a href={`${base}/${lang}/glossary`} class="sugg-link">{t('404.glossary', lang)}</a>
+      <a href={`${base}/${lang}/modules/0-canon`} class="sugg-link">{t('404.canon', lang)}</a>
     </div>
   </div>
 </BaseLayout>
