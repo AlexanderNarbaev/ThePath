@@ -106,7 +106,4 @@ We are not building a strong state. We are building a just society, in which aut
 
 ---
 
-*Version 1.1. Release date: 31 May 2026.*  
-*Changes: added provisions on the Spiral as a moral compass for authority and the citizen, on the illegitimacy of a state that violates the three prohibitions, on the call to civic action. Removed the call to build a strong state.*
-
 *The Manifesto is part of the "Spiral of Consciousness" system and is distributed under the CC BY‑SA 4.0 license.*

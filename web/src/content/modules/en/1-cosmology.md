@@ -230,13 +230,4 @@ And if you fall — rise. The spiral continues. No one strikes you out for a mis
 
 ---
 
-## Document Version
-
-- **Current version:** 1.1
-- **Release date:** 30 May 2026
-- **Changes from version 1.0:** expanded cosmogony, added parallels with sobornost and the common task, strengthened archetypal imagery, added an epilogue on the inadmissibility of using the myth to justify power, removed any hints of a national epic or state mission.
-- **Next edition:** as the collective myth-making of communities deepens
-
----
-
 *This document is part of the "Spiral of Consciousness" system. When distributing, be sure to include a reference to the full corpus of modules.*

@@ -145,13 +145,4 @@ As Blaise Pascal said: "The heart has its reasons, which reason knows not." The 
 
 ---
 
-## Document Version
-
-- **Current version:** 1.0
-- **Release date:** May 31, 2026
-- **Changes from previous versions:** first release.
-- **Next revision:** as new scientific data relevant to the Spiral's principles becomes available.
-
----
-
 *This document is part of the Spiral of Consciousness system. When redistributing, please include a reference to the complete set of modules.*

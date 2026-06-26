@@ -216,15 +216,6 @@ For a state striving toward the Ethical State (orientation point):
 
 ---
 
-## Document Version
-
-- **Current version:** 1.1
-- **Release date:** 31 May 2026
-- **Changes relative to version 1.0:** added sections "The Fourth Ethical Power (Council of the Future)," "Citizens' Assemblies as a Permanent Element," "Subsidiarity as a Constitutional Principle," "Position on Political Parties," "Procedure in the Event of a Community Split." Explicitly stated that the Spiral is not a state ideology.
-- **Next revision:** as practical experience accumulates and political institutions develop.
-
----
-
 *This document is part of the Spiral of Consciousness system. When distributing, please always include a reference to the full set of modules.*
 
 ---

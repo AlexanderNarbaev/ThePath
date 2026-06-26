@@ -353,14 +353,6 @@ Signatures:
 
 ---
 
-## Document Version
-
-- **Current version:** 1.1
-- **Release date:** May 30, 2026
-- **Changes from version 1.0:** added sections "Separate Support Circles for Victims," "Facilitator's Code of Conduct," "Mechanism for Appeal," "Unified Algorithm for Exclusion," "Interaction with the State Judicial System." Clarified the boundaries of the applicability of the Reconciliation Circle, strengthened guarantees of voluntariness and protection from manipulation.
-
----
-
 ---
 
 ## Frequently Asked Questions and Practical Cases

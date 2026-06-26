@@ -278,15 +278,6 @@ For annual self-check:
 
 ---
 
-## Document Version
-
-- **Current version:** 1.1
-- **Release date:** May 30, 2026
-- **Changes from version 1.0:** added sections "The Community Under a Repressive State," "Civic Mutual Aid in Emergencies," "Digital Fortress"; strengthened provisions on the impermissibility of creating armed formations; removed the concept of "mobilization potential"; all aspects adapted to the philosophy of civil, not military, preparedness.
-- **Next edition:** as communities accumulate practical experience.
-
----
-
 ---
 
 ## Frequently Asked Questions and Practical Cases

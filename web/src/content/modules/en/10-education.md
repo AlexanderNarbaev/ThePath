@@ -238,15 +238,6 @@ For a community of any size:
 
 ---
 
-## Document Version
-
-- **Current version:** 1.1
-- **Release date:** May 31, 2026
-- **Changes from version 1.0:** removed formulations about "patriotic upbringing," replaced with "cultivating responsibility and critical thinking." Added sections "Specialization: Mentor in State Institutions," "Optional Course 'Foundations of the Spiral' for Schools and Universities." The coming-of-age ritual is described as a voluntary civic act, without attachment to the state.
-- **Next revision:** as practical experience accumulates from communities and educational institutions.
-
----
-
 *This document is part of the "Spiral of Consciousness" system. When distributing, be sure to include a link to the full set of modules.*
 
 ---

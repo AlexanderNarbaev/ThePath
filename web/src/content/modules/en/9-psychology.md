@@ -253,15 +253,6 @@ Life under conditions of repression generates particular psychological challenge
 
 ---
 
-## Document Version
-
-- **Current version:** 1.1
-- **Release date:** 31 May 2026
-- **Changes relative to version 1.0:** added sections "Working with Collective Trauma," "Protocol for Psychological Aid in Emergencies and Terrorist Attacks," "Working with the Trauma of Combatants" (without glorifying war), "Psychological Resilience for Professionals Confronting Violence," "Psychology Under a Repressive State." Explicitly distinguished the Circle of Empathy from the Circle of Reconciliation. Strengthened sections on ethical dilemmas and moral injury.
-- **Next revision:** as practical community experience accumulates.
-
----
-
 *This document is part of the Spiral of Consciousness system. When distributing, please always include a reference to the full set of modules.*
 
 ---

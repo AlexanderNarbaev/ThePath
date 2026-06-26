@@ -178,15 +178,6 @@ Spiral communities in any country must preserve the ability to critique the stat
 
 ---
 
-## Document Version
-
-- **Current version:** 1.1
-- **Release date:** May 31, 2026
-- **Changes from version 1.0:** the document has been fully reworked. Added the definition of the Ethical State, detailed mechanisms of defense and security (prohibition of LAWS, criminal orders), the fourth ethical branch of power, the constitutional status of the Three Prohibitions, a roadmap of reforms, a section on sovereignty and borders, and an explicit warning about the inadmissibility of the sacralization of the state.
-- **Next revision:** as the principles are tested in real communities and states.
-
----
-
 *This document is part of the "Spiral of Consciousness" system. When distributing, be sure to include a link to the full set of modules.*
 
 ---

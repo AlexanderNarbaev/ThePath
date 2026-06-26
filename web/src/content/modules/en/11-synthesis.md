@@ -199,15 +199,6 @@ In an era when the forces of degradation seek to set civilizations against one a
 
 ---
 
-## Document Version
-
-- **Current version:** 1.1
-- **Release date:** May 31, 2026
-- **Changes from version 1.0:** removed any formulations about "the promotion of national values." Added sections "Civilizational Dialogue," "Ubuntu and Sobornost as Unifying Ethics," "Protocols for Inter-State Synthesis of Knowledge," "Council of Civilizations at the UN." Strengthened emphasis on the equality of cultures and the role of the Spiral as a neutral bridge.
-- **Next revision:** as practical experience accumulates from international projects.
-
----
-
 *This document is part of the "Spiral of Consciousness" system. When distributing, be sure to include a link to the full set of modules.*
 
 ---

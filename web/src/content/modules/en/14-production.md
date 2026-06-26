@@ -269,15 +269,6 @@ CHARTER OF THE COMMUNITY WORKSHOP "NAME"
 
 ---
 
-## Document Version
-
-- **Current version:** 1.1
-- **Release date:** May 31, 2026
-- **Changes from version 1.0:** added sections "The National Regenerative Economy" with instruments of state incentivization, "The Link with Defense and Resilience," "Certification of 'Spiral-Compatible' Products." Removed "import substitution" as dogma; the goal is resilience, not autarky. Strengthened emphasis on voluntariness and the cooperative form of ownership.
-- **Next revision:** as practical experience accumulates from communities and pilot state programs.
-
----
-
 *This document is part of the "Spiral of Consciousness" system. When distributing, be sure to include a link to the full set of modules.*
 
 ---

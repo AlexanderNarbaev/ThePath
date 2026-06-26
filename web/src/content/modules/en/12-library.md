@@ -284,15 +284,6 @@ In this updated edition, special attention is given to the themes of state gover
 
 ---
 
-## Document Version
-
-- **Current version:** 1.1
-- **Release date:** May 31, 2026
-- **Changes from version 1.0:** added sections "State Governance, Law, and Political Theory," "International Law and Global Governance," "Military Ethics and the Ethics of Force," "Latin American Thought." Expanded sections "Russian Philosophy," "Asian Thought," "African Philosophy." Dozens of new annotated sources added, strengthening the connection with the updated modules.
-- **Next revision:** as significant new works are published.
-
----
-
 *This document is part of the "Spiral of Consciousness" system. When distributing, be sure to include a link to the full set of modules.*
 
 ---

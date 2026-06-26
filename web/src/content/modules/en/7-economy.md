@@ -198,15 +198,6 @@ For annual review:
 
 ---
 
-## Document Version
-
-- **Current version:** 1.1
-- **Release date:** 31 May 2026
-- **Changes relative to version 1.0:** added sections "The Cooperative Sector as the Foundation of an Ethical Economy" with tax incentives, "Long-Term Sovereign Funds for the Future," "Transition to a 30-Hour Work Week," "Voluntariness of Contributions and Obligatoriness of Taxes." Strengthened connections to Module 4 and Module 13. Removed "support for domestic producers" as dogma.
-- **Next revision:** as practical community experience accumulates and legislation evolves.
-
----
-
 *This document is part of the Spiral of Consciousness system. When distributing, please always include a reference to the full set of modules.*
 
 ---

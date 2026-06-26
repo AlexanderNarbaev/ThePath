@@ -29,7 +29,6 @@ export const ui = {
     'module.version': 'Версия',
     'footer.text': '«Ты — сознающий узел. Энтропия тянет вниз. Выбор тянет вверх. Выбирай восходящую спираль.»',
     'footer.license': 'Распространяется под лицензией CC BY-SA 4.0.',
-    'footer.version': 'Версия ядра 2.1, май 2026.',
     'prohibitions.title': 'Три запрета',
     'prohibitions.1_title': 'Не убивай',
     'prohibitions.1_desc': 'Прямая неминуемая угроза жизни — единственное исключение',
@@ -116,6 +115,7 @@ export const ui = {
     'share.copied': 'Ссылка скопирована!',
     'comments.title': 'Комментарии',
     'comments.powered': 'через giscus',
+    'comments.github_required': 'требуется GitHub аккаунт',
 
     // Лонгрид — секция практик
     'practices.section_label': '§1 · ПРАКТИКА',
@@ -211,7 +211,6 @@ export const ui = {
     'module.version': 'Version',
     'footer.text': '"You are a conscious node. Entropy pulls downward. Choice pulls upward. Choose the ascending spiral."',
     'footer.license': 'Licensed under CC BY-SA 4.0.',
-    'footer.version': 'Core version 2.1, May 2026.',
     'prohibitions.title': 'Three Prohibitions',
     'prohibitions.1_title': 'Do Not Kill',
     'prohibitions.1_desc': 'Direct imminent threat to life — the only exception',
@@ -298,6 +297,7 @@ export const ui = {
     'share.copied': 'Link copied!',
     'comments.title': 'Comments',
     'comments.powered': 'via giscus',
+    'comments.github_required': 'requires GitHub account',
 
     // Longread — practices section
     'practices.section_label': '§1 · PRACTICE',

@@ -455,6 +455,4 @@ Yes, and the pandemic proved that it works. For most rituals in the module, onli
 
 ---
 
-*Version 1.1. Release date: May 30, 2026.*  
-*Changes from version 1.0: added the Civic Ritual, the ritual for civil servants, the intensified digital fast for Practitioners, separate support circles for victims, expanded earth practices.*  
 *References to other modules: see the beginning of the document.*

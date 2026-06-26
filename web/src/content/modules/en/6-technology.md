@@ -183,15 +183,6 @@ Any AI system deployed in public administration, healthcare, education, finance,
 
 ---
 
-## Document Version
-
-- **Current version:** 1.1
-- **Release date:** 31 May 2026
-- **Changes relative to version 1.0:** added sections "Digital Sovereignty," "AI in the Military Domain," "The Seven Generations Principle," "AI Certification Checklist." Removed emphasis on "domestic technology" as an end in itself. Strengthened universal ethical requirements.
-- **Next revision:** as technologies evolve and practical experience accumulates.
-
----
-
 *This document is part of the Spiral of Consciousness system. When distributing, please always include a reference to the full set of modules.*
 
 ---

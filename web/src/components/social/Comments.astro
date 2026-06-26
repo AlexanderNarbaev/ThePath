@@ -7,7 +7,7 @@ const { lang } = Astro.props as { lang: Lang };
 <div class="comments-section" style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--color-border);">
   <h3>{t('comments.title', lang)}</h3>
   <p style="font-size:0.8rem;color:var(--color-text-secondary);margin-bottom:1rem;">
-    {t('comments.powered', lang)} — требуется GitHub аккаунт
+    {t('comments.powered', lang)} — {t('comments.github_required', lang)}
   </p>
   <script is:inline
     src="https://giscus.app/client.js"

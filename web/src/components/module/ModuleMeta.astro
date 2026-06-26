@@ -5,7 +5,7 @@ const { lang, number, version } = Astro.props as { lang: Lang; number: number; v
 
 <div class="module-meta">
   <span class="module-number">{t('module.number', lang)} {number}</span>
-  {version && <span class="module-version">{t('module.version', lang)} {version}</span>}
+  <meta name="version" content={version} />
 </div>
 
 <style>

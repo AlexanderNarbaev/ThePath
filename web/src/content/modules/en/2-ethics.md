@@ -263,15 +263,6 @@ Use this checklist for weekly reflection (ideally on Sunday evening).
 
 ---
 
-## Document Version
-
-- **Current version:** 1.1
-- **Release date:** May 30, 2026
-- **Changes from version 1.0:** Added sections "The Ethics of Power and Force," "The Dirty Hands Dilemma," "Controversial Issues," "Code of Honor," "Exclusion Procedure." All other sections significantly reworked and deepened.
-- **Next edition:** as communities accumulate practical experience.
-
----
-
 ---
 
 ## Frequently Asked Questions and Practical Cases

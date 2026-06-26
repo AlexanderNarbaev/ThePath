@@ -321,7 +321,4 @@ The Spiral chooses trust in the networked intelligence of free people. If people
 
 ---
 
-*Version 2.2. The Canon is affirmed and not subject to change without global consensus (90% of communities).*  
-*Changes in version 2.1: added clarification of the term "conscious node," strengthened formulations on the inadmissibility of justifying violations of the prohibitions, explicitly limited the authority of the Practitioner, added the section "The Spiral and the State."*  
-*Changes in version 2.2: added Section 10 "Frequently Asked Questions" with answers on religion, the three prohibitions, war, torture, a violating state, differences from humanism, and community self-regulation.*  
 *So may it be.*
