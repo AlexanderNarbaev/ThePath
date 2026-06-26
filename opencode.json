@@ -69,6 +69,26 @@
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
       }
+    },
+    "excalidraw": {
+      "type": "local",
+      "command": ["uvx", "excalidraw-architect-mcp"],
+      "enabled": true
+    },
+    "context7-official": {
+      "type": "local",
+      "command": ["/home/alexandr-narbaev/.npm-global/bin/context7-mcp"],
+      "enabled": true
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": ["/home/alexandr-narbaev/.npm-global/bin/chrome-devtools-mcp"],
+      "enabled": true
+    },
+    "agent-browser": {
+      "type": "local",
+      "command": ["/home/alexandr-narbaev/.bun/bin/agent-browser-mcp-server"],
+      "enabled": true
     }
   }
 }
