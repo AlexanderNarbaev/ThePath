@@ -51,12 +51,12 @@ const { lang } = Astro.params;
     <h2>{t('transparency.heading', lang as 'ru' | 'en')}</h2>
 
     <div class="transparency-grid">
-      <div class="trans-item no"><div class="trans-icon">✕</div><div class="trans-label meta-label">НЕ</div><p>{t('transparency.no_religion', lang as 'ru' | 'en')}</p></div>
-      <div class="trans-item yes"><div class="trans-icon">✓</div><div class="trans-label meta-label">ДА</div><p>{t('transparency.yes_system', lang as 'ru' | 'en')}</p></div>
-      <div class="trans-item no"><div class="trans-icon">✕</div><div class="trans-label meta-label">НЕ</div><p>{t('transparency.no_ideology', lang as 'ru' | 'en')}</p></div>
-      <div class="trans-item yes"><div class="trans-icon">✓</div><div class="trans-label meta-label">ДА</div><p>{t('transparency.yes_open', lang as 'ru' | 'en')}</p></div>
-      <div class="trans-item no"><div class="trans-icon">✕</div><div class="trans-label meta-label">НЕ</div><p>{t('transparency.no_guru', lang as 'ru' | 'en')}</p></div>
-      <div class="trans-item yes"><div class="trans-icon">✓</div><div class="trans-label meta-label">ДА</div><p>{t('transparency.yes_community', lang as 'ru' | 'en')}</p></div>
+      <div class="trans-item no"><div class="trans-icon" aria-hidden="true">✕</div><div class="trans-label meta-label">{t('transparency.no_label', lang as 'ru' | 'en')}</div><p>{t('transparency.no_religion', lang as 'ru' | 'en')}</p></div>
+      <div class="trans-item yes"><div class="trans-icon" aria-hidden="true">✓</div><div class="trans-label meta-label">{t('transparency.yes_label', lang as 'ru' | 'en')}</div><p>{t('transparency.yes_system', lang as 'ru' | 'en')}</p></div>
+      <div class="trans-item no"><div class="trans-icon" aria-hidden="true">✕</div><div class="trans-label meta-label">{t('transparency.no_label', lang as 'ru' | 'en')}</div><p>{t('transparency.no_ideology', lang as 'ru' | 'en')}</p></div>
+      <div class="trans-item yes"><div class="trans-icon" aria-hidden="true">✓</div><div class="trans-label meta-label">{t('transparency.yes_label', lang as 'ru' | 'en')}</div><p>{t('transparency.yes_open', lang as 'ru' | 'en')}</p></div>
+      <div class="trans-item no"><div class="trans-icon" aria-hidden="true">✕</div><div class="trans-label meta-label">{t('transparency.no_label', lang as 'ru' | 'en')}</div><p>{t('transparency.no_guru', lang as 'ru' | 'en')}</p></div>
+      <div class="trans-item yes"><div class="trans-icon" aria-hidden="true">✓</div><div class="trans-label meta-label">{t('transparency.yes_label', lang as 'ru' | 'en')}</div><p>{t('transparency.yes_community', lang as 'ru' | 'en')}</p></div>
     </div>
   </section>
 

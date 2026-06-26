@@ -137,6 +137,8 @@ export const ui = {
     'transparency.yes_system': 'Практическая система. Как тайм-менеджмент или спортзал — для сознания.',
     'transparency.no_ideology': 'Идеология. Никакой «единственно верной» картины мира.',
     'transparency.yes_open': 'Открытый код. Любой может форкнуть, адаптировать, критиковать.',
+    'transparency.no_label': 'НЕ',
+    'transparency.yes_label': 'ДА',
     'transparency.no_guru': 'Гуру. Нет лидера, нет «просветлённых», нет иерархии.',
     'transparency.yes_community': 'Сообщество равных. Горизонтальная сеть, а не пирамида.',
 
@@ -319,6 +321,8 @@ export const ui = {
     'transparency.yes_system': 'A practical system. Like time management or the gym — for consciousness.',
     'transparency.no_ideology': 'An ideology. No "one true" worldview.',
     'transparency.yes_open': 'Open source. Anyone can fork, adapt, criticize.',
+    'transparency.no_label': 'NO',
+    'transparency.yes_label': 'YES',
     'transparency.no_guru': 'A guru. No leader, no "enlightened," no hierarchy.',
     'transparency.yes_community': 'A community of equals. A horizontal network, not a pyramid.',
 

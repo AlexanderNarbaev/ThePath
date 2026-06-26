@@ -22,10 +22,10 @@ const langPath = `/${lang}`;
       <span class="meta-label">{siteName}</span>
     </a>
     <div class="nav-links" id="nav-menu">
-      <a href={`${base}${langPath}/start`} class:list={['nav-link', { active: currentPath.includes('/start') }]}>{t('nav.start', lang)}</a>
-      <a href={`${base}${langPath}/manifesto`} class:list={['nav-link', { active: currentPath.includes('/manifesto') }]}>{t('nav.manifesto', lang)}</a>
-      <a href={`${base}${langPath}/map`} class:list={['nav-link', { active: currentPath.includes('/map') }]}>{t('nav.map', lang)}</a>
-      <a href={`${base}${langPath}/questions`} class:list={['nav-link', { active: currentPath.includes('/questions') }]}>{t('nav.questions', lang)}</a>
+      <a href={`${base}${langPath}/start`} class:list={['nav-link', { active: currentPath.includes('/start') }]} onclick="document.getElementById('nav-menu')?.classList.remove('open');">{t('nav.start', lang)}</a>
+      <a href={`${base}${langPath}/manifesto`} class:list={['nav-link', { active: currentPath.includes('/manifesto') }]} onclick="document.getElementById('nav-menu')?.classList.remove('open');">{t('nav.manifesto', lang)}</a>
+      <a href={`${base}${langPath}/map`} class:list={['nav-link', { active: currentPath.includes('/map') }]} onclick="document.getElementById('nav-menu')?.classList.remove('open');">{t('nav.map', lang)}</a>
+      <a href={`${base}${langPath}/questions`} class:list={['nav-link', { active: currentPath.includes('/questions') }]} onclick="document.getElementById('nav-menu')?.classList.remove('open');">{t('nav.questions', lang)}</a>
       <LanguageSwitch lang={lang} currentPath={currentPath} />
       <ThemeToggle lang={lang} />
       <SearchModal lang={lang} client:load />

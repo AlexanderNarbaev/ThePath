@@ -7,7 +7,7 @@ const { lang } = Astro.props as { lang: Lang };
 <div class="hero">
   <div class="hero-content">
     <div class="meta-label"># {t('hero.meta', lang)}</div>
-    <h1>{t('hero.title_new', lang)}</h1>
+    <h1 set:html={t('hero.title_new', lang)}></h1>
     <p class="hero-subtitle">{t('hero.subtitle_new', lang)}</p>
     <div class="hero-cta">
       <a href={`${BASE_PATH}/${lang}/start`} class="btn-primary">{t('hero.cta_practice', lang)}</a>

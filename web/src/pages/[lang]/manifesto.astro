@@ -16,11 +16,11 @@ if (!page) return Astro.redirect(`${BASE_PATH}/${lang}`);
 const { Content } = await page.render();
 ---
 
-<BaseLayout lang={lang as 'ru' | 'en'} title={t('manifesto.title' as any, lang as 'ru' | 'en')}>
+<BaseLayout lang={lang as 'ru' | 'en'} title={t('manifesto.title', lang as 'ru' | 'en')}>
   <div class="content-wide">
     <article class="manifesto">
       <div class="manifesto-header">
-        <div class="meta-label">{t('map.section_label' as any, lang as 'ru' | 'en')?.replace('§4 ·', '§0 ·')}</div>
+        <div class="meta-label">{t('map.section_label', lang as 'ru' | 'en')?.replace('§4 ·', '§0 ·')}</div>
       </div>
       <Content />
     </article>

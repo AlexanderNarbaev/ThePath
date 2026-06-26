@@ -55,6 +55,8 @@
   --color-card-bg: #ffffff;
   --color-border: #e2e1dc;
   --color-danger: #c0392b;
+  --color-gold: #8b6914;
+  --color-gold-hover: #a67c15;
 }
 
 [data-theme="light"] body {
@@ -81,7 +83,7 @@
     padding: 0.5rem 1.5rem;
     margin: 1.5rem 0;
     font-style: italic;
-    color: var(--color-cosmic-text-secondary);
+  color: var(--color-text-secondary);
   }
   table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
   th, td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--color-border); }
@@ -145,7 +147,7 @@
 /* Мета-лейблы (mono) */
 .meta-label {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   color: var(--color-cosmic-text-secondary);
   letter-spacing: 0.15em;
   text-transform: uppercase;
