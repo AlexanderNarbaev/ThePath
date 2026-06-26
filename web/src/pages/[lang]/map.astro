@@ -34,13 +34,13 @@ const moduleCards = modules.map((m) => ({
     <PathTracker lang={lang} client:visible />
     <Content />
 
-    <section style="margin:2rem 0;">
+    <section class="map-section">
       <h2>{t('map.modules', lang)}</h2>
       <ModuleGraph lang={lang} client:visible />
     </section>
 
-    <section style="margin:2rem 0;">
-      <h2>{t('map.modules', lang)}</h2>
+    <section class="map-section">
+      <h2>{t('map.modules_list', lang)}</h2>
       <div class="module-grid">
         {moduleCards.map((card) => (
           <a href={card.href} class="module-card">
@@ -52,7 +52,7 @@ const moduleCards = modules.map((m) => ({
       </div>
     </section>
 
-    <section style="margin:3rem 0;">
+    <section class="map-section map-section-paths">
       <h2>{t('map.paths', lang)}</h2>
       {paths.map((p) => {
         const requiredModules = p.modules.map((n) => modules.find((m) => m.number === n)).filter(Boolean);
@@ -81,6 +81,8 @@ const moduleCards = modules.map((m) => ({
 </BaseLayout>
 
 <style>
+  .map-section { margin: 2rem 0; }
+  .map-section-paths { margin: 3rem 0; }
   .module-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
   .module-card {
     display: block;

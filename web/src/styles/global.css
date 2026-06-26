@@ -59,20 +59,15 @@
   --color-gold-hover: #a67c15;
 }
 
-[data-theme="light"] body {
-  background-color: var(--color-bg-primary);
-  color: var(--color-text-primary);
-}
-
 [data-theme="light"] .btn-secondary:hover { background: rgba(139, 105, 20, 0.1); }
 
 @layer base {
-  html { scroll-behavior: smooth; font-size: 18px; }
+  html { scroll-behavior: smooth; font-size: 16px; }
   body {
     font-family: var(--font-body);
     line-height: 1.8;
-    background-color: var(--color-cosmic);
-    color: var(--color-cosmic-text);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
   }
 
   h1 { font-size: 2.5rem; font-weight: 300; line-height: 1.2; margin-bottom: 1rem; letter-spacing: -0.01em; }
@@ -215,7 +210,7 @@
 /* Path Tracker */
 .path-tracker { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.5rem; }
 .path-selector { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
-.path-tab { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid var(--color-border); background: transparent; color: var(--color-text-secondary); cursor: pointer; font-size: 0.8rem; transition: all 0.2s; }
+.path-tab { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid var(--color-border); background: transparent; color: var(--color-text-secondary); cursor: pointer; font-size: 0.8rem; transition: all 0.2s; min-height: 44px; }
 .path-tab:hover { border-color: var(--color-gold); color: var(--color-gold); }
 .path-tab.active { background: var(--color-gold); color: var(--color-cosmic); border-color: var(--color-gold); }
 .path-modules h4 { font-size: 0.9rem; margin: 0 0 0.75rem; color: var(--color-text-secondary); }
@@ -244,15 +239,22 @@
 .ethical-compass h3 { margin: 0 0 0.75rem; font-size: 1rem; }
 .ec-text { font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 1rem; line-height: 1.5; }
 .ec-options { display: flex; flex-direction: column; gap: 0.5rem; }
-.ec-btn { padding: 0.6rem 1rem; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-bg-secondary); color: var(--color-text-primary); cursor: pointer; font-size: 0.85rem; text-align: left; transition: all 0.2s; }
+.ec-btn { padding: 0.6rem 1rem; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-bg-secondary); color: var(--color-text-primary); cursor: pointer; font-size: 0.85rem; text-align: left; transition: all 0.2s; min-height: 44px; }
 .ec-btn:hover { border-color: var(--color-gold); background: rgba(230,193,123,0.1); color: var(--color-gold); }
 .ec-reset { padding: 0.5rem 1rem; border: none; background: transparent; color: var(--color-gold); cursor: pointer; font-size: 0.85rem; margin-top: 0.75rem; }
+
+/* Practice Cards (shared by index & start) */
+.practice-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
+.practice-card { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; text-align: center; }
+.practice-card p { font-size: 1rem; margin: 0.75rem 0; line-height: 1.5; }
+.practice-time { font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-cosmic-text-secondary); }
+.practice-disclaimer { font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-cosmic-text-secondary); text-align: center; margin-top: 1.5rem; }
 
 /* Print */
 @media print {
   .nav, .footer, .sidebar, .progress-container, .bookmark-btn, .module-nav,
   .search-trigger, .path-tracker, .daily-checklist, .ethical-compass,
-  .hero-bg { display: none !important; }
+  
   body { font-size: 12pt; line-height: 1.5; color: #000; background: #fff; }
   .page-layout { display: block; }
   .content, .content-wide { max-width: 100%; padding: 0; margin: 0; }

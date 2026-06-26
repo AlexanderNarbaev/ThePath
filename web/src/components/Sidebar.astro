@@ -7,10 +7,26 @@ const base = BASE_PATH;
 ---
 
 <aside class="sidebar" id="sidebar">
-  <button class="sidebar-toggle" onclick="document.getElementById('sidebar')?.classList.toggle('open')">
+  <button class="sidebar-toggle"
+    aria-label={t('sidebar.toggle', lang)}
+    aria-expanded="false"
+    aria-controls="sidebar-nav"
+    onclick="
+      const sidebar = document.getElementById('sidebar');
+      const nav = document.getElementById('sidebar-nav');
+      const expanded = sidebar?.classList.toggle('open');
+      this.setAttribute('aria-expanded', String(expanded));
+    "
+    onkeydown="
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        this.click();
+      }
+    "
+  >
     {t('sidebar.toggle', lang)}
   </button>
-  <nav class="sidebar-nav">
+  <nav class="sidebar-nav" id="sidebar-nav">
     <h3 class="sidebar-title">{t('sidebar.title', lang)}</h3>
     <ul>
       {modules.map(m => (

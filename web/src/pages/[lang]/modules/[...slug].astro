@@ -14,15 +14,12 @@ export async function getStaticPaths() {
         lang: entry.data.lang,
         slug: entry.id.replace(/^modules\//, '').replace(/\.md$/, '').split('/').pop() || '',
       },
-      props: { entryId: entry.id },
+      props: { entry },
     }));
 }
 
 const { lang, slug } = Astro.params as { lang: Lang; slug: string };
-const { entryId } = Astro.props as { entryId: string };
-
-const allMods = await getCollection('modules');
-const doc = allMods.find((entry) => entry.id === entryId);
+const { entry: doc } = Astro.props as { entry: any };
 
 if (!doc) return Astro.redirect(`${BASE_PATH}/${lang}`);
 

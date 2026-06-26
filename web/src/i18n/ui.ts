@@ -59,9 +59,11 @@ export const ui = {
     'progress.reading': 'Прогресс чтения',
     'map.title': 'Карта-путеводитель',
     'map.modules': 'Модульная система',
+    'map.modules_list': 'Список модулей',
     'map.paths': 'Пути изучения',
 
     'manifesto.title': 'Манифест Спирали Сознания',
+    'manifesto.section_label': '§0 · МАНИФЕСТ',
     '404.title': 'Страница не найдена',
     '404.back': 'Вернуться на главную',
     'skip_to_content': 'К содержанию',
@@ -243,9 +245,11 @@ export const ui = {
     'progress.reading': 'Reading progress',
     'map.title': 'Guide Map',
     'map.modules': 'Modular System',
+    'map.modules_list': 'Module List',
     'map.paths': 'Study Paths',
 
     'manifesto.title': 'Manifesto of the Spiral of Consciousness',
+    'manifesto.section_label': '§0 · MANIFESTO',
     '404.title': 'Page not found',
     '404.back': 'Back to home',
     'skip_to_content': 'Skip to content',

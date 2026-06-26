@@ -26,9 +26,9 @@ const langPath = `/${lang}`;
       <a href={`${base}${langPath}/manifesto`} class:list={['nav-link', { active: currentPath.includes('/manifesto') }]} onclick="document.getElementById('nav-menu')?.classList.remove('open');">{t('nav.manifesto', lang)}</a>
       <a href={`${base}${langPath}/map`} class:list={['nav-link', { active: currentPath.includes('/map') }]} onclick="document.getElementById('nav-menu')?.classList.remove('open');">{t('nav.map', lang)}</a>
       <a href={`${base}${langPath}/questions`} class:list={['nav-link', { active: currentPath.includes('/questions') }]} onclick="document.getElementById('nav-menu')?.classList.remove('open');">{t('nav.questions', lang)}</a>
+      <SearchModal lang={lang} client:load />
       <LanguageSwitch lang={lang} currentPath={currentPath} />
       <ThemeToggle lang={lang} />
-      <SearchModal lang={lang} client:load />
     </div>
     <button
       class="nav-toggle"
@@ -58,7 +58,7 @@ const langPath = `/${lang}`;
   .nav-logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.05rem; color: var(--color-text-primary); text-decoration: none; }
   .nav-logo:hover { color: var(--color-accent); }
   .nav-links { display: flex; align-items: center; gap: 0.25rem; }
-  .nav-link { padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.9rem; color: var(--color-text-secondary); text-decoration: none; transition: all 0.2s; }
+  .nav-link { padding: 0.4rem 0.75rem; border-radius: 6px; font-size: 0.9rem; color: var(--color-text-secondary); text-decoration: none; transition: all 0.2s; min-height: 44px; display: inline-flex; align-items: center; }
   .nav-link:hover { color: var(--color-text-primary); background: var(--color-bg-secondary); }
   .nav-link.active { color: var(--color-accent); font-weight: 600; }
   .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.25rem; }

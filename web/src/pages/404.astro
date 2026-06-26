@@ -5,7 +5,7 @@ import { BASE_PATH } from '../constants';
 import SearchModal from '../components/search/SearchModal';
 const url = Astro.url.pathname;
 const base = BASE_PATH;
-const lang: Lang = (url.includes('/en/') || url.startsWith(`${base}/en`)) ? 'en' : 'ru';
+const lang: Lang = (url.startsWith(`${base}/en/`) || url.startsWith(`${base}/en`) || url.includes('/en/')) ? 'en' : 'ru';
 ---
 
 <BaseLayout lang={lang} title={t('404.title', lang)}>
