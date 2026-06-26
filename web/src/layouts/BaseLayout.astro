@@ -45,7 +45,7 @@ const base = BASE_PATH;
     <link rel="alternate" hreflang="ru" href={`${base}${Astro.url.pathname.replace(base, '').replace('/en/', '/ru/')}`} />
   )}
   <script is:inline>
-    (() => { const s = localStorage.getItem('theme'); const p = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; document.documentElement.setAttribute('data-theme', s || p); })();
+    (() => { const s = localStorage.getItem('theme'); if (s === 'light') document.documentElement.setAttribute('data-theme', 'light'); })();
   </script>
   <script data-goatcounter="https://alex-narbaev.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
