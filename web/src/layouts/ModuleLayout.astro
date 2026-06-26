@@ -37,7 +37,7 @@ const base = BASE_PATH;
         <h1>{title}</h1>
         {subtitle && <p class="module-subtitle">{subtitle}</p>}
       </div>
-      <BookmarkButton module_number={moduleNumber} lang={lang} client:load />
+      <BookmarkButton module_number={moduleNumber} lang={lang} client:visible />
       <TableOfContents headings={headings} lang={lang} />
       <div class="prose">
         <slot />
@@ -60,7 +60,7 @@ const base = BASE_PATH;
           inLanguage: lang,
         },
       ])} />
-      <Reactions lang={lang} pageId={`module-${moduleNumber}`} client:load />
+      <Reactions lang={lang} pageId={`module-${moduleNumber}`} client:visible />
       <ShareButtons lang={lang} title={title} />
       <Comments lang={lang} />
     </article>

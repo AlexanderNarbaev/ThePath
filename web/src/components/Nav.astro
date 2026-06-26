@@ -32,8 +32,23 @@ const langPath = `/${lang}`;
       <ThemeToggle lang={lang} />
       <SearchModal lang={lang} client:load />
     </div>
-    <button class="nav-toggle" aria-label="Menu"
-      onclick="document.getElementById('nav-menu')?.classList.toggle('open')">
+    <button
+      class="nav-toggle"
+      aria-label="Menu"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+      onclick="
+        const menu = document.getElementById('nav-menu');
+        const expanded = menu.classList.toggle('open');
+        this.setAttribute('aria-expanded', String(expanded));
+      "
+      onkeydown="
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          this.click();
+        }
+      "
+    >
       <span></span><span></span><span></span>
     </button>
   </div>

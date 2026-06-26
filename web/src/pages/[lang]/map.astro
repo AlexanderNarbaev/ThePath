@@ -24,12 +24,12 @@ const base = BASE_PATH;
 <BaseLayout lang={lang} title={t('map.title', lang)}>
   <div class="content-wide">
     <h1>{t('map.title', lang)}</h1>
-      <PathTracker lang={lang} client:load />
+      <PathTracker lang={lang} client:visible />
     <Content />
 
     <section style="margin:2rem 0;">
       <h2>{t('map.modules', lang)}</h2>
-        <ModuleGraph lang={lang} client:load />
+        <ModuleGraph lang={lang} client:visible />
     </section>
 
     <section style="margin:2rem 0;">

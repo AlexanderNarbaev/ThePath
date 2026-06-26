@@ -17,7 +17,7 @@ const base = BASE_PATH;
       <a href={`${base}/${lang}/contact`} style="color:var(--color-cosmic-text-secondary);text-decoration:none;">{t('nav.contact', lang)}</a>
     </div>
     <div class="footer-counter" style="margin-top:0.5rem;font-size:0.8rem;opacity:0.5;">
-      <VisitorCounter lang={lang} client:load />
+      <VisitorCounter lang={lang} client:visible />
     </div>
   </div>
 </footer>

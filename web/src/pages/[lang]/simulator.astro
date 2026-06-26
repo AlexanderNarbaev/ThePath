@@ -13,7 +13,7 @@ const lang = Astro.params.lang as Lang;
 
 <BaseLayout lang={lang} title={t('simulator.title', lang)}>
   <div class="content-wide" style="max-width:700px;">
-    <EthicalSimulator lang={lang} client:load />
+    <EthicalSimulator lang={lang} client:idle />
   </div>
 </BaseLayout>
 

@@ -15,7 +15,7 @@ const web3Key = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
 <BaseLayout lang={lang} title={t('contact.title', lang)}>
   <div class="content-wide" style="max-width:600px;">
     <h1>{t('contact.title', lang)}</h1>
-    <ContactForm lang={lang} web3Key={web3Key} client:load />
+    <ContactForm lang={lang} web3Key={web3Key} client:visible />
   </div>
 </BaseLayout>
 

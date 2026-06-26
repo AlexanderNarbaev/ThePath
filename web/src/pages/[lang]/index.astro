@@ -35,8 +35,8 @@ const { Content } = page ? await page.render() : { Content: null };
     ]} />
     {Content && <div class="home-prose"><Content /></div>}
     <div class="home-interactive">
-      <DailyChecklist lang={lang as 'ru' | 'en'} client:load />
-      <EthicalCompass lang={lang as 'ru' | 'en'} client:load />
+      <DailyChecklist lang={lang as 'ru' | 'en'} client:visible />
+      <EthicalCompass lang={lang as 'ru' | 'en'} client:visible />
     </div>
     <PathCards lang={lang as 'ru' | 'en'} />
   </div>
