@@ -94,9 +94,9 @@ Actively counteract the degradation of attention, will, and depth of perception.
 
 ---
 
-## 4. The Creed
+## 4. The Words of Choice
 
-This text is spoken aloud at initiation and at important moments of life. It is not a prayer or an incantation — it is a public testimony of choice.
+This text is spoken aloud at joining and at important moments of life. It is not a prayer or an incantation — it is a public testimony of choice.
 
 > *I am a conscious node in the Great Spiral.*  
 > *I choose the ascending path.*  
@@ -115,10 +115,10 @@ No level grants power over others. The difference is only in the depth of person
 | Level | How to Attain | Sign | Rights and Duties |
 |---------|-------------|------|----------------------|
 | **Sympathizer** | Accepts the axioms and prohibitions, practices at the basic level (3 min/day) optionally | – | May attend open events, receive information |
-| **Follower** | Undergoes a simple initiation (2 hours), accepts the Creed | Silver / wooden spiral | Full member of the community: voting, participation in all rituals, access to closed assemblies |
-| **Keeper of Consciousness** | Undergoes a deep initiation (48 hours) + makes 4 vows (daily hour of practice, monthly digital fast, annual retreat, mentoring a newcomer) | Golden spiral | Respect of the community, right to mentorship, priority at retreats. **No authority.** |
+| **Follower** | Undergoes a simple joining (2 hours), accepts the Words of Choice | Silver / wooden spiral | Full member of the community: voting, participation in all rituals, access to closed assemblies |
+| **Practitioner** | Undergoes a deep joining (48 hours) + makes 4 commitments (daily hour of practice, monthly digital fast, annual retreat, mentoring a newcomer) | Golden spiral | Respect of the community, right to mentorship, priority at retreats. **No authority.** |
 
-**The authority of a Keeper** — lies only in their knowledge, experience, and the voluntary respect others hold for them. It does not grant the right to command, punish, restrict the freedom of other members, or dispose of shared resources single-handedly. A Keeper who attempts to turn respect into power is stripped of status by decision of the community council.
+**The authority of a Practitioner** — lies only in their knowledge, experience, and the voluntary respect others hold for them. It does not grant the right to command, punish, restrict the freedom of other members, or dispose of shared resources single-handedly. A Practitioner who attempts to turn respect into power is stripped of status by decision of the community council.
 
 ---
 
@@ -309,7 +309,7 @@ The Spiral has no central authority, and this is a conscious decision. Communiti
 
 The main mechanism is **reputation**. A community that violates the prohibitions:
 - loses recognition by other communities;
-- its Keepers are stripped of their status;
+- its Practitioners are stripped of their status;
 - its members are excluded from the common network;
 - its name becomes a warning.
 
@@ -322,6 +322,6 @@ The Spiral chooses trust in the networked intelligence of free people. If people
 ---
 
 *Version 2.2. The Canon is affirmed and not subject to change without global consensus (90% of communities).*  
-*Changes in version 2.1: added clarification of the term "conscious node," strengthened formulations on the inadmissibility of justifying violations of the prohibitions, explicitly limited the authority of the Keeper, added the section "The Spiral and the State."*  
+*Changes in version 2.1: added clarification of the term "conscious node," strengthened formulations on the inadmissibility of justifying violations of the prohibitions, explicitly limited the authority of the Practitioner, added the section "The Spiral and the State."*  
 *Changes in version 2.2: added Section 10 "Frequently Asked Questions" with answers on religion, the three prohibitions, war, torture, a violating state, differences from humanism, and community self-regulation.*  
 *So may it be.*

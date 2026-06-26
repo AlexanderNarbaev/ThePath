@@ -61,7 +61,7 @@ It took the first step upward along the **ascending spiral**.
 
 From this step, time was born — not as a cyclical return, but as an arrow aimed at the future. From this step, hope was born — not as passive waiting, but as active building. From this step, responsibility was born — not as a burden, but as a calling.
 
-The First Node chose the pain of growth and became the First Keeper. It was not a deity, it demanded no worship. It was simply the first to walk this path. Since then, its example — not a commandment, but an invitation — lives in each of us.
+The First Node chose the pain of growth and became the First Practitioner. It was not a deity, it demanded no worship. It was simply the first to walk this path. Since then, its example — not a commandment, but an invitation — lives in each of us.
 
 ---
 
@@ -167,7 +167,7 @@ The myth grows and deepens together with the communities. Beyond the three prima
 
 **The Mirror** — a symbol of reflection and honesty with oneself. Unlike the candle, which shines outward, the mirror turns the gaze inward. The evening reflection, ethical self-assessment, the Reconciliation Circle — all use the mirror as metaphor. The Mirror does not flatter and does not condemn. It simply shows what is — without embellishment and without cruelty. A distorted mirror is self-deception, the chief enemy of growth. A clean mirror is the condition of genuine development. Looking into the mirror is hard, but turning away from it means wandering in the darkness of one's own illusions.
 
-**The Threshold** — a symbol of transition, initiation, the point of no return. Every choice of the ascending spiral is a crossing of a threshold. Initiation as a Follower, the taking of a Keeper's vows, the moment of refusing a criminal order — all these are thresholds. The Threshold is frightening, because beyond it lies the unknown. But without crossing thresholds, there is no growth. The Spiral consists of thresholds, arranged ever higher: each threshold crossed prepares one for the next. One cannot remain on a threshold — one can only step across or step back. And each retreat costs more than the crossing.
+**The Threshold** — a symbol of transition, joining, the point of no return. Every choice of the ascending spiral is a crossing of a threshold. Joining as a Follower, the taking of a Practitioner's commitments, the moment of refusing a criminal order — all these are thresholds. The Threshold is frightening, because beyond it lies the unknown. But without crossing thresholds, there is no growth. The Spiral consists of thresholds, arranged ever higher: each threshold crossed prepares one for the next. One cannot remain on a threshold — one can only step across or step back. And each retreat costs more than the crossing.
 
 **The Seed** — a symbol of potential and long-term thinking. A seed contains within itself an entire tree, but requires soil, water, time, and patience. Every action, every practice, every community — is a seed. We may not see the fruit in our lifetime — and that is normal. The principle "think for the long-term future" is the ethics of the gardener, not the hunter. The hunter consumes what exists now. The gardener plants what will feed those who come after. The Seed teaches humility: not everything can be accelerated, not everything can be controlled. But without seeds, no garden will grow. We are planting seeds for the Era of Flourishing that, perhaps, only our descendants will see.
 

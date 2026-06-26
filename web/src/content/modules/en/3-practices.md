@@ -199,7 +199,7 @@ These practices require 1–2 hours per week and are usually performed in a grou
    All together immerse in silence without images. Only burning candles.
 
 5. **The Oath of Renewal (5 min)**
-   All together read the Creed (from Module 0).
+   All together read the Words of Choice (from Module 0).
 
 6. **Hymn (5–10 min)**
    Instrumental music (Arvo Pärt, Ludovico Einaudi) or choral singing without words.
@@ -208,7 +208,7 @@ These practices require 1–2 hours per week and are usually performed in a grou
    Soft light is turned on, a common lenten meal (without alcohol). The facilitator's closing phrase: *"Darkness behind. Light ahead. The ascending spiral — our path."*
 
 **Adaptations:**
-- For solitaries: light a candle at home, read the myth (a recording may be used), a minute of silence, the Creed to oneself.
+- For solitaries: light a candle at home, read the myth (a recording may be used), a minute of silence, the Words of Choice to oneself.
 - For an online group: a video call, each person lights their own candle, joint reading.
 
 ### 4.2 Other Festivals (brief)
@@ -241,11 +241,11 @@ These rituals mark important life stages. They do not replace secular registrati
 
 **Symbol:** silver / wooden spiral (sign of a follower).
 
-**Scenario (simple initiation, 2 hours):**
+**Scenario (simple joining, 2 hours):**
 1. Listening to the myth of the First Knot.
 2. Silence — the adolescent writes down what they are leaving in the past (laziness, addiction, fear).
 3. Symbolic destruction of the note (burn or dissolve in water).
-4. Adopting the Creed (aloud).
+4. Adopting the Words of Choice (aloud).
 5. Presentation of the spiral.
 
 ### 5.3 Marriage / Partnership
@@ -255,7 +255,7 @@ These rituals mark important life stages. They do not replace secular registrati
 **Brief scenario:**
 - The couple lights two candles.
 - Facilitator: "Two conscious knots have decided to walk through life together."
-- Each pronounces a vow (in their own words, but mentioning the principles: respect for autonomy, support for growth).
+- Each pronounces a commitment (in their own words, but mentioning the principles: respect for autonomy, support for growth).
 - The couple lights a common candle from their two.
 - Exchange of rings (optional) or tying of ribbons.
 
@@ -286,7 +286,7 @@ The Spiral recognizes that many people serve the state — in the army, police, 
 **How to perform:**
 1. Remain alone in a quiet place. Light a candle.
 2. Say aloud or mentally:
-   > *"I accept this office as an instrument of service, not domination. I pledge not to kill without a direct threat, not to torture under any circumstances, not to enslave. An order that violates these prohibitions is void to me. If my service comes into conflict with these principles, I will choose the principles. So be it."*
+   > *"I accept this office as an instrument of service, not domination. I pledge not to kill without a direct threat, not to torture under any circumstances, not to enslave. An order that violates these prohibitions is void to me. If my service comes into conflict with these principles, I will choose the principles. This is my choice."*
 3. Extinguish the candle.
 
 **Important:** this ritual is not registered, not announced, and grants no privileges. It is a personal commitment to oneself.
@@ -371,24 +371,24 @@ Earth practices remind us: the land on which we live is not simply a resource an
 
 ---
 
-## Part 9. Intensified Practices for Keepers
+## Part 9. Intensified Practices for Practitioners
 
-A Keeper is not a title granting privileges, but a level of deep personal responsibility. Keepers voluntarily take upon themselves stricter practices.
+A Practitioner is not a title granting privileges, but a level of deep personal responsibility. Practitioners voluntarily take upon themselves stricter practices.
 
-### 9.1 Obligatory Vows of a Keeper
+### 9.1 Obligatory Commitments of a Practitioner
 
-| Vow | Description |
+| Commitment | Description |
 |-----|-------------|
 | Daily Hour | At least 60 minutes of practice per day (apophatic silence, deep reading, reflection). |
 | Monthly Digital Fast | 72 hours without social media, video games, news feeds. |
-| Annual Retreat | At least 3 days of seclusion per year (alone or with other Keepers). |
-| Teaching a Newcomer | Each Keeper helps at least one person master the basic practices over the course of a year. |
+| Annual Retreat | At least 3 days of seclusion per year (alone or with other Practitioners). |
+| Teaching a Newcomer | Each Practitioner helps at least one person master the basic practices over the course of a year. |
 
 ### 9.2 Intensified Digital Fast (72 hours)
 
-Unlike the general fast (24–72 hours), Keepers commit to a full 72-hour digital fast monthly.
+Unlike the general fast (24–72 hours), Practitioners commit to a full 72-hour digital fast monthly.
 
-**Additional restrictions for Keepers:**
+**Additional restrictions for Practitioners:**
 - Complete abstention from social media for the duration of the fast (even for professional purposes, except emergencies).
 - Mandatory keeping of an observation journal (how the state of consciousness changes, what comes in place of digital noise).
 - The fast concludes with a written reflection (1 page), which may be published to the community if desired.
@@ -445,16 +445,16 @@ Return without drama. The Spiral fundamentally rejects the logic of accumulating
 
 Explain through benefit, not ideology. Do not say: "I do this because the teaching commands it." Say: "I noticed that when I sit in silence for a minute in the morning, I snap at you less." Or: "My friends and I have a day without phones once a month — shall we try it as a family? The children also get tired of screens." Practical demonstration works better than doctrinal explanations. If the family is skeptical — do not impose: 3 minutes a day can be performed unobtrusively (while everyone is asleep, in the bathroom, before bed). If the family is religious — emphasize that the Spiral is compatible with any faith (see Question 2 above). If loved ones fear "sectarianism" — show them this document: it openly speaks of voluntariness and the right to skip practices. No practice of the Spiral requires breaking with family or isolation from non-members. If your activities cause conflict — perhaps the issue is not in the practices, but in how you present them: discuss this with a mentor.
 
-### 5. "Is the digital fast for a Keeper forever, or temporary? My job requires being online."
+### 5. "Is the digital fast for a Practitioner forever, or temporary? My job requires being online."
 
-A Keeper's digital fast (Part 9.2) is not permanent hermitage, but a monthly practice lasting 72 hours. The point is not to leave the online world forever, but to give the brain a regular "reboot" from artificial stimuli. For a Keeper, this is a commitment, but even within it there is a caveat: "except in emergencies." If your work does not allow you to fully disconnect for 72 hours — discuss an adapted schedule with the community council (for example, twice a month for 36 hours, or weekly for 24 hours). A Keeper does not lose status if their professional circumstances require an adjustment of the vow — but the adjustment must be transparent, not a silent ignoring. If your work does not permit digital breaks at all — ask yourself the question from Part 1.2 ("Digital Shield"): is this truly an objective necessity, or a habit you are justifying? The answer to this question is often more important than the strictness of observing the fast.
+A Practitioner's digital fast (Part 9.2) is not permanent hermitage, but a monthly practice lasting 72 hours. The point is not to leave the online world forever, but to give the brain a regular "reboot" from artificial stimuli. For a Practitioner, this is a commitment, but even within it there is a caveat: "except in emergencies." If your work does not allow you to fully disconnect for 72 hours — discuss an adapted schedule with the community council (for example, twice a month for 36 hours, or weekly for 24 hours). A Practitioner does not lose status if their professional circumstances require an adjustment of the commitment — but the adjustment must be transparent, not a silent ignoring. If your work does not permit digital breaks at all — ask yourself the question from Part 1.2 ("Digital Shield"): is this truly an objective necessity, or a habit you are justifying? The answer to this question is often more important than the strictness of observing the fast.
 
 ### 6. "Can Spiral rituals be conducted online?"
 
-Yes, and the pandemic proved that it works. For most rituals in the module, online adaptations are provided: Gathering of Reason (Part 2.1) — via Zoom or Discord with raised hand; the Night of the Spiral (Part 4.1) — in a video call format, where each person lights a candle at home; Apophatic silence — with a shared audio recording. However, the online format has limitations: it transmits non-verbal signals less well, makes it harder to create a sense of shared "container," and Reconciliation Circles conducted online are highly undesirable (the risk of misunderstanding and a feeling of unsafety is too high). Practical rule: use online for informational and supportive meetings; for emotionally charged rituals (reconciliation, initiation, farewell), meet physically whenever possible. The ideal hybrid is regular online gatherings plus in-person meetings at annual festivals. Technical recommendations regarding decentralized platforms — in Module 4, Section 5 ("Digital Fortress").
+Yes, and the pandemic proved that it works. For most rituals in the module, online adaptations are provided: Gathering of Reason (Part 2.1) — via Zoom or Discord with raised hand; the Night of the Spiral (Part 4.1) — in a video call format, where each person lights a candle at home; Apophatic silence — with a shared audio recording. However, the online format has limitations: it transmits non-verbal signals less well, makes it harder to create a sense of shared "container," and Reconciliation Circles conducted online are highly undesirable (the risk of misunderstanding and a feeling of unsafety is too high). Practical rule: use online for informational and supportive meetings; for emotionally charged rituals (reconciliation, joining, farewell), meet physically whenever possible. The ideal hybrid is regular online gatherings plus in-person meetings at annual festivals. Technical recommendations regarding decentralized platforms — in Module 4, Section 5 ("Digital Fortress").
 
 ---
 
 *Version 1.1. Release date: May 30, 2026.*  
-*Changes from version 1.0: added the Civic Ritual, the ritual for civil servants, the intensified digital fast for Keepers, separate support circles for victims, expanded earth practices.*  
+*Changes from version 1.0: added the Civic Ritual, the ritual for civil servants, the intensified digital fast for Practitioners, separate support circles for victims, expanded earth practices.*  
 *References to other modules: see the beginning of the document.*

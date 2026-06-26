@@ -19,7 +19,7 @@ All documents of the system are divided into independent modules. Each module is
 
 | # | Module Name | Target Audience |
 |---|----------------|-------------------|
-| 0 | **Canon of the Spiral** – the core: axioms, prohibitions, principles, Creed, levels, basic practices, relationship to the state | Everyone |
+| 0 | **Canon of the Spiral** – the core: axioms, prohibitions, principles, Words of Choice, levels, basic practices, relationship to the state | Everyone |
 | 1 | **Cosmology and Myth** – the story of the First Node, Three Eras, two outcomes, symbols | Everyone, learners |
 | 2 | **Ethics and Virtues** – code of honor, ethics of power and force, the "dirty hands" dilemma, controversial issues, exclusion procedure | Everyone, public officials |
 | 3 | **Practices and Rituals** – from 3 minutes a day to annual celebrations, Circles of Reconciliation, earth practices, the Civic Ritual, ritual for public officials | Everyone |

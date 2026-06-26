@@ -180,17 +180,17 @@ Virtues are skills. They can be trained. The table below presents key virtues, t
 
 ### Follower
 - I observe everything prescribed for a Sympathizer, unswervingly.
-- I have publicly adopted the Creed and I am aware of my responsibility to the community.
+- I have publicly adopted the Words of Choice and I am aware of my responsibility to the community.
 - I actively train virtues and participate in Gatherings of Reason.
 - I do not make empty promises and always strive to fulfill the commitments I undertake.
 - I do not use affiliation with the Spiral for personal gain or power.
 
-### Keeper of Consciousness
+### Practitioner
 - I observe everything prescribed for a Follower, with maximum rigor.
-- I have taken deep vows (a daily hour of practice, a monthly fast, an annual retreat, mentorship).
+- I have taken deep commitments (a daily hour of practice, a monthly fast, an annual retreat, mentorship).
 - I serve as an example to others, but do not demand special treatment. My authority lies only in my knowledge and deeds, not in formal status.
 - I teach newcomers, but do not impose my path on them. I am a gardener who creates conditions for growth, not a sculptor who imposes a shape.
-- I remember: the power of a Keeper is power over oneself, not over others.
+- I remember: the power of a Practitioner is power over oneself, not over others.
 
 ---
 
@@ -245,7 +245,7 @@ Use this checklist for weekly reflection (ideally on Sunday evening).
 - [ ] **Did I think about the long-term consequences of my actions?** (Did I not harm future generations?)
 - [ ] **Did I preserve my attention from digital garbage?** (Practiced the digital shield, limited social media?)
 - [ ] **Did I manifest at least one virtue?** (Courage, temperance, generosity, truthfulness, justice, friendliness, humility?)
-- [ ] **Did I abuse my power or influence?** (This item is mandatory for Keepers and leaders.)
+- [ ] **Did I abuse my power or influence?** (This item is mandatory for Practitioners and leaders.)
 
 **If you answered "no" to the majority of the questions — this is not a reason for guilt. It is a reason to think about how to adjust the coming week.**
 

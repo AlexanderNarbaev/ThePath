@@ -1,10 +1,6 @@
-# SESSION WAL — 2026-06-05 (closed)
+# SESSION WAL — 2026-06-26 (active, Task 2 complete)
 
-📍 Status: Финальный билд и деплой. Код запушен в GitHub + GitVerse. GitHub Actions деплоит на Pages.
-🚀 Done:
-  - Web3Forms ключ (35bd2f30-526a-416a-84c7-14c4436477fe) в .env
-  - GoatCounter (alex-narbaev) в BaseLayout.astro
-  - Билд 57 страниц успешен
-  - Push в origin (GitHub) и gitverse
-🛑 Protected: Канон неизменен. giscus repo-id/category-id — плейсхолдеры.
-🔄 Pending: giscus настройка (repo-id, category-id). Дождаться GitHub Pages деплоя. Посетить сайт для первого срабатывания GoatCounter.
+📍 Status: Task 2 (perf & a11y) выполнен. 57 страниц билдятся. 14 файлов изменено, lunr удалён, client:visible/idle внедрены, focus-visible и a11y-обработчики добавлены.
+🚀 Active: Task 3 (из 7) — следующий этап SDD. См. `.superpowers/sdd/task-3-brief.md`.
+🛑 Protected: Канон неизменен. astro check пропускается (нет @astrojs/check). ModuleGraph перерисовывается на resize — для 15 узлов ок.
+🔒 Commit: 3f7fa20 — perf(web): switch client:load to client:visible/idle; replace lunr with filter; add focus-visible and a11y handlers
