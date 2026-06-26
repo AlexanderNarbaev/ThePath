@@ -32,6 +32,7 @@ jobs:
         working-directory: web
         env:
           BASE_PATH: /ThePath
+          PUBLIC_WEB3FORMS_KEY: 35bd2f30-526a-416a-84c7-14c4436477fe
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -66,12 +66,13 @@ export default function ContactForm({ lang, web3Key }: Props) {
   function insertTag(tag: string, sample: string) {
     const textarea = document.getElementById('cf-message') as HTMLTextAreaElement;
     if (!textarea) return;
+    const tagName = tag.split(' ')[0];
     const start = textarea.selectionStart;
     const end = textarea.selectionEnd;
     const before = message.substring(0, start);
     const selected = message.substring(start, end) || sample;
     const after = message.substring(end);
-    setMessage(before + `<${tag}>${selected}</${tag}>` + after);
+    setMessage(before + `<${tag}>${selected}</${tagName}>` + after);
     setTimeout(() => {
       textarea.focus();
       textarea.setSelectionRange(
