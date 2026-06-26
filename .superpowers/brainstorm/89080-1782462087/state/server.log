@@ -30,3 +30,4 @@
 {"source":"user-event","type":"click","text":"Карточки + чек-лист (recommended)\n        Карточки объясняют практики. Ниже — мини-чеклист «Сегодня» с тремя галочками. Объяснение и действие разделены. Чек-лист — якорь для возврата.","choice":"practices-as-both","id":null,"timestamp":1782463482593}
 {"type":"screen-added","file":"/home/alexandr-narbaev/Projects/ThePath/.superpowers/brainstorm/89080-1782462087/content/transparency-section.html"}
 {"type":"screen-added","file":"/home/alexandr-narbaev/Projects/ThePath/.superpowers/brainstorm/89080-1782462087/content/waiting.html"}
+{"type":"server-stopped","reason":"idle timeout"}

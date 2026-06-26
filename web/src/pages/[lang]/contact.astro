@@ -80,6 +80,7 @@ const web3Key = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
     border-color: var(--color-gold);
     box-shadow: 0 0 0 3px rgba(230, 193, 123, 0.12);
   }
+  .cf-box-err { border-color: var(--color-danger) !important; box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.12) !important; }
 
   .cf-input {
     width: 100%;
@@ -166,7 +167,11 @@ const web3Key = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
   }
   .cf-btn:hover:not(:disabled) { opacity: 0.9; transform: translateY(-1px); }
   .cf-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .cf-val-err { color: var(--color-danger); font-size: 0.78rem; margin-top: 0.2rem; }
+  .cf-error-block { flex: 1; min-width: 0; }
   .cf-error { color: var(--color-danger); font-size: 0.85rem; margin: 0; }
+  .cf-error-hint { color: var(--color-text-secondary); font-size: 0.82rem; margin: 0.3rem 0 0; }
+  .cf-error-hint a { color: var(--color-gold); }
 
   .cf-success {
     text-align: center;
