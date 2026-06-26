@@ -1,4 +1,4 @@
-import { useState } from 'preact/hooks';
+import { useState, useRef, useEffect } from 'preact/hooks';
 import { t, type Lang } from '../../i18n/ui';
 
 interface Props {
@@ -10,18 +10,41 @@ export default function ContactForm({ lang, web3Key }: Props) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const editorRef = useRef<HTMLDivElement>(null);
+  const [editorEmpty, setEditorEmpty] = useState(true);
+
+  function getMessage(): string {
+    return editorRef.current?.innerHTML || '';
+  }
+
+  useEffect(() => {
+    if (editorRef.current) {
+      setEditorEmpty(!editorRef.current.textContent?.trim());
+    }
+  }, []);
+
+  function exec(cmd: string, val?: string) {
+    editorRef.current?.focus();
+    document.execCommand(cmd, false, val);
+    setEditorEmpty(!editorRef.current?.textContent?.trim());
+  }
+
+  function insertLink() {
+    const url = prompt(lang === 'ru' ? 'URL ссылки:' : 'Link URL:', 'https://');
+    if (url) exec('createLink', url);
+  }
 
   function validate(): boolean {
     const e: Record<string, string> = {};
+    const msg = editorRef.current?.textContent?.trim() || '';
     if (!name.trim()) e.name = t('contact.val_required', lang);
     if (!email.trim()) e.email = t('contact.val_required', lang);
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) e.email = t('contact.val_email', lang);
     if (!subject.trim()) e.subject = t('contact.val_required', lang);
-    if (!message.trim()) e.message = t('contact.val_required', lang);
+    if (!msg) e.message = t('contact.val_required', lang);
     setErrors(e);
     return Object.keys(e).length === 0;
   }
@@ -39,7 +62,7 @@ export default function ContactForm({ lang, web3Key }: Props) {
       formData.append('name', name);
       formData.append('email', email);
       formData.append('subject', `[${lang.toUpperCase()}] ${subject}`);
-      formData.append('message', message);
+      formData.append('message', getMessage());
       formData.append('from_name', 'Spiral Contact Form');
       formData.append('replyto', email);
       formData.append('botcheck', '');
@@ -52,7 +75,9 @@ export default function ContactForm({ lang, web3Key }: Props) {
 
       if (data.success) {
         setStatus('sent');
-        setName(''); setEmail(''); setSubject(''); setMessage('');
+        setName(''); setEmail(''); setSubject('');
+        if (editorRef.current) editorRef.current.innerHTML = '';
+        setEditorEmpty(true);
       } else {
         setStatus('error');
         setErrorMsg(data.message || `${t('contact.error', lang)} (${res.status})`);
@@ -61,25 +86,6 @@ export default function ContactForm({ lang, web3Key }: Props) {
       setStatus('error');
       setErrorMsg(`${t('contact.error_net', lang)}: ${err.message || ''}`);
     }
-  }
-
-  function insertTag(tag: string, sample: string) {
-    const textarea = document.getElementById('cf-message') as HTMLTextAreaElement;
-    if (!textarea) return;
-    const tagName = tag.split(' ')[0];
-    const start = textarea.selectionStart;
-    const end = textarea.selectionEnd;
-    const before = message.substring(0, start);
-    const selected = message.substring(start, end) || sample;
-    const after = message.substring(end);
-    setMessage(before + `<${tag}>${selected}</${tagName}>` + after);
-    setTimeout(() => {
-      textarea.focus();
-      textarea.setSelectionRange(
-        before.length + `<${tag}>`.length,
-        before.length + `<${tag}>${selected}`.length,
-      );
-    }, 0);
   }
 
   if (status === 'sent') {
@@ -139,23 +145,36 @@ export default function ContactForm({ lang, web3Key }: Props) {
 
       <label class="cf-field">
         <span class="cf-label">{t('contact.message', lang)}</span>
-        <div class={`cf-box${errors.message ? ' cf-box-err' : ''}`}>
+        <div class={`cf-box cf-editor-box${errors.message ? ' cf-box-err' : ''}`}>
           <div class="cf-toolbar">
-            <button type="button" class="cf-tb-btn" title="Bold" onClick={() => insertTag('b', lang === 'ru' ? 'жирный' : 'bold')}>B</button>
-            <button type="button" class="cf-tb-btn" title="Italic" onClick={() => insertTag('i', lang === 'ru' ? 'курсив' : 'italic')}>I</button>
-            <button type="button" class="cf-tb-btn" title="Link" onClick={() => insertTag('a href=""', lang === 'ru' ? 'ссылка' : 'link')}>🔗</button>
-            <button type="button" class="cf-tb-btn" title="Code" onClick={() => insertTag('code', 'code')}>&lt;/&gt;</button>
-            <button type="button" class="cf-tb-btn" title="Blockquote" onClick={() => insertTag('blockquote', lang === 'ru' ? 'цитата' : 'quote')}>❝</button>
+            <button type="button" class="cf-tb-btn" onClick={() => exec('bold')} title={lang === 'ru' ? 'Жирный' : 'Bold'}>
+              <b>B</b>
+            </button>
+            <button type="button" class="cf-tb-btn" onClick={() => exec('italic')} title={lang === 'ru' ? 'Курсив' : 'Italic'}>
+              <i>I</i>
+            </button>
+            <span class="cf-tb-sep" />
+            <button type="button" class="cf-tb-btn" onClick={() => exec('formatBlock', 'pre')} title={lang === 'ru' ? 'Код' : 'Code'}>
+              {'</>'}
+            </button>
+            <button type="button" class="cf-tb-btn" onClick={() => exec('formatBlock', 'blockquote')} title={lang === 'ru' ? 'Цитата' : 'Quote'}>
+              ❝
+            </button>
+            <span class="cf-tb-sep" />
+            <button type="button" class="cf-tb-btn" onClick={insertLink} title={lang === 'ru' ? 'Вставить ссылку' : 'Insert link'}>
+              🔗
+            </button>
+            <button type="button" class="cf-tb-btn" onClick={() => exec('removeFormat')} title={lang === 'ru' ? 'Очистить формат' : 'Clear format'}>
+              ✕
+            </button>
           </div>
-          <textarea
-            id="cf-message"
-            value={message}
-            onInput={e => { setMessage((e.target as HTMLTextAreaElement).value); setErrors(e => ({...e, message: ''})); }}
-            placeholder={t('contact.message_ph', lang)}
-            rows={6}
-            class="cf-input cf-textarea"
+          <div
+            ref={editorRef}
+            class={`cf-editor${editorEmpty ? ' cf-editor-empty' : ''}`}
+            contenteditable
+            data-placeholder={t('contact.message_ph', lang)}
+            onInput={() => { setEditorEmpty(!editorRef.current?.textContent?.trim()); setErrors(e => ({...e, message: ''})); }}
           />
-          <div class="cf-preview" dangerouslySetInnerHTML={{ __html: message || `<span style="opacity:0.4">${t('contact.preview', lang)}</span>` }} />
         </div>
         {errors.message && <span class="cf-val-err">{errors.message}</span>}
       </label>
