@@ -114,6 +114,58 @@ export const ui = {
     'share.copied': 'Ссылка скопирована!',
     'comments.title': 'Комментарии',
     'comments.powered': 'через giscus',
+
+    // Лонгрид — секция практик
+    'practices.section_label': '§1 · ПРАКТИКА',
+    'practices.heading': 'Три минуты. Прямо сейчас.',
+    'practices.morning': 'УТРО',
+    'practices.morning_text': '«Сегодня я выбираю восходящую спираль»',
+    'practices.screen': 'ПЕРЕД ЭКРАНОМ',
+    'practices.screen_text': '«Зачем я это открываю?»',
+    'practices.evening': 'ВЕЧЕР',
+    'practices.evening_text': '«Что я сделал для сохранения сознания?»',
+    'practices.time': '60 секунд',
+    'practices.disclaimer': 'НИКАКОЙ МАГИИ. НИКАКОЙ ВЕРЫ. ТОЛЬКО ВЫ.',
+    'practices.checklist_btn': 'Отметить сегодня',
+
+    // Лонгрид — секция прозрачности
+    'transparency.section_label': '§2 · ПРОЗРАЧНОСТЬ',
+    'transparency.heading': 'Что это — и чем это не является',
+    'transparency.no_religion': 'Религия. Никаких божеств, ритуалов поклонения, требований веры.',
+    'transparency.yes_system': 'Практическая система. Как тайм-менеджмент или спортзал — для сознания.',
+    'transparency.no_ideology': 'Идеология. Никакой «единственно верной» картины мира.',
+    'transparency.yes_open': 'Открытый код. Любой может форкнуть, адаптировать, критиковать.',
+    'transparency.no_guru': 'Гуру. Нет лидера, нет «просветлённых», нет иерархии.',
+    'transparency.yes_community': 'Сообщество равных. Горизонтальная сеть, а не пирамида.',
+
+    // Лонгрид — наука и этика
+    'foundations.section_label': '§3 · ОСНОВЫ',
+    'foundations.heading': 'Наука и этика',
+    'foundations.1_title': 'Сознание природно',
+    'foundations.1_desc': 'Сознание возникает из физических процессов. Ему не нужно сверхъестественное объяснение.',
+    'foundations.2_title': 'Доказательства выше авторитета',
+    'foundations.2_desc': 'Любое утверждение можно оспорить. Истина открывается через исследование, а не указ.',
+    'foundations.3_title': 'Этика из первых принципов',
+    'foundations.3_desc': 'Нормы морали выводятся из аксиомы сохранения сознания, а не из традиции.',
+    'foundations.4_title': 'Открытость к пересмотру',
+    'foundations.4_desc': 'Система развивается по мере роста знаний. Догма — враг мудрости.',
+
+    // Лонгрид — карта
+    'map.section_label': '§4 · КАРТА',
+    'map.heading': 'Выберите свой путь',
+    'map.view_all': 'Смотреть всю карту',
+
+    // Пути изучения — дополнительные
+    'paths.quick_title': 'Быстрый старт',
+    'paths.quick_desc': 'Манифест, Канон и Практики. ~2 часа.',
+    'paths.mentor_title': 'Наставник',
+    'paths.mentor_desc': 'Полная подготовка наставника. 15–20 часов изучения.',
+    'paths.deep_title': 'Глубокое изучение',
+    'paths.deep_desc': 'Для исследователей и энтузиастов. Свободный график.',
+
+    // Стартовая страница
+    'start.title': 'Твой первый день',
+    'start.read_more': 'Читать дальше',
   },
   en: {
     'site.name': 'Spiral of Consciousness',
@@ -230,6 +282,58 @@ export const ui = {
     'share.copied': 'Link copied!',
     'comments.title': 'Comments',
     'comments.powered': 'via giscus',
+
+    // Longread — practices section
+    'practices.section_label': '§1 · PRACTICE',
+    'practices.heading': 'Three minutes. Right now.',
+    'practices.morning': 'MORNING',
+    'practices.morning_text': '"Today I choose the ascending spiral"',
+    'practices.screen': 'BEFORE SCREEN',
+    'practices.screen_text': '"Why am I opening this?"',
+    'practices.evening': 'EVENING',
+    'practices.evening_text': '"What have I done to preserve consciousness?"',
+    'practices.time': '60 seconds',
+    'practices.disclaimer': 'NO MAGIC. NO FAITH. JUST YOU.',
+    'practices.checklist_btn': 'Check today',
+
+    // Longread — transparency section
+    'transparency.section_label': '§2 · TRANSPARENCY',
+    'transparency.heading': 'What it is — and what it is not',
+    'transparency.no_religion': 'A religion. No deities, worship rituals, requirements of faith.',
+    'transparency.yes_system': 'A practical system. Like time management or the gym — for consciousness.',
+    'transparency.no_ideology': 'An ideology. No "one true" worldview.',
+    'transparency.yes_open': 'Open source. Anyone can fork, adapt, criticize.',
+    'transparency.no_guru': 'A guru. No leader, no "enlightened," no hierarchy.',
+    'transparency.yes_community': 'A community of equals. A horizontal network, not a pyramid.',
+
+    // Longread — science and ethics
+    'foundations.section_label': '§3 · FOUNDATIONS',
+    'foundations.heading': 'Science and ethics',
+    'foundations.1_title': 'Consciousness is natural',
+    'foundations.1_desc': 'Consciousness arises from physical processes. It requires no supernatural explanation.',
+    'foundations.2_title': 'Evidence over authority',
+    'foundations.2_desc': 'Every claim can be questioned. Truth is discovered through inquiry, not decree.',
+    'foundations.3_title': 'Ethics from first principles',
+    'foundations.3_desc': 'Moral norms are derived from the axiom of preserving consciousness, not from tradition.',
+    'foundations.4_title': 'Open to revision',
+    'foundations.4_desc': 'The system evolves as knowledge grows. Dogma is the enemy of wisdom.',
+
+    // Longread — map
+    'map.section_label': '§4 · MAP',
+    'map.heading': 'Choose your path',
+    'map.view_all': 'View full map',
+
+    // Study paths — additional
+    'paths.quick_title': 'Quick Start',
+    'paths.quick_desc': 'Manifesto, Canon, and Practices. ~2 hours.',
+    'paths.mentor_title': 'Mentor',
+    'paths.mentor_desc': 'Full mentor preparation. 15–20 hours of study.',
+    'paths.deep_title': 'Deep Study',
+    'paths.deep_desc': 'For researchers and enthusiasts. Free schedule.',
+
+    // Start page
+    'start.title': 'Your First Day',
+    'start.read_more': 'Read more',
   },
 } as const;
 

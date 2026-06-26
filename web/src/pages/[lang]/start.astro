@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLangPaths } from '../../utils/static-paths';
+import { t } from '../../i18n/ui';
+
+export async function getStaticPaths() {
+  return getLangPaths();
+}
+
+const { lang } = Astro.params;
+---
+
+<BaseLayout lang={lang as 'ru' | 'en'} title={t('start.title', lang as 'ru' | 'en')}>
+  <div class="content">
+    <div class="meta-label">{t('practices.section_label', lang as 'ru' | 'en')}</div>
+    <h1>{t('practices.heading', lang as 'ru' | 'en')}</h1>
+
+    <div class="practice-cards">
+      <div class="practice-card">
+        <div class="meta-label">☀️ {t('practices.morning', lang as 'ru' | 'en')}</div>
+        <p>{t('practices.morning_text', lang as 'ru' | 'en')}</p>
+        <span class="practice-time">{t('practices.time', lang as 'ru' | 'en')}</span>
+      </div>
+      <div class="practice-card">
+        <div class="meta-label">📱 {t('practices.screen', lang as 'ru' | 'en')}</div>
+        <p>{t('practices.screen_text', lang as 'ru' | 'en')}</p>
+        <span class="practice-time">{t('practices.time', lang as 'ru' | 'en')}</span>
+      </div>
+      <div class="practice-card">
+        <div class="meta-label">🌙 {t('practices.evening', lang as 'ru' | 'en')}</div>
+        <p>{t('practices.evening_text', lang as 'ru' | 'en')}</p>
+        <span class="practice-time">{t('practices.time', lang as 'ru' | 'en')}</span>
+      </div>
+    </div>
+
+    <p class="practice-disclaimer">{t('practices.disclaimer', lang as 'ru' | 'en')}</p>
+
+    <p class="start-next">
+      <a href={`/ThePath/${lang}/manifesto`}>{t('start.read_more', lang as 'ru' | 'en')} →</a>
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .content { max-width: var(--max-width-content); margin: 0 auto; padding: 3rem 1.5rem; }
+  .practice-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
+  .practice-card { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; text-align: center; }
+  .practice-card p { font-size: 1rem; margin: 0.75rem 0; line-height: 1.5; }
+  .practice-time { font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-cosmic-text-secondary); }
+  .practice-disclaimer { font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-cosmic-text-secondary); text-align: center; margin-top: 1.5rem; }
+  .start-next { text-align: center; margin-top: 2rem; }
+</style>

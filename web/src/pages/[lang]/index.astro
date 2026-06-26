@@ -1,51 +1,122 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/home/Hero.astro';
 import CardsGrid from '../../components/home/CardsGrid.astro';
-import PathCards from '../../components/home/PathCards.astro';
 import DailyChecklist from '../../components/interactive/DailyChecklist';
-import EthicalCompass from '../../components/interactive/EthicalCompass';
-import { t } from '../../i18n/ui';
 import { getLangPaths } from '../../utils/static-paths';
+import { t } from '../../i18n/ui';
 
 export async function getStaticPaths() {
   return getLangPaths();
 }
 
 const { lang } = Astro.params;
-const allPages = await getCollection('pages');
-const page = allPages.find((e) => e.id.includes('index') && e.data?.lang === lang);
-const { Content } = page ? await page.render() : { Content: null };
 ---
 
 <BaseLayout lang={lang as 'ru' | 'en'} title={t('site.name', lang as 'ru' | 'en')}>
+
+  <!-- §0: Hero -->
   <Hero lang={lang as 'ru' | 'en'} />
-  <div class="home-content">
+
+  <!-- §1: Практики -->
+  <section class="longread-section" id="practices">
+    <div class="meta-label">{t('practices.section_label', lang as 'ru' | 'en')}</div>
+    <h2>{t('practices.heading', lang as 'ru' | 'en')}</h2>
+
+    <div class="practice-cards">
+      <div class="practice-card">
+        <div class="meta-label">☀️ {t('practices.morning', lang as 'ru' | 'en')}</div>
+        <p>{t('practices.morning_text', lang as 'ru' | 'en')}</p>
+        <span class="practice-time">{t('practices.time', lang as 'ru' | 'en')}</span>
+      </div>
+      <div class="practice-card">
+        <div class="meta-label">📱 {t('practices.screen', lang as 'ru' | 'en')}</div>
+        <p>{t('practices.screen_text', lang as 'ru' | 'en')}</p>
+        <span class="practice-time">{t('practices.time', lang as 'ru' | 'en')}</span>
+      </div>
+      <div class="practice-card">
+        <div class="meta-label">🌙 {t('practices.evening', lang as 'ru' | 'en')}</div>
+        <p>{t('practices.evening_text', lang as 'ru' | 'en')}</p>
+        <span class="practice-time">{t('practices.time', lang as 'ru' | 'en')}</span>
+      </div>
+    </div>
+
+    <div class="practice-disclaimer">{t('practices.disclaimer', lang as 'ru' | 'en')}</div>
+    <DailyChecklist lang={lang as 'ru' | 'en'} client:visible />
+  </section>
+
+  <!-- §2: Прозрачность -->
+  <section class="longread-section" id="transparency">
+    <div class="meta-label">{t('transparency.section_label', lang as 'ru' | 'en')}</div>
+    <h2>{t('transparency.heading', lang as 'ru' | 'en')}</h2>
+
+    <div class="transparency-grid">
+      <div class="trans-item no"><div class="trans-icon">✕</div><div class="trans-label meta-label">НЕ</div><p>{t('transparency.no_religion', lang as 'ru' | 'en')}</p></div>
+      <div class="trans-item yes"><div class="trans-icon">✓</div><div class="trans-label meta-label">ДА</div><p>{t('transparency.yes_system', lang as 'ru' | 'en')}</p></div>
+      <div class="trans-item no"><div class="trans-icon">✕</div><div class="trans-label meta-label">НЕ</div><p>{t('transparency.no_ideology', lang as 'ru' | 'en')}</p></div>
+      <div class="trans-item yes"><div class="trans-icon">✓</div><div class="trans-label meta-label">ДА</div><p>{t('transparency.yes_open', lang as 'ru' | 'en')}</p></div>
+      <div class="trans-item no"><div class="trans-icon">✕</div><div class="trans-label meta-label">НЕ</div><p>{t('transparency.no_guru', lang as 'ru' | 'en')}</p></div>
+      <div class="trans-item yes"><div class="trans-icon">✓</div><div class="trans-label meta-label">ДА</div><p>{t('transparency.yes_community', lang as 'ru' | 'en')}</p></div>
+    </div>
+  </section>
+
+  <!-- §3: Наука + Этика -->
+  <section class="longread-section" id="foundations">
+    <div class="meta-label">{t('foundations.section_label', lang as 'ru' | 'en')}</div>
+    <h2>{t('foundations.heading', lang as 'ru' | 'en')}</h2>
+    <CardsGrid title="" items={[
+      { icon: '▸', title: t('foundations.1_title', lang as 'ru' | 'en'), description: t('foundations.1_desc', lang as 'ru' | 'en') },
+      { icon: '▸', title: t('foundations.2_title', lang as 'ru' | 'en'), description: t('foundations.2_desc', lang as 'ru' | 'en') },
+      { icon: '▸', title: t('foundations.3_title', lang as 'ru' | 'en'), description: t('foundations.3_desc', lang as 'ru' | 'en') },
+      { icon: '▸', title: t('foundations.4_title', lang as 'ru' | 'en'), description: t('foundations.4_desc', lang as 'ru' | 'en') },
+    ]} />
     <CardsGrid title={t('prohibitions.title', lang as 'ru' | 'en')} items={[
       { icon: '▸', title: t('prohibitions.1_title', lang as 'ru' | 'en'), description: t('prohibitions.1_desc', lang as 'ru' | 'en') },
       { icon: '▸', title: t('prohibitions.2_title', lang as 'ru' | 'en'), description: t('prohibitions.2_desc', lang as 'ru' | 'en') },
       { icon: '▸', title: t('prohibitions.3_title', lang as 'ru' | 'en'), description: t('prohibitions.3_desc', lang as 'ru' | 'en') },
     ]} />
-    <CardsGrid title={t('principles.title', lang as 'ru' | 'en')} items={[
-      { icon: '▸', title: t('principles.1_title', lang as 'ru' | 'en'), description: t('principles.1_desc', lang as 'ru' | 'en') },
-      { icon: '▸', title: t('principles.2_title', lang as 'ru' | 'en'), description: t('principles.2_desc', lang as 'ru' | 'en') },
-      { icon: '▸', title: t('principles.3_title', lang as 'ru' | 'en'), description: t('principles.3_desc', lang as 'ru' | 'en') },
-      { icon: '▸', title: t('principles.4_title', lang as 'ru' | 'en'), description: t('principles.4_desc', lang as 'ru' | 'en') },
+  </section>
+
+  <!-- §4: Карта -->
+  <section class="longread-section" id="map-preview">
+    <div class="meta-label">{t('map.section_label', lang as 'ru' | 'en')}</div>
+    <h2>{t('map.heading', lang as 'ru' | 'en')}</h2>
+    <CardsGrid title="" items={[
+      { icon: '▸', title: t('paths.quick_title', lang as 'ru' | 'en'), description: t('paths.quick_desc', lang as 'ru' | 'en') },
+      { icon: '▸', title: t('paths.mentor_title', lang as 'ru' | 'en'), description: t('paths.mentor_desc', lang as 'ru' | 'en') },
+      { icon: '▸', title: t('paths.deep_title', lang as 'ru' | 'en'), description: t('paths.deep_desc', lang as 'ru' | 'en') },
     ]} />
-    {Content && <div class="home-prose"><Content /></div>}
-    <div class="home-interactive">
-      <DailyChecklist lang={lang as 'ru' | 'en'} client:visible />
-      <EthicalCompass lang={lang as 'ru' | 'en'} client:visible />
-    </div>
-    <PathCards lang={lang as 'ru' | 'en'} />
-  </div>
+    <p class="map-all-link">
+      <a href={`/ThePath/${lang}/map`}>{t('map.view_all', lang as 'ru' | 'en')} →</a>
+    </p>
+  </section>
+
 </BaseLayout>
 
 <style>
-  .home-content { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
-  .home-prose { max-width: 720px; margin: 3rem auto 0; }
-  .home-prose :global(h2) { font-size: 1.75rem; margin-top: 2rem; }
-  .home-prose :global(table) { width: 100%; }
-  .home-interactive { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+  .longread-section { max-width: var(--max-width-wide); margin: 0 auto; padding: 4rem 1.5rem; }
+  .longread-section:nth-child(even) { background: var(--color-cosmic-light); }
+  .longread-section h2 { text-align: center; margin-bottom: 2rem; }
+
+  .practice-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
+  .practice-card { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; text-align: center; }
+  .practice-card p { font-size: 1rem; margin: 0.75rem 0; }
+  .practice-time { font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-cosmic-text-secondary); }
+  .practice-disclaimer { font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-cosmic-text-secondary); text-align: center; margin: 1rem 0 2rem; }
+
+  .transparency-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; max-width: 700px; margin: 0 auto; }
+  .trans-item { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 8px; padding: 1.25rem; }
+  .trans-item.no { border-left: 3px solid var(--color-danger); }
+  .trans-item.yes { border-left: 3px solid #27ae60; }
+  .trans-icon { font-size: 1.2rem; }
+  .trans-item.no .trans-icon { color: var(--color-danger); }
+  .trans-item.yes .trans-icon { color: #27ae60; }
+  .trans-label { margin: 0.3rem 0; }
+  .trans-item p { font-size: 0.85rem; line-height: 1.5; margin-top: 0.3rem; }
+
+  .map-all-link { text-align: center; margin-top: 1.5rem; }
+
+  @media (max-width: 768px) {
+    .longread-section { padding: 2.5rem 1rem; }
+  }
 </style>
