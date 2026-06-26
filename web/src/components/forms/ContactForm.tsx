@@ -12,14 +12,12 @@ export default function ContactForm({ lang, web3Key }: Props) {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
-
-  const recipient = lang === 'ru'
-    ? 'alexander.narbayev@yandex.ru'
-    : 'alexander.narbayev@gmail.com';
+  const [errorMsg, setErrorMsg] = useState('');
 
   async function handleSubmit(e: Event) {
     e.preventDefault();
     setStatus('sending');
+    setErrorMsg('');
 
     try {
       const formData = new FormData();
@@ -30,6 +28,7 @@ export default function ContactForm({ lang, web3Key }: Props) {
       formData.append('message', message);
       formData.append('from_name', 'Spiral Contact Form');
       formData.append('replyto', email);
+      formData.append('botcheck', '');
 
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -42,38 +41,81 @@ export default function ContactForm({ lang, web3Key }: Props) {
         setName(''); setEmail(''); setSubject(''); setMessage('');
       } else {
         setStatus('error');
+        setErrorMsg(data.message || t('contact.error', lang));
       }
     } catch {
       setStatus('error');
+      setErrorMsg(t('contact.error', lang));
     }
   }
 
   if (status === 'sent') {
-    return <div class="contact-success">{t('contact.sent', lang)}</div>;
+    return (
+      <div class="cf-success">
+        <div class="cf-success-icon">✓</div>
+        <h2>{t('contact.sent', lang)}</h2>
+        <p>{t('contact.sent_desc', lang)}</p>
+      </div>
+    );
   }
 
   return (
-    <form class="contact-form" onSubmit={handleSubmit}>
-      <label>
-        <span>{t('contact.name', lang)}</span>
-        <input type="text" value={name} onInput={e => setName((e.target as HTMLInputElement).value)} required />
+    <form class="cf-form" onSubmit={handleSubmit}>
+      <div class="cf-row">
+        <label class="cf-field">
+          <span class="cf-label">{t('contact.name', lang)}</span>
+          <input
+            type="text"
+            value={name}
+            onInput={e => setName((e.target as HTMLInputElement).value)}
+            placeholder={t('contact.name_ph', lang)}
+            required
+            class="cf-input"
+          />
+        </label>
+        <label class="cf-field">
+          <span class="cf-label">{t('contact.email', lang)}</span>
+          <input
+            type="email"
+            value={email}
+            onInput={e => setEmail((e.target as HTMLInputElement).value)}
+            placeholder="email@example.com"
+            required
+            class="cf-input"
+          />
+        </label>
+      </div>
+      <label class="cf-field">
+        <span class="cf-label">{t('contact.subject', lang)}</span>
+        <input
+          type="text"
+          value={subject}
+          onInput={e => setSubject((e.target as HTMLInputElement).value)}
+          placeholder={t('contact.subject_ph', lang)}
+          required
+          class="cf-input"
+        />
       </label>
-      <label>
-        <span>{t('contact.email', lang)}</span>
-        <input type="email" value={email} onInput={e => setEmail((e.target as HTMLInputElement).value)} required />
+      <label class="cf-field">
+        <span class="cf-label">{t('contact.message', lang)}</span>
+        <textarea
+          value={message}
+          onInput={e => setMessage((e.target as HTMLTextAreaElement).value)}
+          placeholder={t('contact.message_ph', lang)}
+          rows={5}
+          required
+          class="cf-input cf-textarea"
+        />
       </label>
-      <label>
-        <span>{t('contact.subject', lang)}</span>
-        <input type="text" value={subject} onInput={e => setSubject((e.target as HTMLInputElement).value)} required />
-      </label>
-      <label>
-        <span>{t('contact.message', lang)}</span>
-        <textarea value={message} onInput={e => setMessage((e.target as HTMLTextAreaElement).value)} rows={5} required />
-      </label>
-      <button type="submit" disabled={status === 'sending'}>
-        {status === 'sending' ? t('contact.sending', lang) : t('contact.send', lang)}
-      </button>
-      {status === 'error' && <p class="contact-error">{t('contact.error', lang)}</p>}
+
+      <input type="text" name="_honey" style="display:none" autocomplete="off" />
+
+      <div class="cf-footer">
+        <button type="submit" disabled={status === 'sending'} class="cf-btn">
+          {status === 'sending' ? t('contact.sending', lang) : t('contact.send', lang)}
+        </button>
+        {status === 'error' && <p class="cf-error">{errorMsg}</p>}
+      </div>
     </form>
   );
 }
