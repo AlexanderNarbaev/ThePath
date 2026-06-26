@@ -70,7 +70,7 @@ const web3Key = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
 
   /* Input box — silver border */
   .cf-box {
-    border: 1px solid #6a6a80;
+    border: 1px solid var(--color-border);
     border-radius: 10px;
     background: var(--color-bg-secondary);
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -93,7 +93,7 @@ const web3Key = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
     outline: none;
     line-height: 1.5;
   }
-  .cf-input::placeholder { color: #6a6a80; opacity: 0.6; }
+  .cf-input::placeholder { color: var(--color-text-secondary); opacity: 0.6; }
   .cf-textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
 
   /* Rich-text toolbar */
@@ -101,7 +101,7 @@ const web3Key = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
     display: flex;
     gap: 0.2rem;
     padding: 0.35rem 0.5rem;
-    border-bottom: 1px solid #6a6a80;
+    border-bottom: 1px solid var(--color-border);
     background: var(--color-bg-secondary);
   }
   .cf-tb-btn {
@@ -125,7 +125,7 @@ const web3Key = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
   /* Live preview */
   .cf-preview {
     padding: 0.75rem 1rem;
-    border-top: 1px solid #6a6a80;
+    border-top: 1px solid var(--color-border);
     font-size: 0.85rem;
     color: var(--color-text-secondary);
     line-height: 1.6;
@@ -179,7 +179,7 @@ const web3Key = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
   }
   .cf-success-icon {
     font-size: 2.5rem;
-    color: #27ae60;
+    color: var(--color-success);
     margin-bottom: 1rem;
   }
   .cf-success h2 {

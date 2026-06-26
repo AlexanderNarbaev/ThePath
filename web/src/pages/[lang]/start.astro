@@ -1,47 +1,11 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getLangPaths } from '../../utils/static-paths';
-import { t, type Lang } from '../../i18n/ui';
+import { BASE_PATH } from '../../constants';
 
 export async function getStaticPaths() {
   return getLangPaths();
 }
 
-const lang = Astro.params.lang as Lang;
+const { lang } = Astro.params;
+return Astro.redirect(`${BASE_PATH}/${lang}/#practices`);
 ---
-
-<BaseLayout lang={lang} title={t('start.title', lang)}>
-  <div class="content">
-    <div class="meta-label">{t('practices.section_label', lang)}</div>
-    <h1>{t('practices.heading', lang)}</h1>
-
-    <div class="practice-cards">
-      <div class="practice-card">
-        <div class="meta-label">☀️ {t('practices.morning', lang)}</div>
-        <p>{t('practices.morning_text', lang)}</p>
-        <span class="practice-time">{t('practices.time', lang)}</span>
-      </div>
-      <div class="practice-card">
-        <div class="meta-label">📱 {t('practices.screen', lang)}</div>
-        <p>{t('practices.screen_text', lang)}</p>
-        <span class="practice-time">{t('practices.time', lang)}</span>
-      </div>
-      <div class="practice-card">
-        <div class="meta-label">🌙 {t('practices.evening', lang)}</div>
-        <p>{t('practices.evening_text', lang)}</p>
-        <span class="practice-time">{t('practices.time', lang)}</span>
-      </div>
-    </div>
-
-    <p class="practice-disclaimer">{t('practices.disclaimer', lang)}</p>
-
-    <p class="start-next">
-      <a href={`/ThePath/${lang}/manifesto`}>{t('start.read_more', lang)} →</a>
-    </p>
-  </div>
-</BaseLayout>
-
-<style>
-  .content { max-width: var(--max-width-content); margin: 0 auto; padding: 3rem 1.5rem; }
-  .start-next { text-align: center; margin-top: 2rem; }
-</style>

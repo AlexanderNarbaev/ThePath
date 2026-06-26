@@ -9,12 +9,14 @@ const { lang } = Astro.props as { lang: Lang };
   <p style="font-size:0.8rem;color:var(--color-text-secondary);margin-bottom:1rem;">
     {t('comments.powered', lang)} — {t('comments.github_required', lang)}
   </p>
+  <!-- Giscus requires repo-id and category-id from GitHub Discussions -->
+  <!--
   <script is:inline
     src="https://giscus.app/client.js"
     data-repo="AlexandrNarbaev/ThePath"
-    data-repo-id="R_kg_DO..."
+    data-repo-id=""
     data-category="Module Comments"
-    data-category-id="DIC_kw..."
+    data-category-id=""
     data-mapping="pathname"
     data-strict="0"
     data-reactions-enabled="1"
@@ -26,4 +28,5 @@ const { lang } = Astro.props as { lang: Lang };
     crossorigin="anonymous"
     async>
   </script>
+  -->
 </div>

@@ -24,6 +24,13 @@ const { Content } = await page.render();
       </div>
       <Content />
     </article>
+    <div class="manifesto-cta">
+      <h2>{t('manifesto.next_title', lang)}</h2>
+      <div class="manifesto-cta-links">
+        <a href={`/ThePath/${lang}/paths/quickstart`} class="btn-primary">{t('paths.quick_title', lang)}</a>
+        <a href={`/ThePath/${lang}/map`} class="btn-secondary">{t('map.view_all', lang)}</a>
+      </div>
+    </div>
   </div>
 </BaseLayout>
 
@@ -66,8 +73,29 @@ const { Content } = await page.render();
   .manifesto :global(strong) {
     color: var(--color-cosmic-text);
   }
+  .manifesto-cta {
+    text-align: center;
+    margin: 3rem 0 2rem;
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--color-card-bg);
+  }
+  .manifesto-cta h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-gold);
+    margin-bottom: 1.25rem;
+  }
+  .manifesto-cta-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   @media (max-width: 768px) {
     .manifesto { padding: 1.5rem 1rem; }
     .manifesto :global(h1) { font-size: 1.75rem; }
+    .manifesto-cta { padding: 1.5rem 1rem; }
   }
 </style>

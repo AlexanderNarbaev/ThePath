@@ -64,6 +64,7 @@ export const ui = {
 
     'manifesto.title': 'Манифест Спирали Сознания',
     'manifesto.section_label': '§0 · МАНИФЕСТ',
+    'manifesto.next_title': 'Что дальше?',
     '404.title': 'Страница не найдена',
     '404.back': 'Вернуться на главную',
     'skip_to_content': 'К содержанию',
@@ -261,6 +262,7 @@ export const ui = {
 
     'manifesto.title': 'Manifesto of the Spiral of Consciousness',
     'manifesto.section_label': '§0 · MANIFESTO',
+    'manifesto.next_title': "What's next?",
     '404.title': 'Page not found',
     '404.back': 'Back to home',
     'skip_to_content': 'Skip to content',
