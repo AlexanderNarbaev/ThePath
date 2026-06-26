@@ -12,7 +12,6 @@ const web3Key = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
 <BaseLayout lang={lang} title={t('contact.title', lang)}>
   <div class="contact-page">
     <div class="contact-head">
-      <div class="contact-dot" />
       <h1>{t('contact.title', lang)}</h1>
       <p>{t('contact.intro', lang)}</p>
     </div>
@@ -22,170 +21,121 @@ const web3Key = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
 
 <style>
   .contact-page {
-    max-width: 600px;
+    max-width: 560px;
     margin: 0 auto;
     padding: 4rem 1.5rem 5rem;
   }
   .contact-head {
     text-align: center;
-    margin-bottom: 3rem;
-  }
-  .contact-dot {
-    width: 8px; height: 8px;
-    background: var(--color-gold);
-    border-radius: 50%;
-    margin: 0 auto 1rem;
+    margin-bottom: 2.5rem;
   }
   .contact-head h1 {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
     font-weight: 300;
     color: var(--color-text-primary);
     margin: 0 0 0.5rem;
   }
   .contact-head p {
     color: var(--color-text-secondary);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.6;
-    max-width: 400px;
+    max-width: 360px;
     margin: 0 auto;
   }
 
-  /* Floating label cells */
-  .cf-form { display: flex; flex-direction: column; gap: 2.5rem; }
-  .cf-fields { display: flex; flex-direction: column; gap: 1.5rem; }
-  .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-
-  .cf-cell {
-    position: relative;
-    border-bottom: 1px solid var(--color-border);
-    transition: border-color 0.25s;
+  /* Form */
+  .cf-form { display: flex; flex-direction: column; gap: 1.25rem; }
+  .cf-grp { display: flex; flex-direction: column; gap: 0.35rem; }
+  .cf-lbl {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
-  .cf-cell:focus-within { border-color: var(--color-gold); }
-  .cf-cell-err { border-color: var(--color-danger) !important; }
-
-  .cf-cell-area {
-    border-bottom: none;
-    border: 1px solid var(--color-border);
+  .cf-inp {
+    padding: 0.7rem 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 8px;
-    padding: 0.6rem 0 0;
-    transition: border-color 0.25s;
-  }
-  .cf-cell-area:focus-within { border-color: var(--color-gold); }
-  .cf-cell-area.cf-cell-err { border-color: var(--color-danger) !important; }
-
-  .cf-input {
-    width: 100%;
-    padding: 0.85rem 0 0.5rem;
-    border: none;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.035);
     color: var(--color-text-primary);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-family: inherit;
     outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
     line-height: 1.5;
     resize: vertical;
   }
-  .cf-textarea {
-    min-height: 200px;
-    padding: 0.5rem 0.85rem 1.5rem;
-    line-height: 1.7;
+  .cf-inp:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px rgba(230, 193, 123, 0.1);
   }
-
-  .cf-lbl {
-    position: absolute;
-    left: 0;
-    top: 0.8rem;
+  .cf-inp::placeholder {
     color: var(--color-text-secondary);
-    font-size: 0.9rem;
-    pointer-events: none;
-    transition: all 0.2s ease;
-    transform-origin: left top;
+    opacity: 0.35;
   }
-  .cf-cell-area .cf-lbl { left: 0.85rem; top: 0.65rem; font-size: 0.8rem; }
+  textarea.cf-inp { min-height: 180px; line-height: 1.65; }
 
-  .cf-input:focus ~ .cf-lbl,
-  .cf-input:not(:placeholder-shown) ~ .cf-lbl {
-    transform: translateY(-0.65rem) scale(0.75);
-    color: var(--color-gold);
-  }
-  .cf-cell-err .cf-lbl { color: var(--color-danger) !important; }
-
-  .cf-count {
-    position: absolute;
-    right: 0.85rem;
-    bottom: 0.5rem;
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    color: var(--color-text-secondary);
-    opacity: 0.5;
-  }
-
-  .cf-bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-  }
   .cf-btn {
-    padding: 0.85rem 3.5rem;
+    align-self: flex-start;
+    padding: 0.75rem 2rem;
     background: var(--color-gold);
     color: #0a0a14;
     border: none;
     border-radius: 8px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     cursor: pointer;
     transition: opacity 0.2s, transform 0.15s, box-shadow 0.15s;
     font-family: var(--font-mono);
     letter-spacing: 0.03em;
+    margin-top: 0.25rem;
   }
   .cf-btn:hover:not(:disabled) {
     opacity: 0.92;
     transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(230, 193, 123, 0.2);
+    box-shadow: 0 4px 14px rgba(230, 193, 123, 0.18);
   }
   .cf-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
 
-  .cf-error-inline {
-    text-align: center;
-    color: var(--color-text-secondary);
+  .cf-err {
     font-size: 0.82rem;
+    color: var(--color-text-secondary);
     margin: 0;
-    max-width: 400px;
     line-height: 1.5;
   }
-  .cf-error-inline a { color: var(--color-gold); }
+  .cf-err a { color: var(--color-gold); }
 
-  .cf-success {
+  .cf-done {
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 2rem 1.5rem;
   }
-  .cf-ok {
-    width: 56px; height: 56px;
+  .cf-done-mark {
+    width: 52px; height: 52px;
     margin: 0 auto 1.25rem;
     border-radius: 50%;
-    background: rgba(39, 174, 96, 0.12);
+    background: rgba(39, 174, 96, 0.1);
+    border: 2px solid rgba(39, 174, 96, 0.25);
     color: #27ae60;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
   }
-  .cf-success h2 {
+  .cf-done h2 {
     color: var(--color-text-primary);
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 400;
     margin: 0 0 0.5rem;
   }
-  .cf-success p {
+  .cf-done p {
     color: var(--color-text-secondary);
     font-size: 0.9rem;
     line-height: 1.6;
   }
 
   @media (max-width: 480px) {
-    .cf-row { grid-template-columns: 1fr; }
     .contact-page { padding: 2rem 1rem 3rem; }
   }
 </style>

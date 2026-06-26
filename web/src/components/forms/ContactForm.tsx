@@ -10,18 +10,13 @@ export default function ContactForm({ lang, web3Key }: Props) {
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [charCount, setCharCount] = useState(0);
 
   function validate(): boolean {
-    const e: Record<string, string> = {};
-    if (!name.trim()) e.name = t('contact.val_required', lang);
-    if (!email.trim()) e.email = t('contact.val_required', lang);
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) e.email = t('contact.val_email', lang);
-    if (!subject.trim()) e.subject = t('contact.val_required', lang);
-    if (!message.trim()) e.message = t('contact.val_required', lang);
-    setErrors(e);
-    return Object.keys(e).length === 0;
+    if (!name.trim()) { setStatus('error'); setErrorMsg(t('contact.val_name', lang)); return false; }
+    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setStatus('error'); setErrorMsg(t('contact.val_email_long', lang)); return false; }
+    if (!subject.trim()) { setStatus('error'); setErrorMsg(t('contact.val_subject', lang)); return false; }
+    if (!message.trim()) { setStatus('error'); setErrorMsg(t('contact.val_message', lang)); return false; }
+    return true;
   }
 
   async function handleSubmit(e: Event) {
@@ -45,18 +40,18 @@ export default function ContactForm({ lang, web3Key }: Props) {
         setName(''); setEmail(''); setSubject(''); setMessage('');
       } else {
         setStatus('error');
-        setErrorMsg(data.message || `${t('contact.error', lang)} (${res.status})`);
+        setErrorMsg(data.message || t('contact.error', lang));
       }
-    } catch (err: any) {
+    } catch {
       setStatus('error');
-      setErrorMsg(`${t('contact.error_net', lang)}: ${err.message || ''}`);
+      setErrorMsg(t('contact.error_net', lang));
     }
   }
 
   if (status === 'sent') {
     return (
-      <div class="cf-success">
-        <div class="cf-ok">✓</div>
+      <div class="cf-done">
+        <div class="cf-done-mark">✓</div>
         <h2>{t('contact.sent', lang)}</h2>
         <p>{t('contact.sent_desc', lang)}</p>
       </div>
@@ -65,38 +60,32 @@ export default function ContactForm({ lang, web3Key }: Props) {
 
   return (
     <form class="cf-form" onSubmit={handleSubmit} novalidate>
-      <div class="cf-fields">
-        <div class="cf-row">
-          <div class={`cf-cell${errors.name ? ' cf-cell-err' : ''}`}>
-            <input type="text" value={name} onInput={e => { setName((e.target as HTMLInputElement).value); setErrors(p => ({...p, name: ''})); }} class="cf-input" />
-            <label class="cf-lbl">{t('contact.name', lang)}</label>
-          </div>
-          <div class={`cf-cell${errors.email ? ' cf-cell-err' : ''}`}>
-            <input type="email" value={email} onInput={e => { setEmail((e.target as HTMLInputElement).value); setErrors(p => ({...p, email: ''})); }} class="cf-input" />
-            <label class="cf-lbl">{t('contact.email', lang)}</label>
-          </div>
-        </div>
-        <div class={`cf-cell${errors.subject ? ' cf-cell-err' : ''}`}>
-          <input type="text" value={subject} onInput={e => { setSubject((e.target as HTMLInputElement).value); setErrors(p => ({...p, subject: ''})); }} class="cf-input" />
-          <label class="cf-lbl">{t('contact.subject', lang)}</label>
-        </div>
-        <div class={`cf-cell cf-cell-area${errors.message ? ' cf-cell-err' : ''}`}>
-          <textarea value={message} onInput={e => { setMessage((e.target as HTMLTextAreaElement).value); setCharCount((e.target as HTMLTextAreaElement).value.length); setErrors(p => ({...p, message: ''})); }} class="cf-input cf-textarea" rows={8} />
-          <label class="cf-lbl">{t('contact.message', lang)}</label>
-          <span class="cf-count">{charCount}</span>
-        </div>
+      <div class="cf-grp">
+        <label class="cf-lbl">{t('contact.name', lang)}</label>
+        <input type="text" value={name} onInput={e => setName((e.target as HTMLInputElement).value)} placeholder={t('contact.name_ph', lang)} class="cf-inp" />
+      </div>
+      <div class="cf-grp">
+        <label class="cf-lbl">{t('contact.email', lang)}</label>
+        <input type="email" value={email} onInput={e => setEmail((e.target as HTMLInputElement).value)} placeholder="email@example.com" class="cf-inp" />
+      </div>
+      <div class="cf-grp">
+        <label class="cf-lbl">{t('contact.subject', lang)}</label>
+        <input type="text" value={subject} onInput={e => setSubject((e.target as HTMLInputElement).value)} placeholder={t('contact.subject_ph', lang)} class="cf-inp" />
+      </div>
+      <div class="cf-grp">
+        <label class="cf-lbl">{t('contact.message', lang)}</label>
+        <textarea value={message} onInput={e => setMessage((e.target as HTMLTextAreaElement).value)} placeholder={t('contact.message_ph', lang)} rows={7} class="cf-inp" />
       </div>
 
       <input type="text" name="_honey" style="display:none" autocomplete="off" />
 
-      <div class="cf-bottom">
-        <button type="submit" disabled={status === 'sending'} class="cf-btn">
-          {status === 'sending' ? t('contact.sending', lang) : t('contact.send', lang)}
-        </button>
-        {status === 'error' && (
-          <p class="cf-error-inline" dangerouslySetInnerHTML={{ __html: t('contact.fallback', lang) }} />
-        )}
-      </div>
+      <button type="submit" disabled={status === 'sending'} class="cf-btn">
+        {status === 'sending' ? t('contact.sending', lang) : t('contact.send', lang)}
+      </button>
+
+      {status === 'error' && (
+        <p class="cf-err" dangerouslySetInnerHTML={{ __html: errorMsg + ' &nbsp;|&nbsp; ' + t('contact.fallback', lang) }} />
+      )}
     </form>
   );
 }
