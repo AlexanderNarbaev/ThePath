@@ -3,6 +3,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { t, type Lang } from '../../../i18n/ui';
 import { paths } from '../../../i18n/paths';
 import { modules } from '../../../i18n/modules';
+import { BASE_PATH } from '../../../constants';
 
 export async function getStaticPaths() {
   const entries: { params: { lang: string; path: string } }[] = [];
@@ -13,9 +14,9 @@ export async function getStaticPaths() {
 }
 
 const { lang, path } = Astro.params as { lang: Lang; path: string };
-const base = '/ThePath';
+const base = BASE_PATH;
 const studyPath = paths.find((p) => p.id === path);
-if (!studyPath) return Astro.redirect(`/ThePath/404`);
+if (!studyPath) return Astro.redirect(`${BASE_PATH}/404`);
 
 const pathModules = studyPath.modules.map((n) => modules.find((m) => m.number === n)).filter(Boolean);
 const optionalModules = (studyPath.optional || []).map((n) => modules.find((m) => m.number === n)).filter(Boolean);

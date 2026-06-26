@@ -3,6 +3,7 @@ import * as d3 from 'd3';
 import { modules } from '../../i18n/modules';
 import { paths } from '../../i18n/paths';
 import type { Lang } from '../../i18n/ui';
+import { BASE_PATH } from '../../constants';
 
 const pathColors: Record<string, string> = {
   quickstart: '#4CAF50', mentor: '#2196F3', coordinator: '#FF9800', statesman: '#E91E63', deep: '#9C27B0',
@@ -42,7 +43,7 @@ export default function ModuleGraph({ lang }: Props) {
 
     const node = svg.append('g').selectAll('g').data(nodes).join('g')
       .attr('cursor', 'pointer')
-      .on('click', (_e: any, d: any) => { window.location.href = `/ThePath/${lang}/modules/${d.slug}`; });
+      .on('click', (_e: any, d: any) => { window.location.href = `${BASE_PATH}/${lang}/modules/${d.slug}`; });
 
     node.append('circle').attr('r', 18).attr('fill', (d: any) => pathColors[d.path] || '#888')
       .attr('stroke', '#fff').attr('stroke-width', 2);

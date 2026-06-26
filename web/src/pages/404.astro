@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { t, type Lang } from '../i18n/ui';
+import { BASE_PATH } from '../constants';
 import SearchModal from '../components/search/SearchModal';
 const url = Astro.url.pathname;
-const lang: Lang = (url.includes('/en/') || url.startsWith('/ThePath/en')) ? 'en' : 'ru';
-const base = '/ThePath';
+const base = BASE_PATH;
+const lang: Lang = (url.includes('/en/') || url.startsWith(`${base}/en`)) ? 'en' : 'ru';
 ---
 
 <BaseLayout lang={lang} title={t('404.title', lang)}>

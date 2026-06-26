@@ -2,15 +2,17 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { t } from '../../i18n/ui';
+import { getLangPaths } from '../../utils/static-paths';
+import { BASE_PATH } from '../../constants';
 
 export async function getStaticPaths() {
-  return [{ params: { lang: 'ru' } }, { params: { lang: 'en' } }];
+  return getLangPaths();
 }
 
 const { lang } = Astro.params;
 const allPages = await getCollection('pages');
 const page = allPages.find((e) => e.id.includes('manifesto') && e.data?.lang === lang);
-if (!page) return Astro.redirect(`/ThePath/${lang}`);
+if (!page) return Astro.redirect(`${BASE_PATH}/${lang}`);
 const { Content } = await page.render();
 ---
 

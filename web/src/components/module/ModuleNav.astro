@@ -1,6 +1,7 @@
 ---
 import { t, type Lang } from '../../i18n/ui';
 import { modules } from '../../i18n/modules';
+import { BASE_PATH } from '../../constants';
 
 interface Props { lang: Lang; current: number; }
 
@@ -8,7 +9,7 @@ const { lang, current } = Astro.props;
 const idx = modules.findIndex((m) => m.number === current);
 const prev = idx > 0 ? modules[idx - 1] : null;
 const next = idx < modules.length - 1 ? modules[idx + 1] : null;
-const base = '/ThePath';
+const base = BASE_PATH;
 ---
 
 {idx >= 0 && (

@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { t, type Lang } from '../../i18n/ui';
+import { getLangPaths } from '../../utils/static-paths';
 const lang = Astro.params.lang as Lang;
 
 export async function getStaticPaths() {
-  return [{ params: { lang: 'ru' } }, { params: { lang: 'en' } }];
+  return getLangPaths();
 }
 
 const terms = [
@@ -42,10 +43,10 @@ const terms = [
       {t('glossary.description', lang)}
     </p>
     {terms.map((t) => (
-      <div class="glossary-item">
+      <dl class="glossary-item">
         <dt class="glossary-term">{lang === 'ru' ? t.term : t.term_en}</dt>
         <dd class="glossary-def">{lang === 'ru' ? t.def : t.def_en}</dd>
-      </div>
+      </dl>
     ))}
   </div>
 </BaseLayout>

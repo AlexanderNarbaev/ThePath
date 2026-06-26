@@ -6,17 +6,19 @@ import PathTracker from '../../components/interactive/PathTracker';
 import { t, type Lang } from '../../i18n/ui';
 import { modules } from '../../i18n/modules';
 import { paths } from '../../i18n/paths';
+import { getLangPaths } from '../../utils/static-paths';
+import { BASE_PATH } from '../../constants';
 
 export async function getStaticPaths() {
-  return [{ params: { lang: 'ru' } }, { params: { lang: 'en' } }];
+  return getLangPaths();
 }
 
 const lang = Astro.params.lang as Lang;
 const allPages = await getCollection('pages');
 const page = allPages.find((e) => e.id.includes('map') && e.data?.lang === lang);
-if (!page) return Astro.redirect(`/ThePath/${lang}`);
+if (!page) return Astro.redirect(`${BASE_PATH}/${lang}`);
 const { Content } = await page.render();
-const base = '/ThePath';
+const base = BASE_PATH;
 ---
 
 <BaseLayout lang={lang} title={t('map.title', lang)}>

@@ -1,8 +1,9 @@
 ---
 import type { Lang } from '../i18n/ui';
+import { BASE_PATH } from '../constants';
 const { lang, currentPath } = Astro.props as { lang: Lang; currentPath: string };
 const otherLang = lang === 'ru' ? 'en' : 'ru';
-const base = '/ThePath';
+const base = BASE_PATH;
 const relPath = currentPath.startsWith(base) ? currentPath.slice(base.length) : currentPath;
 const otherPath = relPath.replace(`/${lang}`, `/${otherLang}`) || `/${otherLang}`;
 ---

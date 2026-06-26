@@ -1,8 +1,9 @@
 ---
 import { t, type Lang } from '../i18n/ui';
 import { modules } from '../i18n/modules';
+import { BASE_PATH } from '../constants';
 const { lang, currentModule } = Astro.props as { lang: Lang; currentModule?: number };
-const base = '/ThePath';
+const base = BASE_PATH;
 ---
 
 <aside class="sidebar" id="sidebar">

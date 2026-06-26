@@ -1,9 +1,12 @@
 import { useState } from 'preact/hooks';
 import { t, type Lang } from '../../i18n/ui';
 
-interface Props { lang: Lang; }
+interface Props {
+  lang: Lang;
+  web3Key: string;
+}
 
-export default function ContactForm({ lang }: Props) {
+export default function ContactForm({ lang, web3Key }: Props) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
@@ -20,7 +23,7 @@ export default function ContactForm({ lang }: Props) {
 
     try {
       const formData = new FormData();
-      formData.append('access_key', (import.meta as any).env?.PUBLIC_WEB3FORMS_KEY || '');
+      formData.append('access_key', web3Key);
       formData.append('name', name);
       formData.append('email', email);
       formData.append('subject', `[${lang.toUpperCase()}] ${subject}`);

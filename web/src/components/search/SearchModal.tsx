@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'preact/hooks';
 import lunr from 'lunr';
 import { modules } from '../../i18n/modules';
 import { t, type Lang } from '../../i18n/ui';
+import { BASE_PATH } from '../../constants';
 
 interface Props { lang: Lang; }
 
@@ -68,7 +69,7 @@ export default function SearchModal({ lang }: Props) {
             const mod = modules.find((m) => m.number === r.id);
             if (!mod) return null;
             return (
-              <a href={`/ThePath/${lang}/modules/${mod.slug}`} class="search-result" onClick={() => setOpen(false)}>
+              <a href={`${BASE_PATH}/${lang}/modules/${mod.slug}`} class="search-result" onClick={() => setOpen(false)}>
                 <span class="search-result-num">{mod.number}</span><span>{mod.title[lang]}</span>
               </a>
             );

@@ -2,18 +2,20 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContactForm from '../../components/forms/ContactForm';
 import { t, type Lang } from '../../i18n/ui';
+import { getLangPaths } from '../../utils/static-paths';
 
 export async function getStaticPaths() {
-  return [{ params: { lang: 'ru' } }, { params: { lang: 'en' } }];
+  return getLangPaths();
 }
 
 const lang = Astro.params.lang as Lang;
+const web3Key = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
 ---
 
 <BaseLayout lang={lang} title={t('contact.title', lang)}>
   <div class="content-wide" style="max-width:600px;">
     <h1>{t('contact.title', lang)}</h1>
-    <ContactForm lang={lang} client:load />
+    <ContactForm lang={lang} web3Key={web3Key} client:load />
   </div>
 </BaseLayout>
 

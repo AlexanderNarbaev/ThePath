@@ -3,11 +3,12 @@ import ThemeToggle from './ThemeToggle.astro';
 import LanguageSwitch from './LanguageSwitch.astro';
 import SearchModal from './search/SearchModal';
 import { t, type Lang } from '../i18n/ui';
+import { BASE_PATH } from '../constants';
 
 const { lang } = Astro.props as { lang: Lang };
 const siteName = t('site.name', lang);
 const currentPath = Astro.url.pathname;
-const base = '/ThePath';
+const base = BASE_PATH;
 const langPath = `/${lang}`;
 ---
 

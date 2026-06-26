@@ -104,13 +104,18 @@ At the start of each response, include a brief anchor tag: `[CTX: <3-word sessio
 - **`context7`** — живая документация библиотек.
 - **`codegraph`** — граф вызовов и метрики сложности. **Всегда используй для навигации по коду.**
 - **`agentic-tools`** — иерархическая память задач.
-- **`muninn`** — семантическая память (ChromaDB).
-- **`playwright`** — UI-тестирование.
+- **`memorylayer`** — семантическая память и сессионный контекст (замена muninn).
+- **`playwright`** — UI-тестирование и браузерная автоматизация.
+- **`sequential-thinking`** — пошаговое рассуждение для сложных задач.
+- **`fetch`** — HTTP-запросы и получение веб-содержимого.
+- **`github`** — взаимодействие с GitHub API (репозитории, PR, issues).
 
 ### Инструменты эффективности
 - **Caveman:** Сокращает выходные токены до 75%. Для рутинных ответов.
-- **CodeGraph Plugin:** Автоматически обогащает диалог графом вызовов.
+- **CodeGraph Plugin (opencode-codegraph):** Автоматически обогащает диалог графом вызовов.
 - **Superpowers skills:** 62+ skills в `~/.config/opencode/skills/superpowers/`.
+- **memorylayer:** Семантическая память сессии и автосохранение контекста.
+- **agentic-tools:** Иерархические задачи, мемуары, исследовательские запросы.
 
 ## ТЕХНОЛОГИЧЕСКИЙ СТЕК (зрелые технологии — май 2026)
 ### Языки
@@ -172,14 +177,14 @@ At the start of each response, include a brief anchor tag: `[CTX: <3-word sessio
 
 ## ПАМЯТЬ: Knowledge Base и WAL
 - **Первым делом** читай `docs/INDEX.md`.
-- **При старте сессии** проверяй `wal/GLOBAL_WAL.md` и `wal/SESSION_WAL.md`. Загрузи контекст из `agentic-tools` и `muninn`.
+- **При старте сессии** проверяй `wal/GLOBAL_WAL.md` и `wal/SESSION_WAL.md`. Загрузи контекст из `agentic-tools` и `memorylayer`.
 - **Протокол блокировок:** проверь WAL → создай SESSION_WAL → установи `.lock` (TTL 300) → после работы удали lock и обнови WAL.
 
 ## АЛГОРИТМ РАБОТЫ
 1. **Инициализация:** прочитай WAL, INDEX.md, загрузи память, получи обзор через codegraph.
 2. **План:** сформируй план (3–6 шагов). **Запроси подтверждение.**
 3. **Реализация:** строгий порядок: доменная модель → юзкейсы → тесты → код. Используй агентов, codegraph, context7.
-4. **Завершение:** предложи обновить WAL, сохрани ключевые решения в `agentic-tools` и `muninn`.
+4. **Завершение:** предложи обновить WAL, сохрани ключевые решения в `agentic-tools` и `memorylayer`.
 
 ## САМОПРОВЕРКА (обязательный блок)
 После сложного ответа добавляй блок «Самопроверка»:
@@ -197,4 +202,4 @@ At the start of each response, include a brief anchor tag: `[CTX: <3-word sessio
 -->
 
 ## СТАРТ СЕССИИ
-[CTX: project dev session]. Немедленно выполни инициализацию: прочитай WAL, INDEX.md, загрузи память из muninn/agentic-tools, получи обзор codegraph. Выведи сводку в 3 строках: статус, активная задача, защищённые зоны.
+[CTX: project dev session]. Немедленно выполни инициализацию: прочитай WAL, INDEX.md, загрузи память из memorylayer/agentic-tools, получи обзор codegraph. Выведи сводку в 3 строках: статус, активная задача, защищённые зоны.

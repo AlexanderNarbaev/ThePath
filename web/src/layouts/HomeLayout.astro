@@ -1,9 +1,0 @@
----
-import BaseLayout from './BaseLayout.astro';
-import type { Lang } from '../i18n/ui';
-interface Props { lang: Lang; title: string; }
-const { lang, title } = Astro.props;
----
-<BaseLayout lang={lang} title={title}>
-  <slot />
-</BaseLayout>

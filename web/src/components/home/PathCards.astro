@@ -1,8 +1,9 @@
 ---
 import { t, type Lang } from '../../i18n/ui';
 import { paths } from '../../i18n/paths';
+import { BASE_PATH } from '../../constants';
 const { lang } = Astro.props as { lang: Lang };
-const base = '/ThePath';
+const base = BASE_PATH;
 ---
 
 <section class="paths">

@@ -1,7 +1,9 @@
 ---
 import { t, type Lang } from '../i18n/ui';
+import { BASE_PATH } from '../constants';
 import VisitorCounter from './analytics/VisitorCounter';
 const { lang } = Astro.props as { lang: Lang };
+const base = BASE_PATH;
 ---
 
 <footer class="footer">
@@ -12,7 +14,7 @@ const { lang } = Astro.props as { lang: Lang };
       <p class="footer-version">{t('footer.version', lang)}</p>
     </div>
     <div class="footer-links" style="margin-top:1rem;display:flex;gap:1.5rem;justify-content:center;font-size:0.85rem;">
-      <a href={`/ThePath/${lang}/contact`} style="color:var(--color-cosmic-text-secondary);text-decoration:none;">{t('nav.contact', lang)}</a>
+      <a href={`${base}/${lang}/contact`} style="color:var(--color-cosmic-text-secondary);text-decoration:none;">{t('nav.contact', lang)}</a>
     </div>
     <div class="footer-counter" style="margin-top:0.5rem;font-size:0.8rem;opacity:0.5;">
       <VisitorCounter lang={lang} client:load />

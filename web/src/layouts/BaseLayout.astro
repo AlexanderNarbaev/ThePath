@@ -2,6 +2,7 @@
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import { t, type Lang } from '../i18n/ui';
+import { BASE_PATH } from '../constants';
 import '../styles/global.css';
 
 interface Props { lang: Lang; title: string; description?: string; ogType?: string; }
@@ -9,7 +10,7 @@ interface Props { lang: Lang; title: string; description?: string; ogType?: stri
 const { lang, title, description, ogType = 'website' } = Astro.props;
 const siteName = t('site.name', lang);
 const pageDesc = description ?? t('hero.subtitle', lang);
-const base = '/ThePath';
+const base = BASE_PATH;
 ---
 
 <!doctype html>
@@ -19,9 +20,9 @@ const base = '/ThePath';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title} — {siteName}</title>
   <meta name="description" content={pageDesc} />
-  <link rel="icon" type="image/x-icon" href="/ThePath/favicon.ico" />
-  <link rel="apple-touch-icon" href="/ThePath/apple-touch-icon.png" />
-  <link rel="manifest" href="/ThePath/manifest.json" />
+  <link rel="icon" type="image/x-icon" href={`${base}/favicon.ico`} />
+  <link rel="apple-touch-icon" href={`${base}/apple-touch-icon.png`} />
+  <link rel="manifest" href={`${base}/manifest.json`} />
   <meta name="theme-color" content="#e6c17b" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={`${title} — ${siteName}`} />

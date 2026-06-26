@@ -1,3 +1,4 @@
 ---
-return Astro.redirect('/ThePath/ru/', 302);
+import { BASE_PATH } from '../constants';
+return Astro.redirect(`${BASE_PATH}/ru/`, 302);
 ---

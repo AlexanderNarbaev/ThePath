@@ -2,6 +2,7 @@ import { useState, useEffect } from 'preact/hooks';
 import { paths } from '../../i18n/paths';
 import { modules, type ModuleMeta } from '../../i18n/modules';
 import { t, type Lang } from '../../i18n/ui';
+import { BASE_PATH } from '../../constants';
 
 interface Props { lang: Lang; }
 
@@ -52,7 +53,7 @@ export default function PathTracker({ lang }: Props) {
           const done = pct >= 80;
           if (!mod) return null;
           return (
-            <a href={`/ThePath/${lang}/modules/${mod.slug}`} class={`path-module ${done ? 'done' : ''}`}>
+            <a href={`${BASE_PATH}/${lang}/modules/${mod.slug}`} class={`path-module ${done ? 'done' : ''}`}>
               <span class="pm-num">{mod.number}</span>
               <span class="pm-title">{mod.title[lang]}</span>
               <span class="pm-progress">

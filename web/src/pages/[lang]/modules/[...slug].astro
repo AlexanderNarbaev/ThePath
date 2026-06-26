@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import ModuleLayout from '../../../layouts/ModuleLayout.astro';
 import { modules } from '../../../i18n/modules';
 import type { Lang } from '../../../i18n/ui';
+import { BASE_PATH } from '../../../constants';
 
 export async function getStaticPaths() {
   const allModules = await getCollection('modules');
@@ -23,7 +24,7 @@ const { entryId } = Astro.props as { entryId: string };
 const allMods = await getCollection('modules');
 const doc = allMods.find((entry) => entry.id === entryId);
 
-if (!doc) return Astro.redirect(`/ThePath/${lang}`);
+if (!doc) return Astro.redirect(`${BASE_PATH}/${lang}`);
 
 const { Content, headings } = await doc.render();
 

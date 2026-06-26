@@ -1,7 +1,8 @@
 ---
 import { t, type Lang } from '../../i18n/ui';
+import { BASE_PATH } from '../../constants';
 const { lang, title } = Astro.props as { lang: Lang; title: string };
-const base = '/ThePath';
+const base = BASE_PATH;
 ---
 
 <nav class="breadcrumb" aria-label="Breadcrumb">

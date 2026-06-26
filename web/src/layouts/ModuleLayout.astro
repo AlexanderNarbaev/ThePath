@@ -8,6 +8,7 @@ import BookmarkButton from '../components/progress/BookmarkButton';
 import ModuleNav from '../components/module/ModuleNav.astro';
 import TableOfContents from '../components/module/TableOfContents.astro';
 import { t, type Lang } from '../i18n/ui';
+import { BASE_PATH } from '../constants';
 import Reactions from '../components/social/Reactions';
 import ShareButtons from '../components/social/ShareButtons.astro';
 import Comments from '../components/social/Comments.astro';
@@ -22,7 +23,7 @@ interface Props {
 }
 
 const { lang, title, subtitle, moduleNumber, version, headings = [] } = Astro.props;
-const base = '/ThePath';
+const base = BASE_PATH;
 ---
 
 <BaseLayout lang={lang} title={title} ogType="article">

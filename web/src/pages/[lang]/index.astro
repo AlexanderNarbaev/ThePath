@@ -1,16 +1,16 @@
 ---
 import { getCollection } from 'astro:content';
-import HomeLayout from '../../layouts/HomeLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/home/Hero.astro';
-import ProhibitionsCards from '../../components/home/ProhibitionsCards.astro';
-import PrinciplesCards from '../../components/home/PrinciplesCards.astro';
+import CardsGrid from '../../components/home/CardsGrid.astro';
 import PathCards from '../../components/home/PathCards.astro';
 import DailyChecklist from '../../components/interactive/DailyChecklist';
 import EthicalCompass from '../../components/interactive/EthicalCompass';
 import { t } from '../../i18n/ui';
+import { getLangPaths } from '../../utils/static-paths';
 
 export async function getStaticPaths() {
-  return [{ params: { lang: 'ru' } }, { params: { lang: 'en' } }];
+  return getLangPaths();
 }
 
 const { lang } = Astro.params;
@@ -19,11 +19,20 @@ const page = allPages.find((e) => e.id.includes('index') && e.data?.lang === lan
 const { Content } = page ? await page.render() : { Content: null };
 ---
 
-<HomeLayout lang={lang as 'ru' | 'en'} title={t('site.name', lang as 'ru' | 'en')}>
+<BaseLayout lang={lang as 'ru' | 'en'} title={t('site.name', lang as 'ru' | 'en')}>
   <Hero lang={lang as 'ru' | 'en'} />
   <div class="home-content">
-    <ProhibitionsCards lang={lang as 'ru' | 'en'} />
-    <PrinciplesCards lang={lang as 'ru' | 'en'} />
+    <CardsGrid title={t('prohibitions.title', lang as 'ru' | 'en')} items={[
+      { icon: '▸', title: t('prohibitions.1_title', lang as 'ru' | 'en'), description: t('prohibitions.1_desc', lang as 'ru' | 'en') },
+      { icon: '▸', title: t('prohibitions.2_title', lang as 'ru' | 'en'), description: t('prohibitions.2_desc', lang as 'ru' | 'en') },
+      { icon: '▸', title: t('prohibitions.3_title', lang as 'ru' | 'en'), description: t('prohibitions.3_desc', lang as 'ru' | 'en') },
+    ]} />
+    <CardsGrid title={t('principles.title', lang as 'ru' | 'en')} items={[
+      { icon: '▸', title: t('principles.1_title', lang as 'ru' | 'en'), description: t('principles.1_desc', lang as 'ru' | 'en') },
+      { icon: '▸', title: t('principles.2_title', lang as 'ru' | 'en'), description: t('principles.2_desc', lang as 'ru' | 'en') },
+      { icon: '▸', title: t('principles.3_title', lang as 'ru' | 'en'), description: t('principles.3_desc', lang as 'ru' | 'en') },
+      { icon: '▸', title: t('principles.4_title', lang as 'ru' | 'en'), description: t('principles.4_desc', lang as 'ru' | 'en') },
+    ]} />
     {Content && <div class="home-prose"><Content /></div>}
     <div class="home-interactive">
       <DailyChecklist lang={lang as 'ru' | 'en'} client:load />
@@ -31,7 +40,7 @@ const { Content } = page ? await page.render() : { Content: null };
     </div>
     <PathCards lang={lang as 'ru' | 'en'} />
   </div>
-</HomeLayout>
+</BaseLayout>
 
 <style>
   .home-content { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
