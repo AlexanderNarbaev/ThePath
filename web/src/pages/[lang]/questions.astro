@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLangPaths } from '../../utils/static-paths';
+import { t, type Lang } from '../../i18n/ui';
+
+export async function getStaticPaths() {
+  return getLangPaths();
+}
+
+const lang = Astro.params.lang as Lang;
+const faqs = [
+  { q: t('faq.q1', lang), a: t('faq.a1', lang) },
+  { q: t('faq.q2', lang), a: t('faq.a2', lang) },
+  { q: t('faq.q3', lang), a: t('faq.a3', lang) },
+  { q: t('faq.q4', lang), a: t('faq.a4', lang) },
+  { q: t('faq.q5', lang), a: t('faq.a5', lang) },
+  { q: t('faq.q6', lang), a: t('faq.a6', lang) },
+];
+---
+
+<BaseLayout lang={lang} title={t('faq.title', lang)}>
+  <div class="content">
+    <h1>{t('faq.title', lang)}</h1>
+    <p class="faq-desc">{t('faq.description', lang)}</p>
+    <div class="faq-list">
+      {faqs.map((item) => (
+        <details class="faq-item">
+          <summary>{item.q}</summary>
+          <div class="faq-answer" set:html={item.a.replace(/\n/g, '<br/>')} />
+        </details>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .content { max-width: var(--max-width-content); margin: 0 auto; padding: 3rem 1.5rem; }
+  .faq-desc { color: var(--color-cosmic-text-secondary); font-size: 0.95rem; margin-bottom: 2rem; line-height: 1.7; }
+  .faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
+  .faq-item {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .faq-item:hover { border-color: var(--color-gold); }
+  .faq-item[open] { border-color: var(--color-gold); }
+  .faq-item summary {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--color-cosmic-text);
+    list-style: none;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::marker { display: none; content: none; }
+  .faq-item summary::before {
+    content: '+';
+    display: inline-block;
+    width: 1.25rem;
+    margin-right: 0.5rem;
+    color: var(--color-gold);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    transition: transform 0.2s;
+  }
+  .faq-item[open] summary::before {
+    content: '−';
+  }
+  .faq-answer {
+    padding: 0.75rem 0 0.25rem 1.75rem;
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--color-cosmic-text-secondary);
+  }
+</style>

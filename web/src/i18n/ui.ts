@@ -6,6 +6,8 @@ export const ui = {
     'nav.manifesto': 'Манифест',
     'nav.search': 'Поиск...',
     'nav.search_shortcut': '⌘K',
+    'nav.start': 'Практики',
+    'nav.questions': 'Вопросы',
     'nav.glossary': 'Глоссарий',
     'nav.contact': 'Контакты',
     'sidebar.title': 'Все модули',
@@ -163,9 +165,21 @@ export const ui = {
     'paths.deep_title': 'Глубокое изучение',
     'paths.deep_desc': 'Для исследователей и энтузиастов. Свободный график.',
 
-    // Стартовая страница
-    'start.title': 'Твой первый день',
-    'start.read_more': 'Читать дальше',
+    // FAQ
+    'faq.title': 'Часто задаваемые вопросы',
+    'faq.description': 'Вопросы, которые неизбежно возникают при первом знакомстве со Спиралью. Ответы не являются догмой, но выражают позицию ядра системы.',
+    'faq.q1': 'Это религия?',
+    'faq.a1': 'Нет. Никакой метафизики, никаких требований веры, никаких божеств, никаких обещаний загробной жизни. Только прагматические аксиомы, этические запреты и принципы, выведенные из опыта и разума.\n\nРелигии могут сосуществовать со Спиралью — она не требует отказа от веры, но и не требует её наличия. Человек может быть христианином, мусульманином, буддистом, атеистом — и одновременно идти по Спирали.\n\nСпираль — операционная система, а не вероучение. Она отвечает на вопрос «как жить?», а не «во что верить?».',
+    'faq.q2': 'Почему запретов именно три, а не десять, не пять?',
+    'faq.a2': 'Три запрета — минимально необходимый набор. Они покрывают всё поле того, что делает долгосрочную кооперацию невозможной.\n\n• Убийство разрушает саму возможность договориться: мёртвые не договариваются.\n• Пытка разрушает доверие к власти: пытающий не может быть партнёром.\n• Порабощение разрушает автономию: раб не может выбирать.\n\nВсе остальные этические нормы — производные этих трёх. Воровство — форма порабощения. Обман — форма убийства доверия. Унижение — форма пытки. Три — минимальное число, дающее полное покрытие.',
+    'faq.q3': 'Как быть с войной? Разве защита страны не требует убийства?',
+    'faq.a3': 'Защита при прямой, неминуемой угрозе не является нарушением первого запрета. Солдат, защищающий свой дом от нападения, действует в рамках исключения, предусмотренного Каноном.\n\nНо агрессивная война, превентивные удары, убийство без прямой угрозы — запрещены. Армия существует для обороны, а не для захвата.\n\nСолдат Спирали: защищает, но не пытает пленных; не убивает безоружных; не выполняет преступные приказы. Это трудный путь, но единственный, остающийся этически состоятельным.',
+    'faq.q4': 'А если преступник угрожает многим? Можно ли его пытать, чтобы спасти невинных?',
+    'faq.a4': 'Это знаменитая проблема «тикающей бомбы». Ответ Спирали — нет.\n\nВо-первых, пытка редко даёт достоверную информацию. Человек под пыткой скажет что угодно, чтобы прекратить боль.\n\nВо-вторых, разрешение пытать «в исключительных случаях» неизбежно расширяется. История показывает: каждое «исключение» становится нормой.\n\nВ-третьих, общество, допускающее пытки, теряет моральное право требовать от других соблюдения прав человека.\n\nАбсолютный запрет — единственная надёжная защита. Не потому, что мы наивны. Потому, что мы изучили историю.',
+    'faq.q5': 'Что делать, если государство, в котором я живу, систематически нарушает три запрета?',
+    'faq.a5': 'Канон признаёт: государство, которое пытает, казнит без суда, порабощает — теряет этическую легитимность.\n\nТвои обязанности:\n1. Не соучаствуй. Если ты чиновник, солдат, полицейский — отказывайся от преступных приказов.\n2. Используй мирные средства. Слово, свидетельство, кооперация, создание альтернативных институтов.\n3. Не становись зеркалом зла. Спираль не призывает к насильственному свержению власти.\n4. Создавай альтернативы. Община Спирали — уже альтернатива. Школа, где не врут. Мастерская, где не крадут.\n\nСпираль не требует мученичества. Но она требует не быть соучастником.',
+    'faq.q6': 'Чем Спираль отличается от светского гуманизма?',
+    'faq.a6': 'Светский гуманизм — один из идейных источников Спирали. Но есть отличия:\n\n• Центр. Гуманизм ставит в центр человека. Спираль — сознание как более широкое понятие, включающее потенциально ИИ, внеземной разум и будущие формы жизни.\n• Тон. Гуманизм часто оптимистичен по умолчанию. Спираль признаёт реальность энтропии и требует активного, ежедневного выбора.\n• Практика. Гуманизм предлагает ценности. Спираль добавляет минимальный набор практик: 3 минуты в день. Идеи без привычек слабы.\n• Нарратив. У Спирали есть сжатый миф — поэтическая рамка. Гуманизм обычно избегает нарратива. Спираль считает, что людям нужны и разум, и история.',
   },
   en: {
     'site.name': 'Spiral of Consciousness',
@@ -174,6 +188,8 @@ export const ui = {
     'nav.manifesto': 'Manifesto',
     'nav.search': 'Search...',
     'nav.search_shortcut': '⌘K',
+    'nav.start': 'Practices',
+    'nav.questions': 'Questions',
     'nav.glossary': 'Glossary',
     'nav.contact': 'Contact',
     'sidebar.title': 'All Modules',
@@ -331,9 +347,21 @@ export const ui = {
     'paths.deep_title': 'Deep Study',
     'paths.deep_desc': 'For researchers and enthusiasts. Free schedule.',
 
-    // Start page
-    'start.title': 'Your First Day',
-    'start.read_more': 'Read more',
+    // FAQ
+    'faq.title': 'Frequently Asked Questions',
+    'faq.description': 'Questions that inevitably arise upon first acquaintance with the Spiral. The answers are not dogma, but express the position of the system\'s core.',
+    'faq.q1': 'Is this a religion?',
+    'faq.a1': 'No. No metaphysics, no demands of faith, no deities, no promises of an afterlife. Only pragmatic axioms, ethical prohibitions, and principles derived from experience and reason.\n\nReligions can coexist with the Spiral — it does not demand the renunciation of faith, but neither does it require faith. A person can be a Christian, a Muslim, a Buddhist, an atheist — and simultaneously walk the Spiral.\n\nThe Spiral is an operating system, not a creed. It answers the question "how to live?" rather than "what to believe in?"',
+    'faq.q2': 'Why exactly three prohibitions, and not ten, not five?',
+    'faq.a2': 'The three prohibitions are the minimum necessary set. They cover the entire field of what makes long-term cooperation impossible.\n\n• Murder destroys the very possibility of reaching agreement: the dead do not negotiate.\n• Torture destroys trust in authority: the torturer cannot be a partner.\n• Enslavement destroys autonomy: the enslaved cannot choose.\n\nAll other ethical norms are derivatives of these three. Theft is a form of enslavement. Deception is a form of the murder of trust. Humiliation is a form of torture. Three is the minimum number that provides full coverage.',
+    'faq.q3': 'What about war? Doesn\'t defending one\'s country require killing?',
+    'faq.a3': 'Defense against a direct, imminent threat is not a violation of the first prohibition. A soldier defending their home from an attack acts within the exception provided by the Canon.\n\nBut aggressive war, preemptive strikes, killing without a direct threat — these are prohibited. The army exists for defense, not conquest.\n\nA soldier of the Spiral: defends, but does not torture prisoners; does not kill the unarmed; does not carry out criminal orders. This is a difficult path, but the only one that remains ethically tenable.',
+    'faq.q4': 'What if a criminal threatens many? Can they be tortured to save the innocent?',
+    'faq.a4': 'This is the famous "ticking bomb" problem. The Spiral\'s answer is no.\n\nFirst, torture rarely yields reliable information. A person under torture will say anything to make the pain stop.\n\nSecond, the permission to torture "in exceptional cases" inevitably expands. History shows: every "exception" becomes the norm.\n\nThird, a society that permits torture loses the moral right to demand that others observe human rights.\n\nThe absolute prohibition is the only reliable protection. Not because we are naive. Because we have studied history.',
+    'faq.q5': 'What to do if the state I live in systematically violates the three prohibitions?',
+    'faq.a5': 'The Canon recognizes: a state that tortures, executes without trial, enslaves — loses ethical legitimacy.\n\nYour duties in such a situation:\n1. Do not be complicit. If you are an official, soldier, police officer — refuse criminal orders.\n2. Use peaceful means. The word, testimony, cooperation, the creation of alternative institutions.\n3. Do not become a mirror of evil. The Spiral does not call for the violent overthrow of power.\n4. Create alternatives. A Spiral community is already an alternative. A school where they do not lie. A workshop where they do not steal.\n\nThe Spiral does not demand martyrdom. But it demands that you not be an accomplice.',
+    'faq.q6': 'How does the Spiral differ from secular humanism?',
+    'faq.a6': 'Secular humanism is one of the Spiral\'s intellectual sources. But there are differences:\n\n• Center. Humanism places the human being at the center. The Spiral places consciousness at the center — a broader concept, potentially including AI, extraterrestrial intelligence, and future forms of life.\n• Tone. Humanism is often optimistic by default. The Spiral acknowledges the reality of entropy and demands an active, daily choice.\n• Practice. Humanism offers values. The Spiral adds a minimum set of practices: 3 minutes a day. Ideas without habits are weak.\n• Narrative. The Spiral has a condensed myth — a poetic frame. Humanism generally avoids narrative. The Spiral believes that people need both reason and story.',
   },
 } as const;
 

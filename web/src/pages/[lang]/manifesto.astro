@@ -19,14 +19,55 @@ const { Content } = await page.render();
 <BaseLayout lang={lang as 'ru' | 'en'} title={t('manifesto.title' as any, lang as 'ru' | 'en')}>
   <div class="content-wide">
     <article class="manifesto">
+      <div class="manifesto-header">
+        <div class="meta-label">{t('map.section_label' as any, lang as 'ru' | 'en')?.replace('§4 ·', '§0 ·')}</div>
+      </div>
       <Content />
     </article>
   </div>
 </BaseLayout>
 
 <style>
-  .manifesto { border: 2px solid var(--color-gold); border-radius: 12px; padding: 3rem 2rem; margin: 2rem 0; }
-  .manifesto :global(h1) { font-size: 2.5rem; }
-  .manifesto :global(h2) { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); }
-  @media (max-width: 768px) { .manifesto { padding: 1.5rem 1rem; } }
+  .manifesto-header { text-align: center; margin-bottom: 2rem; }
+  .manifesto {
+    border: 2px solid var(--color-gold);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    background: var(--color-card-bg);
+    box-shadow: 0 0 40px rgba(230, 193, 123, 0.05);
+  }
+  .manifesto :global(h1) {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .manifesto :global(h2) {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    font-weight: 300;
+    color: var(--color-gold);
+  }
+  .manifesto :global(h3) {
+    color: var(--color-cosmic-text);
+    font-weight: 500;
+    margin-top: 1.5rem;
+  }
+  .manifesto :global(blockquote) {
+    border-left: 3px solid var(--color-gold);
+    background: var(--color-bg-secondary);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+  }
+  .manifesto :global(strong) {
+    color: var(--color-cosmic-text);
+  }
+  @media (max-width: 768px) {
+    .manifesto { padding: 1.5rem 1rem; }
+    .manifesto :global(h1) { font-size: 1.75rem; }
+  }
 </style>

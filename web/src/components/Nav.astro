@@ -22,12 +22,10 @@ const langPath = `/${lang}`;
       <span class="meta-label">{siteName}</span>
     </a>
     <div class="nav-links" id="nav-menu">
-      <a href={`${base}${langPath}`} class:list={['nav-link', { active: currentPath === `${base}${langPath}/` || currentPath === base + langPath }]}>{t('nav.home', lang)}</a>
-      <a href={`${base}${langPath}/map`} class:list={['nav-link', { active: currentPath.includes('/map') }]}>{t('nav.map', lang)}</a>
+      <a href={`${base}${langPath}/start`} class:list={['nav-link', { active: currentPath.includes('/start') }]}>{t('nav.start', lang)}</a>
       <a href={`${base}${langPath}/manifesto`} class:list={['nav-link', { active: currentPath.includes('/manifesto') }]}>{t('nav.manifesto', lang)}</a>
-      <a href={`${base}${langPath}/glossary`} class:list={['nav-link', { active: currentPath.includes('/glossary') }]}>{t('nav.glossary', lang)}</a>
-      <a href={`${base}${langPath}/contact`} class:list={['nav-link', { active: currentPath.includes('/contact') }]}>{t('nav.contact', lang)}</a>
-      <a href={`${base}${langPath}/simulator`} class:list={['nav-link', { active: currentPath.includes('/simulator') }]}>{t('nav.simulator', lang)}</a>
+      <a href={`${base}${langPath}/map`} class:list={['nav-link', { active: currentPath.includes('/map') }]}>{t('nav.map', lang)}</a>
+      <a href={`${base}${langPath}/questions`} class:list={['nav-link', { active: currentPath.includes('/questions') }]}>{t('nav.questions', lang)}</a>
       <LanguageSwitch lang={lang} currentPath={currentPath} />
       <ThemeToggle lang={lang} />
       <SearchModal lang={lang} client:load />
