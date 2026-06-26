@@ -160,6 +160,7 @@ export const ui = {
     'map.section_label': '§4 · КАРТА',
     'map.heading': 'Выберите свой путь',
     'map.view_all': 'Смотреть всю карту',
+    'map.view_paths': 'Учебные пути →',
 
     // Пути изучения — дополнительные
     'paths.quick_title': 'Быстрый старт',
@@ -346,6 +347,7 @@ export const ui = {
     'map.section_label': '§4 · MAP',
     'map.heading': 'Choose your path',
     'map.view_all': 'View full map',
+    'map.view_paths': 'Study paths →',
 
     // Study paths — additional
     'paths.quick_title': 'Quick Start',

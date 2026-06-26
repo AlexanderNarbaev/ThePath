@@ -5,6 +5,7 @@ import CardsGrid from '../../components/home/CardsGrid.astro';
 import DailyChecklist from '../../components/interactive/DailyChecklist';
 import { getLangPaths } from '../../utils/static-paths';
 import { t, type Lang } from '../../i18n/ui';
+import { modules } from '../../i18n/modules';
 
 export async function getStaticPaths() {
   return getLangPaths();
@@ -51,12 +52,12 @@ const lang = Astro.params.lang as Lang;
     <h2>{t('transparency.heading', lang)}</h2>
 
     <div class="transparency-grid">
-      <div class="trans-item no"><div class="trans-icon">✕</div><div class="trans-label meta-label">НЕ</div><p>{t('transparency.no_religion', lang)}</p></div>
-      <div class="trans-item yes"><div class="trans-icon">✓</div><div class="trans-label meta-label">ДА</div><p>{t('transparency.yes_system', lang)}</p></div>
-      <div class="trans-item no"><div class="trans-icon">✕</div><div class="trans-label meta-label">НЕ</div><p>{t('transparency.no_ideology', lang)}</p></div>
-      <div class="trans-item yes"><div class="trans-icon">✓</div><div class="trans-label meta-label">ДА</div><p>{t('transparency.yes_open', lang)}</p></div>
-      <div class="trans-item no"><div class="trans-icon">✕</div><div class="trans-label meta-label">НЕ</div><p>{t('transparency.no_guru', lang)}</p></div>
-      <div class="trans-item yes"><div class="trans-icon">✓</div><div class="trans-label meta-label">ДА</div><p>{t('transparency.yes_community', lang)}</p></div>
+      <div class="trans-item no"><div class="trans-icon" aria-hidden="true">✕</div><div class="trans-label meta-label">{t('transparency.no_label', lang)}</div><p>{t('transparency.no_religion', lang)}</p></div>
+      <div class="trans-item yes"><div class="trans-icon" aria-hidden="true">✓</div><div class="trans-label meta-label">{t('transparency.yes_label', lang)}</div><p>{t('transparency.yes_system', lang)}</p></div>
+      <div class="trans-item no"><div class="trans-icon" aria-hidden="true">✕</div><div class="trans-label meta-label">{t('transparency.no_label', lang)}</div><p>{t('transparency.no_ideology', lang)}</p></div>
+      <div class="trans-item yes"><div class="trans-icon" aria-hidden="true">✓</div><div class="trans-label meta-label">{t('transparency.yes_label', lang)}</div><p>{t('transparency.yes_open', lang)}</p></div>
+      <div class="trans-item no"><div class="trans-icon" aria-hidden="true">✕</div><div class="trans-label meta-label">{t('transparency.no_label', lang)}</div><p>{t('transparency.no_guru', lang)}</p></div>
+      <div class="trans-item yes"><div class="trans-icon" aria-hidden="true">✓</div><div class="trans-label meta-label">{t('transparency.yes_label', lang)}</div><p>{t('transparency.yes_community', lang)}</p></div>
     </div>
   </section>
 
@@ -65,15 +66,15 @@ const lang = Astro.params.lang as Lang;
     <div class="meta-label">{t('foundations.section_label', lang)}</div>
     <h2>{t('foundations.heading', lang)}</h2>
     <CardsGrid title="" items={[
-      { icon: '▸', title: t('foundations.1_title', lang), description: t('foundations.1_desc', lang) },
-      { icon: '▸', title: t('foundations.2_title', lang), description: t('foundations.2_desc', lang) },
-      { icon: '▸', title: t('foundations.3_title', lang), description: t('foundations.3_desc', lang) },
-      { icon: '▸', title: t('foundations.4_title', lang), description: t('foundations.4_desc', lang) },
+      { icon: '▸', title: t('foundations.1_title', lang), description: t('foundations.1_desc', lang), href: `/ThePath/${lang}/modules/scientific-foundations` },
+      { icon: '▸', title: t('foundations.2_title', lang), description: t('foundations.2_desc', lang), href: `/ThePath/${lang}/modules/6-technology` },
+      { icon: '▸', title: t('foundations.3_title', lang), description: t('foundations.3_desc', lang), href: `/ThePath/${lang}/modules/2-ethics` },
+      { icon: '▸', title: t('foundations.4_title', lang), description: t('foundations.4_desc', lang), href: `/ThePath/${lang}/modules/3-practices` },
     ]} />
     <CardsGrid title={t('prohibitions.title', lang)} items={[
-      { icon: '▸', title: t('prohibitions.1_title', lang), description: t('prohibitions.1_desc', lang) },
-      { icon: '▸', title: t('prohibitions.2_title', lang), description: t('prohibitions.2_desc', lang) },
-      { icon: '▸', title: t('prohibitions.3_title', lang), description: t('prohibitions.3_desc', lang) },
+      { icon: '▸', title: t('prohibitions.1_title', lang), description: t('prohibitions.1_desc', lang), href: `/ThePath/${lang}/modules/0-canon` },
+      { icon: '▸', title: t('prohibitions.2_title', lang), description: t('prohibitions.2_desc', lang), href: `/ThePath/${lang}/modules/0-canon` },
+      { icon: '▸', title: t('prohibitions.3_title', lang), description: t('prohibitions.3_desc', lang), href: `/ThePath/${lang}/modules/0-canon` },
     ]} />
   </section>
 
@@ -82,12 +83,30 @@ const lang = Astro.params.lang as Lang;
     <div class="meta-label">{t('map.section_label', lang)}</div>
     <h2>{t('map.heading', lang)}</h2>
     <CardsGrid title="" items={[
-      { icon: '▸', title: t('paths.quick_title', lang), description: t('paths.quick_desc', lang) },
-      { icon: '▸', title: t('paths.mentor_title', lang), description: t('paths.mentor_desc', lang) },
-      { icon: '▸', title: t('paths.deep_title', lang), description: t('paths.deep_desc', lang) },
+      { icon: '▸', title: t('paths.quick_title', lang), description: t('paths.quick_desc', lang), href: `/ThePath/${lang}/paths/quickstart` },
+      { icon: '▸', title: t('paths.mentor_title', lang), description: t('paths.mentor_desc', lang), href: `/ThePath/${lang}/paths/mentor` },
+      { icon: '▸', title: t('paths.deep_title', lang), description: t('paths.deep_desc', lang), href: `/ThePath/${lang}/paths/deep` },
     ]} />
     <p class="map-all-link">
       <a href={`/ThePath/${lang}/map`}>{t('map.view_all', lang)} →</a>
+    </p>
+  </section>
+
+  <!-- §5: Все модули -->
+  <section class="longread-section" id="all-modules">
+    <div class="meta-label">§5 · {t('map.modules', lang).toUpperCase()}</div>
+    <h2>{t('map.modules_list', lang)}</h2>
+    <div class="module-grid">
+      {modules.map((m) => (
+        <a href={`/ThePath/${lang}/modules/${m.slug}`} class="module-card">
+          <div class="module-card-icon">M{m.number}</div>
+          <h3>{m.title[lang]}</h3>
+          <p>{m.subtitle[lang]}</p>
+        </a>
+      ))}
+    </div>
+    <p class="map-all-link">
+      <a href={`/ThePath/${lang}/map`}>{t('map.view_paths', lang)} →</a>
     </p>
   </section>
 
@@ -109,6 +128,20 @@ const lang = Astro.params.lang as Lang;
   .trans-item p { font-size: 0.85rem; line-height: 1.5; margin-top: 0.3rem; }
 
   .map-all-link { text-align: center; margin-top: 1.5rem; }
+
+  .module-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .module-card {
+    display: block; background: var(--color-card-bg); border: 1px solid var(--color-border);
+    border-radius: 12px; padding: 1.25rem; text-decoration: none;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .module-card:hover { border-color: var(--color-gold); transform: translateY(-2px); }
+  .module-card-icon {
+    font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700;
+    color: var(--color-gold); margin-bottom: 0.5rem; letter-spacing: 0.05em;
+  }
+  .module-card h3 { font-size: 1rem; margin: 0.25rem 0; font-weight: 500; color: var(--color-cosmic-text); }
+  .module-card p { font-size: 0.82rem; color: var(--color-cosmic-text-secondary); line-height: 1.5; margin: 0; }
 
   @media (max-width: 768px) {
     .longread-section { padding: 2.5rem 1rem; }
