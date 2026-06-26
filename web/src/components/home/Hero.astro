@@ -1,5 +1,4 @@
 ---
-import { BASE_PATH } from '../../constants';
 import { t, type Lang } from '../../i18n/ui';
 const { lang } = Astro.props as { lang: Lang };
 ---
@@ -10,8 +9,8 @@ const { lang } = Astro.props as { lang: Lang };
     <h1 set:html={t('hero.title_new', lang)}></h1>
     <p class="hero-subtitle">{t('hero.subtitle_new', lang)}</p>
     <div class="hero-cta">
-      <a href={`${BASE_PATH}/${lang}/start`} class="btn-primary">{t('hero.cta_practice', lang)}</a>
-      <span class="hero-hint">{t('hero.scroll_hint', lang)}</span>
+      <a href="#explore" class="btn-primary">{t('hero.cta_explore', lang)}</a>
+      <a href="#practices" class="btn-secondary">{t('hero.cta_practice', lang)}</a>
     </div>
   </div>
 </div>
@@ -22,7 +21,15 @@ const { lang } = Astro.props as { lang: Lang };
   .hero h1 { font-size: 2.8rem; font-weight: 300; line-height: 1.25; letter-spacing: -0.01em; color: var(--color-cosmic-text); margin-bottom: 1rem; }
   .hero h1 span { color: var(--color-gold); }
   .hero-subtitle { font-size: 1.05rem; color: var(--color-cosmic-text-secondary); margin: 0 auto 2rem; line-height: 1.6; max-width: 500px; }
-  .hero-cta { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
+  .hero-cta { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .hero-cta .btn-primary { /* keep existing btn-primary style */ }
+  .hero-cta .btn-secondary {
+    display: inline-block; padding: 0.7em 1.5em; font-size: 0.95rem; font-weight: 500;
+    text-decoration: none; border-radius: 0.25rem; cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    border: 1px solid var(--color-gold); color: var(--color-gold); background: transparent;
+  }
+  .hero-cta .btn-secondary:hover { background: var(--color-gold); color: #0d0d1a; }
   .hero-hint { font-size: 0.8rem; color: var(--color-cosmic-text-secondary); }
   @media (max-width: 768px) { .hero { padding: 4rem 1rem 2.5rem; } .hero h1 { font-size: 1.8rem; } }
 </style>

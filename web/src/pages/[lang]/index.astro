@@ -19,10 +19,61 @@ const lang = Astro.params.lang as Lang;
   <!-- §0: Hero -->
   <Hero lang={lang} />
 
-  <!-- §1: Практики -->
+  <!-- §1: Shared Beliefs -->
+  <section class="longread-section" id="beliefs">
+    <div class="meta-label">{t('beliefs.section_label', lang)}</div>
+    <h2>{t('beliefs.heading', lang)}</h2>
+    <div class="beliefs-grid">
+      <a href={`/ThePath/${lang}/modules/3-practices`} class="belief-card">
+        <h3>{t('beliefs.1_title', lang)}</h3>
+        <p>{t('beliefs.1_desc', lang)}</p>
+        <span class="belief-link">{t('beliefs.see_how', lang)}</span>
+      </a>
+      <a href={`/ThePath/${lang}/modules/2-ethics`} class="belief-card">
+        <h3>{t('beliefs.2_title', lang)}</h3>
+        <p>{t('beliefs.2_desc', lang)}</p>
+        <span class="belief-link">{t('beliefs.see_how', lang)}</span>
+      </a>
+      <a href={`/ThePath/${lang}/modules/6-technology`} class="belief-card">
+        <h3>{t('beliefs.3_title', lang)}</h3>
+        <p>{t('beliefs.3_desc', lang)}</p>
+        <span class="belief-link">{t('beliefs.see_how', lang)}</span>
+      </a>
+      <a href={`/ThePath/${lang}/modules/community-guide`} class="belief-card">
+        <h3>{t('beliefs.4_title', lang)}</h3>
+        <p>{t('beliefs.4_desc', lang)}</p>
+        <span class="belief-link">{t('beliefs.see_how', lang)}</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- §2: What This Is -->
+  <section class="longread-section about-section" id="about">
+    <div class="meta-label">{t('about.section_label', lang)}</div>
+    <h2>{t('about.heading', lang)}</h2>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>{t('about.tool', lang)}</h3>
+        <p>{t('about.tool_desc', lang)}</p>
+      </div>
+      <div class="about-card">
+        <h3>{t('about.open', lang)}</h3>
+        <p>{t('about.open_desc', lang)}</p>
+      </div>
+      <div class="about-card">
+        <h3>{t('about.community', lang)}</h3>
+        <p>{t('about.community_desc', lang)}</p>
+      </div>
+    </div>
+    <p class="section-cta">
+      <a href="#practices">{t('how.cta', lang)}</a>
+    </p>
+  </section>
+
+  <!-- §3: How It Works -->
   <section class="longread-section" id="practices">
-    <div class="meta-label">{t('practices.section_label', lang)}</div>
-    <h2>{t('practices.heading', lang)}</h2>
+    <div class="meta-label">{t('how.section_label', lang)}</div>
+    <h2>{t('how.heading', lang)}</h2>
 
     <div class="practice-cards">
       <div class="practice-card">
@@ -44,58 +95,30 @@ const lang = Astro.params.lang as Lang;
 
     <div class="practice-disclaimer">{t('practices.disclaimer', lang)}</div>
     <DailyChecklist lang={lang} client:visible />
+
+    <p class="section-cta">
+      <a href={`/ThePath/${lang}/paths/quickstart`}>{t('paths.quick_title', lang)} →</a>
+    </p>
   </section>
 
-  <!-- §2: Прозрачность -->
-  <section class="longread-section" id="transparency">
-    <div class="meta-label">{t('transparency.section_label', lang)}</div>
-    <h2>{t('transparency.heading', lang)}</h2>
-
-    <div class="transparency-grid">
-      <div class="trans-item no"><div class="trans-icon" aria-hidden="true">✕</div><div class="trans-label meta-label">{t('transparency.no_label', lang)}</div><p>{t('transparency.no_religion', lang)}</p></div>
-      <div class="trans-item yes"><div class="trans-icon" aria-hidden="true">✓</div><div class="trans-label meta-label">{t('transparency.yes_label', lang)}</div><p>{t('transparency.yes_system', lang)}</p></div>
-      <div class="trans-item no"><div class="trans-icon" aria-hidden="true">✕</div><div class="trans-label meta-label">{t('transparency.no_label', lang)}</div><p>{t('transparency.no_ideology', lang)}</p></div>
-      <div class="trans-item yes"><div class="trans-icon" aria-hidden="true">✓</div><div class="trans-label meta-label">{t('transparency.yes_label', lang)}</div><p>{t('transparency.yes_open', lang)}</p></div>
-      <div class="trans-item no"><div class="trans-icon" aria-hidden="true">✕</div><div class="trans-label meta-label">{t('transparency.no_label', lang)}</div><p>{t('transparency.no_guru', lang)}</p></div>
-      <div class="trans-item yes"><div class="trans-icon" aria-hidden="true">✓</div><div class="trans-label meta-label">{t('transparency.yes_label', lang)}</div><p>{t('transparency.yes_community', lang)}</p></div>
-    </div>
-  </section>
-
-  <!-- §3: Наука + Этика -->
-  <section class="longread-section" id="foundations">
-    <div class="meta-label">{t('foundations.section_label', lang)}</div>
-    <h2>{t('foundations.heading', lang)}</h2>
-    <CardsGrid title="" items={[
-      { icon: '▸', title: t('foundations.1_title', lang), description: t('foundations.1_desc', lang), href: `/ThePath/${lang}/modules/scientific-foundations` },
-      { icon: '▸', title: t('foundations.2_title', lang), description: t('foundations.2_desc', lang), href: `/ThePath/${lang}/modules/6-technology` },
-      { icon: '▸', title: t('foundations.3_title', lang), description: t('foundations.3_desc', lang), href: `/ThePath/${lang}/modules/2-ethics` },
-      { icon: '▸', title: t('foundations.4_title', lang), description: t('foundations.4_desc', lang), href: `/ThePath/${lang}/modules/3-practices` },
-    ]} />
-    <CardsGrid title={t('prohibitions.title', lang)} items={[
-      { icon: '▸', title: t('prohibitions.1_title', lang), description: t('prohibitions.1_desc', lang), href: `/ThePath/${lang}/modules/0-canon` },
-      { icon: '▸', title: t('prohibitions.2_title', lang), description: t('prohibitions.2_desc', lang), href: `/ThePath/${lang}/modules/0-canon` },
-      { icon: '▸', title: t('prohibitions.3_title', lang), description: t('prohibitions.3_desc', lang), href: `/ThePath/${lang}/modules/0-canon` },
-    ]} />
-  </section>
-
-  <!-- §4: Карта -->
-  <section class="longread-section" id="map-preview">
-    <div class="meta-label">{t('map.section_label', lang)}</div>
+  <!-- §4: Paths -->
+  <section class="longread-section" id="paths">
+    <div class="meta-label">§4 · {t('map.paths', lang).toUpperCase()}</div>
     <h2>{t('map.heading', lang)}</h2>
     <CardsGrid title="" items={[
       { icon: '▸', title: t('paths.quick_title', lang), description: t('paths.quick_desc', lang), href: `/ThePath/${lang}/paths/quickstart` },
       { icon: '▸', title: t('paths.mentor_title', lang), description: t('paths.mentor_desc', lang), href: `/ThePath/${lang}/paths/mentor` },
       { icon: '▸', title: t('paths.deep_title', lang), description: t('paths.deep_desc', lang), href: `/ThePath/${lang}/paths/deep` },
     ]} />
-    <p class="map-all-link">
+    <p class="section-cta">
       <a href={`/ThePath/${lang}/map`}>{t('map.view_all', lang)} →</a>
     </p>
   </section>
 
-  <!-- §5: Все модули -->
-  <section class="longread-section" id="all-modules">
-    <div class="meta-label">§5 · {t('map.modules', lang).toUpperCase()}</div>
-    <h2>{t('map.modules_list', lang)}</h2>
+  <!-- §5: Explore Modules -->
+  <section class="longread-section" id="explore">
+    <div class="meta-label">{t('explore.section_label', lang)}</div>
+    <h2>{t('explore.heading', lang)}</h2>
     <div class="module-grid">
       {modules.map((m) => (
         <a href={`/ThePath/${lang}/modules/${m.slug}`} class="module-card">
@@ -105,8 +128,8 @@ const lang = Astro.params.lang as Lang;
         </a>
       ))}
     </div>
-    <p class="map-all-link">
-      <a href={`/ThePath/${lang}/map`}>{t('map.view_paths', lang)} →</a>
+    <p class="section-cta">
+      <a href={`/ThePath/${lang}/map`}>{t('explore.cta', lang)}</a>
     </p>
   </section>
 
@@ -117,18 +140,44 @@ const lang = Astro.params.lang as Lang;
   .longread-section:nth-child(even) { background: var(--color-cosmic-light); }
   .longread-section h2 { text-align: center; margin-bottom: 2rem; }
 
-  .transparency-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; max-width: 700px; margin: 0 auto; }
-  .trans-item { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 8px; padding: 1.25rem; }
-  .trans-item.no { border-left: 3px solid var(--color-danger); }
-  .trans-item.yes { border-left: 3px solid var(--color-success); }
-  .trans-icon { font-size: 1.2rem; }
-  .trans-item.no .trans-icon { color: var(--color-danger); }
-  .trans-item.yes .trans-icon { color: var(--color-success); }
-  .trans-label { margin: 0.3rem 0; }
-  .trans-item p { font-size: 0.85rem; line-height: 1.5; margin-top: 0.3rem; }
+  /* Shared Beliefs grid */
+  .beliefs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .belief-card {
+    display: block; background: var(--color-card-bg); border: 1px solid var(--color-border);
+    border-radius: 12px; padding: 1.5rem; text-decoration: none;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .belief-card:hover { border-color: var(--color-gold); transform: translateY(-2px); }
+  .belief-card h3 { font-size: 1rem; margin: 0 0 0.5rem; font-weight: 500; color: var(--color-cosmic-text); }
+  .belief-card p { font-size: 0.85rem; color: var(--color-cosmic-text-secondary); line-height: 1.5; margin: 0 0 0.75rem; }
+  .belief-link { font-size: 0.82rem; color: var(--color-gold); font-weight: 500; }
 
+  /* About section */
+  .about-section { background: var(--color-cosmic-light); }
+  .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+  .about-card { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.75rem; text-align: center; }
+  .about-card h3 { font-size: 1.15rem; margin: 0 0 0.75rem; font-weight: 500; color: var(--color-cosmic-text); }
+  .about-card p { font-size: 0.9rem; color: var(--color-cosmic-text-secondary); line-height: 1.6; margin: 0; }
+
+  /* Practice cards (reused from old design) */
+  .practice-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .practice-card { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; text-align: center; }
+  .practice-card p { font-size: 0.95rem; color: var(--color-cosmic-text); line-height: 1.6; margin: 0.5rem 0; }
+  .practice-time { font-size: 0.8rem; color: var(--color-cosmic-text-secondary); display: block; margin-top: 0.5rem; }
+  .practice-disclaimer { text-align: center; font-weight: 700; font-size: 0.75rem; margin: 1.5rem 0 1rem; color: var(--color-gold); letter-spacing: 0.05em; }
+
+  /* Section CTA */
+  .section-cta { text-align: center; margin-top: 1.5rem; }
+  .section-cta a {
+    color: var(--color-gold); font-weight: 500; text-decoration: none;
+    font-size: 0.95rem; transition: color 0.15s;
+  }
+  .section-cta a:hover { color: var(--color-gold-hover); }
+
+  /* Map all link */
   .map-all-link { text-align: center; margin-top: 1.5rem; }
 
+  /* Module grid */
   .module-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
   .module-card {
     display: block; background: var(--color-card-bg); border: 1px solid var(--color-border);

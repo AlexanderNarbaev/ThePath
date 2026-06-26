@@ -19,9 +19,10 @@ export const ui = {
     'hero.cta_path': 'Выбрать путь изучения',
     'hero.cta_manifesto': 'Читать Манифест',
     'hero.meta': 'ОТКРЫТАЯ СИСТЕМА · НЕ РЕЛИГИЯ',
-    'hero.title_new': 'Ваше внимание — <span>единственное, что вам по-настоящему принадлежит.</span>',
-    'hero.subtitle_new': '3 практики. Никакой магии. Никакой веры. Только вы и ваши решения.',
-    'hero.cta_practice': '→ 3 минуты сегодня',
+    'hero.title_new': 'Вы уже чувствуете: что-то не так с тем, как мы используем технологии и внимание.',
+    'hero.subtitle_new': 'Спираль — практическая система. Не религия. Не идеология. Инструмент.',
+    'hero.cta_explore': 'Исследовать',
+    'hero.cta_practice': '3 минуты сегодня',
     'hero.scroll_hint': '↓ что это',
     'breadcrumb.home': 'Главная',
     'breadcrumb.map': 'Карта',
@@ -181,6 +182,39 @@ export const ui = {
     'paths.deep_title': 'Глубокое изучение',
     'paths.deep_desc': 'Для исследователей и энтузиастов. Свободный график.',
 
+    // Shared Beliefs
+    'beliefs.section_label': '§1 · ОБЩИЕ УБЕЖДЕНИЯ',
+    'beliefs.heading': 'Вероятно, вы уже верите...',
+    'beliefs.1_title': 'Внимание ценно',
+    'beliefs.1_desc': 'Ваше внимание — ограниченный ресурс. То, на что вы его направляете, формирует вашу жизнь.',
+    'beliefs.2_title': 'Мораль может быть системной',
+    'beliefs.2_desc': 'Этические принципы не обязаны быть произвольными. Их можно вывести из первых принципов.',
+    'beliefs.3_title': 'Технологии должны служить сознанию',
+    'beliefs.3_desc': 'Инструменты — продолжение нашей воли. Они не должны порабощать создателя.',
+    'beliefs.4_title': 'Сообщество имеет значение',
+    'beliefs.4_desc': 'Никто не выбирается из энтропии в одиночку. Нам нужны равные.',
+    'beliefs.see_how': '→ Узнать как',
+
+    // What This Is
+    'about.section_label': '§2 · ЧТО ЭТО',
+    'about.heading': 'Что это — и чем это не является',
+    'about.tool': '🔧 Инструмент',
+    'about.tool_desc': 'Практическая система для сознания. Как спортзал — но для внимания и этики. Никакой магии. Только вы.',
+    'about.open': '📖 Открытый код',
+    'about.open_desc': 'Любой может читать, копировать, адаптировать, критиковать. Распространяется под CC BY-SA 4.0.',
+    'about.community': '👥 Сообщество равных',
+    'about.community_desc': 'Горизонтальная сеть. Нет лидера, нет гуру, нет иерархии. Только взаимное уважение.',
+
+    // How It Works
+    'how.section_label': '§3 · КАК ЭТО РАБОТАЕТ',
+    'how.heading': 'Три практики. Прямо сейчас.',
+    'how.cta': '→ Попробовать сегодня',
+
+    // Explore Modules
+    'explore.section_label': '§5 · МОДУЛИ',
+    'explore.heading': 'Исследуйте систему',
+    'explore.cta': '→ Смотреть все модули',
+
     // FAQ
     'faq.title': 'Часто задаваемые вопросы',
     'faq.description': 'Вопросы, которые неизбежно возникают при первом знакомстве со Спиралью. Ответы не являются догмой, но выражают позицию ядра системы.',
@@ -217,9 +251,10 @@ export const ui = {
     'hero.cta_path': 'Choose Your Path',
     'hero.cta_manifesto': 'Read the Manifesto',
     'hero.meta': 'OPEN SYSTEM · NOT A RELIGION',
-    'hero.title_new': 'Your attention is <span>the only thing that truly belongs to you.</span>',
-    'hero.subtitle_new': '3 practices. No magic. No faith. Just you and your choices.',
-    'hero.cta_practice': '→ 3 minutes today',
+    'hero.title_new': 'You already feel something is wrong with how we use technology and attention.',
+    'hero.subtitle_new': 'The Spiral is a practical system. Not a religion. Not an ideology. A tool.',
+    'hero.cta_explore': 'Explore',
+    'hero.cta_practice': '3 min today',
     'hero.scroll_hint': '↓ what is this',
     'breadcrumb.home': 'Home',
     'breadcrumb.map': 'Map',
@@ -378,6 +413,39 @@ export const ui = {
     'paths.mentor_desc': 'Full mentor preparation. 15–20 hours of study.',
     'paths.deep_title': 'Deep Study',
     'paths.deep_desc': 'For researchers and enthusiasts. Free schedule.',
+
+    // Shared Beliefs
+    'beliefs.section_label': '§1 · SHARED BELIEFS',
+    'beliefs.heading': 'You probably already believe...',
+    'beliefs.1_title': 'Attention is valuable',
+    'beliefs.1_desc': 'Your attention is a limited resource. What you direct it toward shapes your life.',
+    'beliefs.2_title': 'Morality can be systematic',
+    'beliefs.2_desc': 'Ethical principles need not be arbitrary. They can be derived from first principles.',
+    'beliefs.3_title': 'Technology should serve consciousness',
+    'beliefs.3_desc': 'Tools are extensions of our will. They must not enslave their creator.',
+    'beliefs.4_title': 'Community matters',
+    'beliefs.4_desc': 'No one escapes entropy alone. We need equals.',
+    'beliefs.see_how': '→ See how',
+
+    // What This Is
+    'about.section_label': '§2 · WHAT THIS IS',
+    'about.heading': 'What it is — and what it is not',
+    'about.tool': '🔧 Tool',
+    'about.tool_desc': 'A practical system for consciousness. Like a gym — but for attention and ethics. No magic. Just you.',
+    'about.open': '📖 Open Source',
+    'about.open_desc': 'Anyone can read, copy, adapt, criticize. Licensed under CC BY-SA 4.0.',
+    'about.community': '👥 Community of Equals',
+    'about.community_desc': 'A horizontal network. No leader, no guru, no hierarchy. Only mutual respect.',
+
+    // How It Works
+    'how.section_label': '§3 · HOW IT WORKS',
+    'how.heading': 'Three practices. Right now.',
+    'how.cta': '→ Try today',
+
+    // Explore Modules
+    'explore.section_label': '§5 · MODULES',
+    'explore.heading': 'Explore the system',
+    'explore.cta': '→ View all modules',
 
     // FAQ
     'faq.title': 'Frequently Asked Questions',
