@@ -92,52 +92,63 @@ const web3Key = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
   .cf-input::placeholder { color: var(--color-text-secondary); opacity: 0.6; }
 
   /* Editor */
-  .cf-editor-box { min-height: 220px; display: flex; flex-direction: column; }
+  .cf-editor-box { min-height: 240px; display: flex; flex-direction: column; }
   .cf-toolbar {
     display: flex;
-    gap: 0.15rem;
-    padding: 0.35rem 0.5rem;
+    gap: 0;
+    padding: 0.3rem 0.4rem;
     border-bottom: 1px solid var(--color-border);
-    background: var(--color-bg-secondary);
+    background: rgba(0,0,0,0.08);
     align-items: center;
+    flex-wrap: wrap;
   }
   .cf-tb-btn {
-    padding: 0.35rem 0.6rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.3rem 0.55rem;
     border: 1px solid transparent;
     border-radius: 5px;
     background: transparent;
     color: var(--color-text-secondary);
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     cursor: pointer;
     transition: all 0.15s;
     line-height: 1;
-    min-width: 32px;
-    text-align: center;
+    font-family: inherit;
   }
   .cf-tb-btn:hover {
     background: var(--color-border);
     color: var(--color-text-primary);
   }
+  .cf-tb-active, .cf-tb-active:hover {
+    background: rgba(230, 193, 123, 0.15);
+    color: var(--color-gold);
+    border-color: rgba(230, 193, 123, 0.3);
+  }
+  .cf-tb-icon { font-size: 0.9rem; }
+  .cf-tb-text { font-size: 0.75rem; white-space: nowrap; }
+  .cf-tb-clear .cf-tb-text { opacity: 0.7; }
   .cf-tb-sep {
     width: 1px;
-    height: 18px;
+    height: 20px;
     background: var(--color-border);
-    margin: 0 0.2rem;
+    margin: 0 0.3rem;
   }
   .cf-editor {
     flex: 1;
-    padding: 0.85rem 0.95rem;
+    padding: 1rem 1rem;
     font-size: 0.95rem;
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--color-text-primary);
     outline: none;
-    min-height: 180px;
+    min-height: 200px;
     word-break: break-word;
   }
   .cf-editor:empty::before {
     content: attr(data-placeholder);
     color: var(--color-text-secondary);
-    opacity: 0.5;
+    opacity: 0.45;
     pointer-events: none;
   }
   .cf-editor pre {
@@ -159,15 +170,25 @@ const web3Key = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
     font-style: italic;
     color: var(--color-text-secondary);
   }
-  .cf-editor a { color: var(--color-gold); }
+  .cf-editor a { color: var(--color-gold); text-decoration: underline; }
+  .cf-editor code {
+    font-family: var(--font-mono);
+    background: var(--color-cosmic-light);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+    border: 1px solid var(--color-border);
+  }
 
   .cf-footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
   }
   .cf-btn {
-    padding: 0.8rem 2.2rem;
+    padding: 0.85rem 3rem;
     background: var(--color-gold);
     color: #0a0a14;
     border: none;
@@ -177,11 +198,12 @@ const web3Key = import.meta.env.PUBLIC_WEB3FORMS_KEY || '';
     cursor: pointer;
     transition: opacity 0.2s, transform 0.15s;
     font-family: var(--font-mono);
+    letter-spacing: 0.03em;
   }
   .cf-btn:hover:not(:disabled) { opacity: 0.9; transform: translateY(-1px); }
-  .cf-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .cf-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
   .cf-val-err { color: var(--color-danger); font-size: 0.78rem; margin-top: 0.2rem; }
-  .cf-error-block { flex: 1; min-width: 0; }
+  .cf-error-block { text-align: center; width: 100%; }
   .cf-error { color: var(--color-danger); font-size: 0.85rem; margin: 0; }
   .cf-error-hint { color: var(--color-text-secondary); font-size: 0.82rem; margin: 0.3rem 0 0; }
   .cf-error-hint a { color: var(--color-gold); }

@@ -1,10 +1,7 @@
 import { useState, useRef, useEffect } from 'preact/hooks';
 import { t, type Lang } from '../../i18n/ui';
 
-interface Props {
-  lang: Lang;
-  web3Key: string;
-}
+interface Props { lang: Lang; web3Key: string; }
 
 export default function ContactForm({ lang, web3Key }: Props) {
   const [name, setName] = useState('');
@@ -15,6 +12,7 @@ export default function ContactForm({ lang, web3Key }: Props) {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const editorRef = useRef<HTMLDivElement>(null);
   const [editorEmpty, setEditorEmpty] = useState(true);
+  const [activeFormats, setActiveFormats] = useState<Set<string>>(new Set());
 
   function getMessage(): string {
     return editorRef.current?.innerHTML || '';
@@ -30,11 +28,50 @@ export default function ContactForm({ lang, web3Key }: Props) {
     editorRef.current?.focus();
     document.execCommand(cmd, false, val);
     setEditorEmpty(!editorRef.current?.textContent?.trim());
+    updateActiveFormats();
+  }
+
+  function updateActiveFormats() {
+    const fmts = new Set<string>();
+    if (document.queryCommandState('bold')) fmts.add('bold');
+    if (document.queryCommandState('italic')) fmts.add('italic');
+    setActiveFormats(fmts);
   }
 
   function insertLink() {
-    const url = prompt(lang === 'ru' ? 'URL ссылки:' : 'Link URL:', 'https://');
-    if (url) exec('createLink', url);
+    const sel = window.getSelection();
+    if (sel && !sel.isCollapsed) {
+      const url = prompt(lang === 'ru' ? 'URL ссылки:' : 'Link URL:', 'https://');
+      if (url) { exec('createLink', url); }
+    } else {
+      const url = prompt(lang === 'ru' ? 'URL ссылки:' : 'Link URL:', 'https://');
+      const text = prompt(lang === 'ru' ? 'Текст ссылки:' : 'Link text:', url || '');
+      if (url && text) {
+        editorRef.current?.focus();
+        document.execCommand('insertHTML', false, `<a href="${url}">${text}</a>`);
+        setEditorEmpty(false);
+      }
+    }
+  }
+
+  function insertCode() {
+    const sel = window.getSelection();
+    if (sel && !sel.isCollapsed) {
+      const text = sel.toString();
+      editorRef.current?.focus();
+      document.execCommand('insertHTML', false, `<code>${text}</code>`);
+      setEditorEmpty(false);
+    }
+  }
+
+  function insertQuote() {
+    const sel = window.getSelection();
+    if (sel && !sel.isCollapsed) {
+      const text = sel.toString();
+      editorRef.current?.focus();
+      document.execCommand('insertHTML', false, `<blockquote>${text}</blockquote>`);
+      setEditorEmpty(false);
+    }
   }
 
   function validate(): boolean {
@@ -52,10 +89,8 @@ export default function ContactForm({ lang, web3Key }: Props) {
   async function handleSubmit(e: Event) {
     e.preventDefault();
     if (!validate()) return;
-
     setStatus('sending');
     setErrorMsg('');
-
     try {
       const formData = new FormData();
       formData.append('access_key', web3Key);
@@ -66,13 +101,8 @@ export default function ContactForm({ lang, web3Key }: Props) {
       formData.append('from_name', 'Spiral Contact Form');
       formData.append('replyto', email);
       formData.append('botcheck', '');
-
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData,
-      });
+      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
       const data = await res.json();
-
       if (data.success) {
         setStatus('sent');
         setName(''); setEmail(''); setSubject('');
@@ -98,32 +128,32 @@ export default function ContactForm({ lang, web3Key }: Props) {
     );
   }
 
+  const tb = (cmd: string, label: string, icon: string, title: string) => (
+    <button
+      type="button"
+      class={`cf-tb-btn${activeFormats.has(cmd) ? ' cf-tb-active' : ''}`}
+      onClick={() => exec(cmd)}
+      title={title}
+    >
+      <span class="cf-tb-icon">{icon}</span>
+      <span class="cf-tb-text">{label}</span>
+    </button>
+  );
+
   return (
     <form class="cf-form" onSubmit={handleSubmit} novalidate>
       <div class="cf-row">
         <label class="cf-field">
           <span class="cf-label">{t('contact.name', lang)}</span>
           <div class={`cf-box${errors.name ? ' cf-box-err' : ''}`}>
-            <input
-              type="text"
-              value={name}
-              onInput={e => { setName((e.target as HTMLInputElement).value); setErrors(e => ({...e, name: ''})); }}
-              placeholder={t('contact.name_ph', lang)}
-              class="cf-input"
-            />
+            <input type="text" value={name} onInput={e => { setName((e.target as HTMLInputElement).value); setErrors(p => ({...p, name: ''})); }} placeholder={t('contact.name_ph', lang)} class="cf-input" />
           </div>
           {errors.name && <span class="cf-val-err">{errors.name}</span>}
         </label>
         <label class="cf-field">
           <span class="cf-label">{t('contact.email', lang)}</span>
           <div class={`cf-box${errors.email ? ' cf-box-err' : ''}`}>
-            <input
-              type="email"
-              value={email}
-              onInput={e => { setEmail((e.target as HTMLInputElement).value); setErrors(e => ({...e, email: ''})); }}
-              placeholder="email@example.com"
-              class="cf-input"
-            />
+            <input type="email" value={email} onInput={e => { setEmail((e.target as HTMLInputElement).value); setErrors(p => ({...p, email: ''})); }} placeholder="email@example.com" class="cf-input" />
           </div>
           {errors.email && <span class="cf-val-err">{errors.email}</span>}
         </label>
@@ -132,13 +162,7 @@ export default function ContactForm({ lang, web3Key }: Props) {
       <label class="cf-field">
         <span class="cf-label">{t('contact.subject', lang)}</span>
         <div class={`cf-box${errors.subject ? ' cf-box-err' : ''}`}>
-          <input
-            type="text"
-            value={subject}
-            onInput={e => { setSubject((e.target as HTMLInputElement).value); setErrors(e => ({...e, subject: ''})); }}
-            placeholder={t('contact.subject_ph', lang)}
-            class="cf-input"
-          />
+          <input type="text" value={subject} onInput={e => { setSubject((e.target as HTMLInputElement).value); setErrors(p => ({...p, subject: ''})); }} placeholder={t('contact.subject_ph', lang)} class="cf-input" />
         </div>
         {errors.subject && <span class="cf-val-err">{errors.subject}</span>}
       </label>
@@ -147,33 +171,35 @@ export default function ContactForm({ lang, web3Key }: Props) {
         <span class="cf-label">{t('contact.message', lang)}</span>
         <div class={`cf-box cf-editor-box${errors.message ? ' cf-box-err' : ''}`}>
           <div class="cf-toolbar">
-            <button type="button" class="cf-tb-btn" onClick={() => exec('bold')} title={lang === 'ru' ? 'Жирный' : 'Bold'}>
-              <b>B</b>
-            </button>
-            <button type="button" class="cf-tb-btn" onClick={() => exec('italic')} title={lang === 'ru' ? 'Курсив' : 'Italic'}>
-              <i>I</i>
-            </button>
-            <span class="cf-tb-sep" />
-            <button type="button" class="cf-tb-btn" onClick={() => exec('formatBlock', 'pre')} title={lang === 'ru' ? 'Код' : 'Code'}>
-              {'</>'}
-            </button>
-            <button type="button" class="cf-tb-btn" onClick={() => exec('formatBlock', 'blockquote')} title={lang === 'ru' ? 'Цитата' : 'Quote'}>
-              ❝
-            </button>
+            {tb('bold', lang === 'ru' ? 'Жирный' : 'Bold', 'B', lang === 'ru' ? 'Жирный (Ctrl+B)' : 'Bold (Ctrl+B)')}
+            {tb('italic', lang === 'ru' ? 'Курсив' : 'Italic', 'I', lang === 'ru' ? 'Курсив (Ctrl+I)' : 'Italic (Ctrl+I)')}
             <span class="cf-tb-sep" />
             <button type="button" class="cf-tb-btn" onClick={insertLink} title={lang === 'ru' ? 'Вставить ссылку' : 'Insert link'}>
-              🔗
+              <span class="cf-tb-icon">🔗</span>
+              <span class="cf-tb-text">{lang === 'ru' ? 'Ссылка' : 'Link'}</span>
             </button>
-            <button type="button" class="cf-tb-btn" onClick={() => exec('removeFormat')} title={lang === 'ru' ? 'Очистить формат' : 'Clear format'}>
-              ✕
+            <button type="button" class="cf-tb-btn" onClick={insertCode} title={lang === 'ru' ? 'Вставить код' : 'Insert code'}>
+              <span class="cf-tb-icon">&lt;/&gt;</span>
+              <span class="cf-tb-text">{lang === 'ru' ? 'Код' : 'Code'}</span>
+            </button>
+            <button type="button" class="cf-tb-btn" onClick={insertQuote} title={lang === 'ru' ? 'Цитата' : 'Quote'}>
+              <span class="cf-tb-icon">❝</span>
+              <span class="cf-tb-text">{lang === 'ru' ? 'Цитата' : 'Quote'}</span>
+            </button>
+            <span class="cf-tb-sep" />
+            <button type="button" class="cf-tb-btn cf-tb-clear" onClick={() => exec('removeFormat')} title={lang === 'ru' ? 'Очистить форматирование' : 'Clear formatting'}>
+              <span class="cf-tb-icon">↺</span>
+              <span class="cf-tb-text">{lang === 'ru' ? 'Очистить' : 'Clear'}</span>
             </button>
           </div>
           <div
             ref={editorRef}
-            class={`cf-editor${editorEmpty ? ' cf-editor-empty' : ''}`}
+            class="cf-editor"
             contenteditable
             data-placeholder={t('contact.message_ph', lang)}
-            onInput={() => { setEditorEmpty(!editorRef.current?.textContent?.trim()); setErrors(e => ({...e, message: ''})); }}
+            onInput={() => { setEditorEmpty(!editorRef.current?.textContent?.trim()); setErrors(p => ({...p, message: ''})); }}
+            onKeyUp={updateActiveFormats}
+            onMouseUp={updateActiveFormats}
           />
         </div>
         {errors.message && <span class="cf-val-err">{errors.message}</span>}
