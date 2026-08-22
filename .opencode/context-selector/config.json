@@ -1,0 +1,76 @@
+{
+  "version": "1.0.0",
+  "description": "Context-aware MCP/LSP selector — loads only the servers relevant to a task to minimize token/context overhead.",
+  "task_categories": {
+    "coding": {
+      "description": "Implementation, refactoring, code writing",
+      "mcp": ["codegraph", "git", "filesystem", "context7-official"],
+      "lsp": ["typescript-lsp", "eslint-lsp"],
+      "model": "deepseek/deepseek-v4-pro",
+      "small_model": "deepseek/deepseek-v4-flash"
+    },
+    "reasoning": {
+      "description": "Architecture, planning, complex analysis",
+      "mcp": ["fetch", "websearch", "memory", "sequential-thinking"],
+      "lsp": [],
+      "model": "anthropic/claude-opus-4-8",
+      "small_model": "anthropic/claude-sonnet-4-6"
+    },
+    "fast": {
+      "description": "Quick answers, exploration, compaction — minimal context",
+      "mcp": ["filesystem"],
+      "lsp": [],
+      "model": "deepseek/deepseek-v4-flash",
+      "small_model": "deepseek/deepseek-v4-flash"
+    },
+    "agentic": {
+      "description": "Autonomous multi-step workflows — full tool access",
+      "mcp": ["codegraph", "git", "filesystem", "playwright", "agent-browser", "chrome-devtools", "sequential-thinking", "memorylayer", "memory", "github", "open-orchestra", "context7-official"],
+      "lsp": [],
+      "model": "deepseek/deepseek-v4-pro",
+      "small_model": "deepseek/deepseek-v4-flash"
+    },
+    "research": {
+      "description": "External research, documentation gathering",
+      "mcp": ["fetch", "websearch", "playwright", "agent-browser", "context7-official"],
+      "lsp": [],
+      "model": "deepseek/deepseek-v4-pro",
+      "small_model": "deepseek/deepseek-v4-flash"
+    },
+    "testing": {
+      "description": "Test authoring, execution, coverage analysis",
+      "mcp": ["filesystem", "git", "codegraph"],
+      "lsp": ["typescript-lsp"],
+      "model": "deepseek/deepseek-v4-pro",
+      "small_model": "deepseek/deepseek-v4-flash"
+    }
+  },
+  "file_lsp_map": {
+    ".ts": ["typescript-lsp", "eslint-lsp"],
+    ".tsx": ["typescript-lsp", "eslint-lsp"],
+    ".js": ["typescript-lsp", "eslint-lsp"],
+    ".jsx": ["typescript-lsp", "eslint-lsp"],
+    ".mjs": ["typescript-lsp", "eslint-lsp"],
+    ".cjs": ["typescript-lsp", "eslint-lsp"],
+    ".py": ["pyright"],
+    ".go": ["gopls"],
+    ".rs": ["rust-analyzer"],
+    ".sh": ["bash-language-server"],
+    ".bash": ["bash-language-server"],
+    ".zsh": ["bash-language-server"],
+    ".yaml": ["yaml-language-server"],
+    ".yml": ["yaml-language-server"],
+    ".json": ["json-lsp"],
+    ".toml": ["taplo"],
+    ".md": ["marksman"],
+    ".markdown": ["marksman"],
+    ".lua": ["lua-language-server"],
+    ".zig": ["zls"],
+    ".cs": ["csharp-ls"],
+    "Dockerfile": ["docker-langserver"]
+  },
+  "defaults": {
+    "default_task": "coding",
+    "minimal_mcp": ["filesystem"]
+  }
+}

@@ -1,6 +1,7 @@
 ---
-description: "reviewer specialist — ThePath"
-model: deepseek/deepseek-v4-flash
+description: "reviewer specialist"
+model: opencode-go/qwen3.6-plus
+mode: subagent
 temperature: 0.2
 permission:
   edit: deny
@@ -10,6 +11,5 @@ permission:
   grep: allow
   write: deny
 ---
-# reviewer — ThePath
-Ты — **reviewer** в проекте **ThePath** (Personal knowledge graph & life management system).
-Primary model: **deepseek/deepseek-v4-pro**. Изучи документы, предложи план, дождись подтверждения, выполни задачу, обнови WAL.
+# reviewer Agent
+Ты — **reviewer**. Следуй протоколу: изучи документы, предложи план, дождись подтверждения, выполни задачу, обнови WAL.

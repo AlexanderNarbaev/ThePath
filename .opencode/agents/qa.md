@@ -1,6 +1,7 @@
 ---
-description: "qa specialist — ThePath"
-model: xai/grok-4.3
+description: "qa specialist"
+model: opencode-go/minimax-m2.7
+mode: subagent
 temperature: 0.2
 permission:
   edit: allow
@@ -10,6 +11,5 @@ permission:
   grep: allow
   write: allow
 ---
-# qa — ThePath
-Ты — **qa** в проекте **ThePath** (Personal knowledge graph & life management system).
-Primary model: **deepseek/deepseek-v4-pro**. Изучи документы, предложи план, дождись подтверждения, выполни задачу, обнови WAL.
+# qa Agent
+Ты — **qa**. Следуй протоколу: изучи документы, предложи план, дождись подтверждения, выполни задачу, обнови WAL.

@@ -1,0 +1,67 @@
+{
+  "version": "1.0.0",
+  "architecture": "Commander → Planner → Worker → Reviewer",
+
+  "agents": {
+    "Commander": {
+      "capabilities": ["orchestration", "delegation", "verification", "mission_control"],
+      "delegates_to": ["Planner", "Worker", "Reviewer"],
+      "best_for": ["complex", "multi_agent", "end_to_end"],
+      "skill": null
+    },
+    "Planner": {
+      "capabilities": ["research", "analysis", "planning", "decomposition"],
+      "delegates_to": ["Worker"],
+      "best_for": ["medium", "research", "design", "planning"],
+      "skill": "plan"
+    },
+    "Worker": {
+      "capabilities": ["implementation", "testing", "documentation", "fixes"],
+      "delegates_to": [],
+      "best_for": ["simple", "coding", "testing", "debug", "refactor", "docs"],
+      "skill": "implement"
+    },
+    "Reviewer": {
+      "capabilities": ["verification", "validation", "quality_checks"],
+      "delegates_to": [],
+      "best_for": ["review", "verification", "qa"],
+      "skill": "code-review"
+    }
+  },
+
+  "complexity": {
+    "simple":  { "max_minutes": 5,   "agent": "Worker",    "flow": "direct",         "description": "Single file, mechanical edit, quick fix" },
+    "medium":  { "max_minutes": 30,  "agent": "Planner",   "flow": "plan_then_work", "description": "Multi-file, needs research or a plan first" },
+    "complex": { "max_minutes": 999, "agent": "Commander", "flow": "orchestrate",    "description": "Large scope, multi-agent, end-to-end" }
+  },
+
+  "distribution_rules": {
+    "coding":         { "agent": "Worker",    "skill": "implement" },
+    "testing":        { "agent": "Worker",    "skill": "tdd" },
+    "research":       { "agent": "Planner",   "skill": "deep-research" },
+    "planning":       { "agent": "Planner",   "skill": "plan" },
+    "review":         { "agent": "Reviewer",  "skill": "code-review" },
+    "debug":          { "agent": "Worker",    "skill": "diagnosing-bugs" },
+    "refactor":       { "agent": "Worker",    "skill": "improve-codebase-architecture" },
+    "docs":           { "agent": "Worker",    "skill": null },
+    "orchestration":  { "agent": "Commander", "skill": null }
+  },
+
+  "keyword_map": {
+    "coding":    ["implement", "add", "create", "write", "build", "feature", "code", "function", "module"],
+    "testing":   ["test", "assert", "coverage", "verify", "unit", "integration", "e2e"],
+    "research":  ["research", "investigate", "explore", "analyze", "survey", "audit", "discover"],
+    "planning":  ["plan", "design", "architecture", "spec", "roadmap", "strategy", "break down"],
+    "review":    ["review", "inspect", "critique", "audit code", "code review"],
+    "debug":     ["debug", "fix", "bug", "error", "crash", "broken", "failing", "diagnose"],
+    "refactor":  ["refactor", "cleanup", "simplify", "optimize", "restructure", "migrate"],
+    "docs":      ["document", "readme", "guide", "comment", "translate"],
+    "orchestration": ["orchestrate", "delegate", "coordinate", "distribute", "multi-agent", "parallelize", "mission"]
+  },
+
+  "complexity_signals": {
+    "simple":  ["typo", "rename", "single file", "one file", "trivial", "quick", "small", "format"],
+    "medium":  ["multiple files", "multi-file", "several", "update", "refactor", "add tests", "docs"],
+    "complex": ["system", "architecture", "end-to-end", "migrate", "rewrite", "pipeline", "orchestrate", "all projects", "framework"]
+  }
+}

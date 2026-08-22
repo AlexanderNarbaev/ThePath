@@ -1,15 +1,15 @@
 ---
-description: "designer specialist — ThePath"
-model: xai/grok-4.3
+description: "designer specialist"
+model: opencode-go/minimax-m2.7
+mode: subagent
 temperature: 0.2
 permission:
-  edit: allow
+  edit: deny
   bash: deny
   read: allow
   glob: allow
   grep: allow
-  write: allow
+  write: deny
 ---
-# designer — ThePath
-Ты — **designer** в проекте **ThePath** (Personal knowledge graph & life management system).
-Primary model: **deepseek/deepseek-v4-pro**. Изучи документы, предложи план, дождись подтверждения, выполни задачу, обнови WAL.
+# designer Agent
+Ты — **designer**. Следуй протоколу: изучи документы, предложи план, дождись подтверждения, выполни задачу, обнови WAL.
