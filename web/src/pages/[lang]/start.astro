@@ -1,11 +1,52 @@
 ---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import OnboardingFlow from '../../components/interactive/OnboardingFlow';
+import { t, type Lang } from '../../i18n/ui';
 import { getLangPaths } from '../../utils/static-paths';
-import { BASE_PATH } from '../../constants';
 
 export async function getStaticPaths() {
   return getLangPaths();
 }
 
-const { lang } = Astro.params;
-return Astro.redirect(`${BASE_PATH}/${lang}/#practices`);
+const lang = Astro.params.lang as Lang;
 ---
+
+<BaseLayout lang={lang} title={t('onboarding.title', lang)}>
+  <div class="content-wide" style="max-width:700px;">
+    <h1>{t('onboarding.title', lang)}</h1>
+    <p class="ob-subtitle">{t('onboarding.subtitle', lang)}</p>
+    <OnboardingFlow lang={lang} client:visible />
+  </div>
+</BaseLayout>
+
+<style>
+  .ob-subtitle { color: var(--color-text-secondary); margin-bottom: 1.5rem; }
+  .onboarding { background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; }
+  .ob-progress-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+  .ob-progress-text { font-size: 0.8rem; color: var(--color-text-secondary); }
+  .ob-reset { background: none; border: none; color: var(--color-gold); cursor: pointer; font-size: 0.8rem; padding: 0.25rem 0.5rem; min-height: 44px; }
+  .ob-progress-bar { height: 4px; background: var(--color-bg-secondary); border-radius: 2px; overflow: hidden; margin-bottom: 1.25rem; }
+  .ob-progress-fill { height: 100%; background: var(--color-gold); border-radius: 2px; transition: width 0.3s ease; }
+  .ob-done { margin-bottom: 1rem; padding: 0.75rem; background: rgba(230,193,123,0.15); border-radius: 8px; text-align: center; font-size: 0.9rem; color: var(--color-gold); font-weight: 500; }
+  .ob-steps { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+  .ob-step { display: flex; align-items: center; gap: 1rem; padding: 1rem; border: 1px solid var(--color-border); border-radius: 10px; background: var(--color-bg-secondary); transition: border-color 0.2s; }
+  .ob-step.done { border-color: var(--color-gold); opacity: 0.75; }
+  .ob-check { display: flex; align-items: center; cursor: pointer; position: relative; }
+  .ob-check input { position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer; }
+  .ob-num { display: flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 50%; border: 2px solid var(--color-border); font-size: 0.85rem; font-weight: 600; color: var(--color-text-secondary); transition: all 0.2s; }
+  .ob-step.done .ob-num { background: var(--color-gold); border-color: var(--color-gold); color: #0a0a14; }
+  .ob-body { flex: 1; min-width: 0; }
+  .ob-step-title { font-weight: 600; font-size: 0.95rem; color: var(--color-text-primary); }
+  .ob-step.done .ob-step-title { text-decoration: line-through; }
+  .ob-desc { font-size: 0.82rem; color: var(--color-text-secondary); margin: 0.25rem 0; line-height: 1.4; }
+  .ob-time { font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-secondary); }
+  .ob-go { white-space: nowrap; font-size: 0.85rem; font-weight: 600; color: var(--color-gold); text-decoration: none; padding: 0.5rem 0.75rem; border: 1px solid var(--color-border); border-radius: 8px; transition: all 0.2s; min-height: 44px; display: inline-flex; align-items: center; }
+  .ob-go:hover { border-color: var(--color-gold); background: rgba(230,193,123,0.1); }
+  @media (max-width: 600px) {
+    .ob-step { flex-wrap: wrap; }
+    .ob-go { width: 100%; justify-content: center; }
+  }
+  @media print {
+    .onboarding { display: none; }
+  }
+</style>
