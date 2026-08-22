@@ -26,6 +26,7 @@ const langPath = `/${lang}`;
       <a href={`${base}${langPath}/manifesto`} class:list={['nav-link', { active: currentPath.includes('/manifesto') }]}>{t('nav.manifesto', lang)}</a>
       <a href={`${base}${langPath}/map`} class:list={['nav-link', { active: currentPath.includes('/map') }]}>{t('nav.map', lang)}</a>
       <a href={`${base}${langPath}/questions`} class:list={['nav-link', { active: currentPath.includes('/questions') }]}>{t('nav.questions', lang)}</a>
+      <a href={`${base}${langPath}/community`} class:list={['nav-link', { active: currentPath.includes('/community') }]}>{t('nav.community', lang)}</a>
       <SearchModal lang={lang} client:load />
       <LanguageSwitch lang={lang} currentPath={currentPath} />
       <ThemeToggle lang={lang} />

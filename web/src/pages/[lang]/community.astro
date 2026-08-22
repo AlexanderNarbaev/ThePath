@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Comments from '../../components/social/Comments.astro';
+import { getLangPaths } from '../../utils/static-paths';
+import { t, type Lang } from '../../i18n/ui';
+import { BASE_PATH } from '../../constants';
+
+export async function getStaticPaths() {
+  return getLangPaths();
+}
+
+const lang = Astro.params.lang as Lang;
+---
+
+<BaseLayout lang={lang} title={t('community.title', lang)}>
+  <div class="content">
+    <h1>{t('community.title', lang)}</h1>
+    <p class="community-intro">{t('community.intro', lang)}</p>
+    <a href={`${BASE_PATH}/${lang}/modules/community-guide`} class="guide-card">
+      <span class="guide-label">{t('community.guide_label', lang)}</span>
+      <span class="guide-title">{t('community.guide_cta', lang)} →</span>
+    </a>
+    <Comments lang={lang} term={`community-${lang}`} />
+  </div>
+</BaseLayout>
+
+<style>
+  .content { max-width: var(--max-width-content); margin: 0 auto; padding: 3rem 1.5rem; }
+  .community-intro { color: var(--color-cosmic-text-secondary); font-size: 0.95rem; margin-bottom: 2rem; line-height: 1.7; }
+  .guide-card {
+    display: flex; flex-direction: column; gap: 0.25rem;
+    background: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: 12px;
+    padding: 1.25rem; text-decoration: none; margin-bottom: 1rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .guide-card:hover { border-color: var(--color-gold); transform: translateY(-2px); }
+  .guide-label { font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-secondary); letter-spacing: 0.05em; text-transform: uppercase; }
+  .guide-title { font-weight: 600; color: var(--color-gold); }
+</style>

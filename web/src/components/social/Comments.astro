@@ -1,7 +1,7 @@
 ---
 import { t, type Lang } from '../../i18n/ui';
 
-const { lang } = Astro.props as { lang: Lang };
+const { lang, term } = Astro.props as { lang: Lang; term?: string };
 ---
 
 <div class="comments-section" style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--color-border);">
@@ -9,7 +9,7 @@ const { lang } = Astro.props as { lang: Lang };
   <p style="font-size:0.8rem;color:var(--color-text-secondary);margin-bottom:1rem;">
     {t('comments.powered', lang)} — {t('comments.github_required', lang)}
   </p>
-  <script is:inline define:vars={{ lang }}>
+  <script is:inline define:vars={{ lang, term }}>
     (() => {
       const theme = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
       const s = document.createElement('script');
@@ -18,7 +18,12 @@ const { lang } = Astro.props as { lang: Lang };
       s.setAttribute('data-repo-id', 'R_kgDOSs0fJg');
       s.setAttribute('data-category', 'General');
       s.setAttribute('data-category-id', 'DIC_kwDOSs0fJs4DD8Br');
-      s.setAttribute('data-mapping', 'pathname');
+      if (term) {
+        s.setAttribute('data-mapping', 'specific');
+        s.setAttribute('data-term', term);
+      } else {
+        s.setAttribute('data-mapping', 'pathname');
+      }
       s.setAttribute('data-strict', '0');
       s.setAttribute('data-reactions-enabled', '1');
       s.setAttribute('data-emit-metadata', '0');
