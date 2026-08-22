@@ -35,3 +35,12 @@ Thumbs.db
 
 # Lock files
 .lock/
+
+# Session cookies (secrets)
+.sinv_session
+
+# OpenCode config backups
+opencode.json*.bak
+
+# Agent tools local state
+.agentic-tools-mcp/
