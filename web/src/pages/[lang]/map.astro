@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ModuleGraph from '../../components/map/ModuleGraph';
 import PathTracker from '../../components/interactive/PathTracker';
@@ -17,7 +17,7 @@ const lang = Astro.params.lang as Lang;
 const allPages = await getCollection('pages');
 const page = allPages.find((e) => e.id.includes('map') && e.data?.lang === lang);
 if (!page) return Astro.redirect(`${BASE_PATH}/${lang}`);
-const { Content } = await page.render();
+const { Content } = await render(page);
 const base = BASE_PATH;
 
 const moduleCards = modules.map((m) => ({

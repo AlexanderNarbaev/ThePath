@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import ModuleLayout from '../../../layouts/ModuleLayout.astro';
 import { modules } from '../../../i18n/modules';
 import type { Lang } from '../../../i18n/ui';
@@ -23,7 +23,7 @@ const { entry: doc } = Astro.props as { entry: any };
 
 if (!doc) return Astro.redirect(`${BASE_PATH}/${lang}`);
 
-const { Content, headings } = await doc.render();
+const { Content, headings } = await render(doc);
 
 const meta = modules.find((m) => m.slug === slug);
 const title = meta?.title[lang] ?? doc.data.title;

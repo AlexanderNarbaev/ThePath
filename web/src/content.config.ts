@@ -1,6 +1,8 @@
 import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 const modules = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/modules' }),
   schema: z.object({
     module_number: z.number().min(0).max(99),
     title: z.string(),
@@ -14,6 +16,7 @@ const modules = defineCollection({
 });
 
 const pages = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
   schema: z.object({
     title: z.string(),
     lang: z.enum(['ru', 'en']),
