@@ -8,21 +8,10 @@ const base = BASE_PATH;
 
 <aside class="sidebar" id="sidebar">
   <button class="sidebar-toggle"
+    id="sidebar-toggle"
     aria-label={t('sidebar.toggle', lang)}
     aria-expanded="false"
     aria-controls="sidebar-nav"
-    onclick="
-      const sidebar = document.getElementById('sidebar');
-      const nav = document.getElementById('sidebar-nav');
-      const expanded = sidebar?.classList.toggle('open');
-      this.setAttribute('aria-expanded', String(expanded));
-    "
-    onkeydown="
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        this.click();
-      }
-    "
   >
     {t('sidebar.toggle', lang)}
   </button>
@@ -40,6 +29,18 @@ const base = BASE_PATH;
     </ul>
   </nav>
 </aside>
+
+<script>
+  (() => {
+    const sidebar = document.getElementById('sidebar');
+    const toggle = document.getElementById('sidebar-toggle');
+    if (!sidebar || !toggle) return;
+    toggle.addEventListener('click', () => {
+      const expanded = sidebar.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(expanded));
+    });
+  })();
+</script>
 
 <style>
   .sidebar { width: var(--sidebar-width); flex-shrink: 0; border-right: 1px solid var(--color-border); background: var(--color-bg-secondary); position: sticky; top: 59px; height: calc(100vh - 59px); overflow-y: auto; }

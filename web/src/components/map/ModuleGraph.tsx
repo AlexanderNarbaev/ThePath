@@ -1,5 +1,3 @@
-import { useEffect, useRef } from 'preact/hooks';
-import * as d3 from 'd3';
 import { modules } from '../../i18n/modules';
 import { paths } from '../../i18n/paths';
 import type { Lang } from '../../i18n/ui';
@@ -11,90 +9,58 @@ const pathColors: Record<string, string> = {
 
 interface Props { lang: Lang; }
 
+// Статическая круговая раскладка («спираль») — замена d3-force: детерминирована и не тянет ~200KB зависимость
+const W = 640;
+const H = 440;
+const RX = W / 2 - 60;
+const RY = H / 2 - 60;
+
 export default function ModuleGraph({ lang }: Props) {
-  const svgRef = useRef<SVGSVGElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!svgRef.current) return;
-    const container = containerRef.current;
-    const svgEl = svgRef.current;
-
-    function render() {
-      const svg = d3.select(svgEl);
-      svg.selectAll('*').remove();
-
-      const width = container?.clientWidth || 600;
-      const height = Math.min(width * 0.6, 500);
-
-      const nodes: any[] = modules.map((m) => ({ id: m.number, title: m.title[lang], path: m.path, slug: m.slug }));
-      const edges: { source: number; target: number }[] = [];
-
-      for (const p of paths) {
-        const pmods = [...p.modules, ...(p.optional || []), ...(p.recommended || [])];
-        for (let i = 0; i < pmods.length - 1; i++) {
-          if (!edges.some((l) => (l.source === pmods[i] && l.target === pmods[i + 1]) || (l.source === pmods[i + 1] && l.target === pmods[i])))
-            edges.push({ source: pmods[i], target: pmods[i + 1] });
-        }
-      }
-
-      const simulation = d3.forceSimulation(nodes)
-        .force('link', d3.forceLink(edges).id((d: any) => d.id).distance(80))
-        .force('charge', d3.forceManyBody().strength(-300))
-        .force('center', d3.forceCenter(width / 2, height / 2));
-
-      svg.attr('viewBox', `0 0 ${width} ${height}`);
-
-      const link = svg.append('g').selectAll('line').data(edges).join('line')
-        .attr('stroke', '#666').attr('stroke-width', 1).attr('stroke-opacity', 0.4);
-
-      const node = svg.append('g').selectAll('g').data(nodes).join('g')
-        .attr('cursor', 'pointer')
-        .attr('tabindex', 0)
-        .attr('role', 'link')
-        .attr('aria-label', (d: any) => `${d.id}: ${d.title}`)
-        .on('click', (_e: any, d: any) => { window.location.href = `${BASE_PATH}/${lang}/modules/${d.slug}`; })
-        .on('keydown', (event: any, d: any) => {
-          if (event.key === 'Enter') {
-            window.location.href = `${BASE_PATH}/${lang}/modules/${d.slug}`;
-          }
-        });
-
-      node.append('circle').attr('r', 18).attr('fill', (d: any) => pathColors[d.path] || '#888')
-        .attr('stroke', '#fff').attr('stroke-width', 2);
-
-      node.append('text').text((d: any) => d.id).attr('text-anchor', 'middle').attr('dy', '0.35em')
-        .attr('fill', 'white').attr('font-size', '11px').attr('font-weight', '600');
-
-      node.append('text').text((d: any) => d.title.length > 18 ? d.title.slice(0, 16) + '..' : d.title)
-        .attr('text-anchor', 'middle').attr('dy', '2.3em').attr('fill', '#aaa').attr('font-size', '9px');
-
-      simulation.on('tick', () => {
-        link.attr('x1', (d: any) => d.source.x).attr('y1', (d: any) => d.source.y)
-          .attr('x2', (d: any) => d.target.x).attr('y2', (d: any) => d.target.y);
-        node.attr('transform', (d: any) => `translate(${d.x},${d.y})`);
-      });
-
-      return simulation;
-    }
-
-    let sim = render();
-
-    const observer = new ResizeObserver(() => {
-      sim?.stop();
-      sim = render();
-    });
-    if (container) observer.observe(container);
-
-    return () => {
-      sim?.stop();
-      observer.disconnect();
+  const nodes = modules.map((m, i) => {
+    const angle = (2 * Math.PI * i) / modules.length - Math.PI / 2;
+    return {
+      number: m.number,
+      slug: m.slug,
+      path: m.path,
+      title: m.title[lang],
+      x: W / 2 + RX * Math.cos(angle),
+      y: H / 2 + RY * Math.sin(angle),
     };
-  }, [lang]);
+  });
+  const byNumber = new Map(nodes.map((n) => [n.number, n]));
+
+  const seen = new Set<string>();
+  const edges: { x1: number; y1: number; x2: number; y2: number }[] = [];
+  for (const p of paths) {
+    const seq = [...p.modules, ...(p.optional || []), ...(p.recommended || [])];
+    for (let i = 0; i < seq.length - 1; i++) {
+      const key = [seq[i], seq[i + 1]].sort((a, b) => a - b).join('-');
+      if (seen.has(key)) continue;
+      seen.add(key);
+      const a = byNumber.get(seq[i]);
+      const b = byNumber.get(seq[i + 1]);
+      if (a && b) edges.push({ x1: a.x, y1: a.y, x2: b.x, y2: b.y });
+    }
+  }
 
   return (
-    <div ref={containerRef} style="width:100%;overflow-x:auto;margin:1rem 0;background:var(--color-card-bg);border:1px solid var(--color-border);border-radius:12px;padding:1rem;">
-      <svg ref={svgRef} style="width:100%;height:auto;min-height:350px;" />
+    <div style="width:100%;overflow-x:auto;margin:1rem 0;background:var(--color-card-bg);border:1px solid var(--color-border);border-radius:12px;padding:1rem;">
+      <svg viewBox={`0 0 ${W} ${H}`} style="width:100%;height:auto;min-height:350px;" role="img" aria-label="Module graph">
+        {edges.map((e) => (
+          <line x1={e.x1} y1={e.y1} x2={e.x2} y2={e.y2} stroke="#666" stroke-width="1" stroke-opacity="0.4" />
+        ))}
+        {nodes.map((n) => (
+          <a href={`${BASE_PATH}/${lang}/modules/${n.slug}`} aria-label={`${n.number}: ${n.title}`}>
+            <g cursor="pointer">
+              <circle cx={n.x} cy={n.y} r="18" fill={pathColors[n.path] || '#888'} stroke="#fff" stroke-width="2" />
+              <text x={n.x} y={n.y} text-anchor="middle" dy="0.35em" fill="white" font-size="11" font-weight="600">{n.number}</text>
+              <text x={n.x} y={n.y} text-anchor="middle" dy="2.3em" fill="#aaa" font-size="9">
+                {n.title.length > 18 ? n.title.slice(0, 16) + '..' : n.title}
+              </text>
+            </g>
+          </a>
+        ))}
+      </svg>
     </div>
   );
 }
