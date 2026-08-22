@@ -118,6 +118,8 @@ const results = [
 export default function EthicalSimulator({ lang }: Props) {
   const [step, setStep] = useState<'start' | number | 'result'>('start');
   const [scores, setScores] = useState<[number, number, number]>([0, 0, 0]);
+  const [history, setHistory] = useState<[number, number, number][]>([]);
+  const [copied, setCopied] = useState(false);
 
   function handleAnswer(optionScores: [number, number, number]) {
     const newScores: [number, number, number] = [
@@ -126,6 +128,7 @@ export default function EthicalSimulator({ lang }: Props) {
       scores[2] + optionScores[2],
     ];
     setScores(newScores);
+    setHistory([...history, optionScores]);
     const nextIdx = typeof step === 'number' ? step + 1 : 0;
     if (nextIdx >= scenarios.length) {
       setStep('result');
@@ -134,9 +137,26 @@ export default function EthicalSimulator({ lang }: Props) {
     }
   }
 
+  function back() {
+    if (typeof step !== 'number' || step === 0 || history.length === 0) return;
+    const last = history[history.length - 1];
+    setScores([scores[0] - last[0], scores[1] - last[1], scores[2] - last[2]]);
+    setHistory(history.slice(0, -1));
+    setStep(step - 1);
+  }
+
+  function copyResult(url: string) {
+    navigator.clipboard.writeText(url).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  }
+
   function reset() {
     setStep('start');
     setScores([0, 0, 0]);
+    setHistory([]);
+    setCopied(false);
   }
 
   const maxPossible = scenarios.length * 3;
@@ -172,7 +192,9 @@ export default function EthicalSimulator({ lang }: Props) {
           ))}
         </div>
         <div class="sim-actions">
-          <button class="sim-btn" onClick={() => { navigator.clipboard.writeText(shareUrl); alert(t('simulator.copied', lang)); }}>{t('simulator.share', lang)}</button>
+          <button class="sim-btn" onClick={() => copyResult(shareUrl)}>
+            {copied ? t('simulator.copied', lang) : t('simulator.share', lang)}
+          </button>
           <button class="sim-btn sim-btn-secondary" onClick={reset}>{t('simulator.retry', lang)}</button>
         </div>
       </div>
@@ -180,9 +202,11 @@ export default function EthicalSimulator({ lang }: Props) {
   }
 
   const current = scenarios[step as number];
+  const progressPct = ((step as number) / scenarios.length) * 100;
   return (
     <div class="simulator">
       <div class="sim-progress">{t('compass.progress', lang).replace('{current}', String((step as number) + 1)).replace('{total}', String(scenarios.length))}</div>
+      <div class="sim-progress-bar"><div class="sim-progress-fill" style={`width:${progressPct}%`} /></div>
       <h3>{current.title[lang]}</h3>
       <p class="sim-text">{current.text[lang]}</p>
       <div class="sim-options">
@@ -192,6 +216,9 @@ export default function EthicalSimulator({ lang }: Props) {
           </button>
         ))}
       </div>
+      {(step as number) > 0 && (
+        <button class="sim-btn sim-btn-secondary sim-back" onClick={back}>{t('simulator.back', lang)}</button>
+      )}
     </div>
   );
 }

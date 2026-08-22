@@ -201,6 +201,8 @@
 .search-result { display: flex; align-items: baseline; gap: 0.75rem; padding: 0.75rem 1.25rem; color: var(--color-text-primary); text-decoration: none; transition: background 0.15s; }
 .search-result:hover { background: var(--color-bg-secondary); }
 .search-result-num { font-size: 0.8rem; font-weight: 700; color: var(--color-gold); min-width: 1.5em; }
+.search-result-body { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.search-snippet { font-size: 0.78rem; color: var(--color-text-secondary); line-height: 1.4; }
 
 /* Progress */
 .progress-container { position: fixed; top: 59px; left: 0; right: 0; height: 3px; z-index: 49; background: transparent; }
@@ -232,6 +234,8 @@
 .dc-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
 .dc-title { font-size: 0.85rem; font-weight: 600; }
 .dc-count { font-size: 0.8rem; color: var(--color-text-secondary); }
+.dc-meta { display: flex; align-items: center; gap: 0.6rem; }
+.dc-streak { font-size: 0.8rem; font-weight: 600; color: var(--color-gold); }
 .dc-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0; cursor: pointer; font-size: 0.9rem; }
 .dc-item input { accent-color: var(--color-gold); width: 1.1em; height: 1.1em; cursor: pointer; }
 .dc-item.checked span { text-decoration: line-through; opacity: 0.5; }
