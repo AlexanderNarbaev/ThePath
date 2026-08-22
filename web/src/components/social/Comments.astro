@@ -9,24 +9,26 @@ const { lang } = Astro.props as { lang: Lang };
   <p style="font-size:0.8rem;color:var(--color-text-secondary);margin-bottom:1rem;">
     {t('comments.powered', lang)} — {t('comments.github_required', lang)}
   </p>
-  <!-- Giscus requires repo-id and category-id from GitHub Discussions -->
-  <!--
-  <script is:inline
-    src="https://giscus.app/client.js"
-    data-repo="AlexandrNarbaev/ThePath"
-    data-repo-id=""
-    data-category="Module Comments"
-    data-category-id=""
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="noborder_gray"
-    data-lang={lang}
-    data-loading="lazy"
-    crossorigin="anonymous"
-    async>
+  <script is:inline define:vars={{ lang }}>
+    (() => {
+      const theme = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      const s = document.createElement('script');
+      s.src = 'https://giscus.app/client.js';
+      s.setAttribute('data-repo', 'AlexanderNarbaev/ThePath');
+      s.setAttribute('data-repo-id', 'R_kgDOSs0fJg');
+      s.setAttribute('data-category', 'General');
+      s.setAttribute('data-category-id', 'DIC_kwDOSs0fJs4DD8Br');
+      s.setAttribute('data-mapping', 'pathname');
+      s.setAttribute('data-strict', '0');
+      s.setAttribute('data-reactions-enabled', '1');
+      s.setAttribute('data-emit-metadata', '0');
+      s.setAttribute('data-input-position', 'bottom');
+      s.setAttribute('data-theme', theme);
+      s.setAttribute('data-lang', lang);
+      s.setAttribute('data-loading', 'lazy');
+      s.crossOrigin = 'anonymous';
+      s.async = true;
+      document.currentScript.after(s);
+    })();
   </script>
-  -->
 </div>
